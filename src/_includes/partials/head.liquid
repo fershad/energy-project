@@ -1,0 +1,19 @@
+{% if title %}
+    {% capture pageTitle %}
+        {{ title }}
+        |
+        {{ site.name[locale] }}
+    {% endcapture %}
+{% else %}
+    {% assign pageTitle = site.name[locale] %}
+{% endif %}
+
+{% unless shortDescription %}
+    {% assign pageDescription = site.description[locale] %}
+{% else %}
+    {% assign pageDescription = shortDescription %}
+{% endunless %}
+
+{% include 'partials/metadata' %}
+{% include 'partials/favicon' %}
+{% include 'partials/social-image' %}
