@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ locale | default: site.defaultLocale }}">
+<html class="no-js" lang="{{ locale | default: site.defaultLocale }}">
     <head>
         {% include 'partials/head' %}
         {% capture mainCSS %}
             {% include "../../.cache/main.css" %}
         {% endcapture %}
+        <script>
+            function jsCheck(el){el.className=el.className.replace(/\bno-js\b/,'js')} jsCheck(document.documentElement)
+        </script>
         <style>
             {{ mainCSS | inlinecss }}
         </style>
