@@ -1,3 +1,5 @@
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
-    plugins: [require('autoprefixer'), require('postcss-import'), require('postcss-nesting')],
+    plugins: [autoprefixer, require('postcss-import'), require('postcss-nesting')],
 };
