@@ -19,16 +19,16 @@ module.exports = {
         zh: '關於',
         link: '/about',
     },
-    contribute: {
-        en: 'contribute',
-        zh: '貢獻',
-        link: '/about#contribute',
-    },
-    support: {
-        en: 'support',
-        zh: '支持',
-        link: '/about#support',
-    },
+    // contribute: {
+    //     en: 'contribute',
+    //     zh: '貢獻',
+    //     link: '/about#contribute',
+    // },
+    // support: {
+    //     en: 'support',
+    //     zh: '支持',
+    //     link: '/about#support',
+    // },
     carbon: {
         en: 'carbon',
         zh: '二氧化碳',

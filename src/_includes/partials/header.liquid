@@ -1,0 +1,7 @@
+<header class="site-header">
+    {% include "partials/nav" %}
+</header>
+{% capture menuJS %}
+    {% include "../_bundle/scripts/menu.js" %}
+{% endcapture %}
+<script>{{ menuJS }}</script>

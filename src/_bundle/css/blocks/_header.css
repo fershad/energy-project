@@ -1,0 +1,6 @@
+.site-header {
+  height: auto;
+  background: var(--color-charcoal);
+  border-bottom: 2px solid var(--color-campfire-smoke);
+  padding: 0 var(--size-300);
+}

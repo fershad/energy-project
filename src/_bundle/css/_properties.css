@@ -73,7 +73,7 @@ main:focus {
   background: rgba(var(--color-pale-peach), 0.99);
 }
 
-/* Scrollbar styles */
+/* Scrollbar styles
 ::-webkit-scrollbar {
   height: 0.8rem;
 }
@@ -87,4 +87,4 @@ main:focus {
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-pale-peach);
   border-radius: 0rem;
-}
+} */
