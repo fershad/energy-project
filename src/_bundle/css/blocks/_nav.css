@@ -168,3 +168,28 @@ li.nav__link {
   display: inline-block;
   margin-inline-end: var(--size-400);
 }
+
+@media (min-width: 36rem) {
+  .header__nav {
+    grid-template-columns: 1fr auto 3.5rem 1fr auto 1fr;
+    grid-template: ". . logo menu . ." 3.5rem;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .nav__menu-list {
+    display: block;
+    background: transparent;
+    margin: 0;
+    min-height: auto;
+    text-align: right;
+  }
+
+  .nav__link {
+    font-size: var(--size-500);
+    display: inline-block;
+    margin-inline-end: var(--size-400);
+  }
+}
