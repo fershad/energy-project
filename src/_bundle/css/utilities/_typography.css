@@ -1,0 +1,217 @@
+/* Typography */
+p {
+  margin-bottom: 1.15rem;
+  max-width: 75ch;
+}
+
+li {
+  max-width: 75ch;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 900;
+  font-family: var(--heading-font-family);
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+  word-spacing: 0px;
+  max-width: 75ch;
+  margin: var(--size-300) 0;
+}
+
+h1,
+.h1 {
+  margin-top: 0;
+  font-size: var(--size-900);
+  position: relative;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+h1::after,
+.h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 180px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0.0001px 2px,
+    var(--color-ocean-green) 2px 4px
+  );
+}
+
+.h2,
+h2,
+.h3,
+h3,
+.underlined {
+  position: relative;
+  padding-bottom: var(--size-300);
+}
+
+.h2::after,
+h2::after,
+.h3::after,
+h3::after,
+.underlined::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+}
+
+.h2::after,
+h2::after {
+  background-color: var(--text-color);
+}
+
+.h3,
+h3 {
+  color: var(--color-ocean-green);
+}
+
+.h3::after,
+h3::after,
+.underlined[data-color="ocean-green"]::after {
+  background-color: var(--color-ocean-green);
+}
+
+.h3[data-color="ocean-blue"]::after,
+h3[data-color="ocean-blue"]::after,
+.underlined[data-color="ocean-blue"]::after {
+  background-color: var(--color-ocean-blue);
+}
+
+.h3[data-color="text-color"],
+h3[data-color="text-color"] {
+  color: var(--text-color);
+}
+
+.h3[data-color="text-color"]::after,
+h3[data-color="text-color"]::after,
+.underlined[data-color="text-color"]::after {
+  background-color: var(--text-color);
+}
+
+.h2[data-style="regular"],
+h2[data-style="regular"],
+.h3[data-style="regular"],
+h3[data-style="regular"] {
+  padding-bottom: unset;
+}
+
+.h2[data-style="regular"]::after,
+h2[data-style="regular"]::after,
+.h3[data-style="regular"]::after,
+h3[data-style="regular"]::after {
+  display: none;
+}
+
+h2,
+.h2 {
+  font-size: var(--size-700);
+}
+
+h3,
+.h3 {
+  font-size: var(--size-600);
+}
+
+h4,
+.h4 {
+  font-size: var(--size-500);
+}
+
+h5,
+.h5 {
+  font-size: var(--size-400);
+}
+
+small,
+.small {
+  font-size: var(--size-300);
+}
+
+b,
+strong,
+.bold {
+  font-weight: bolder;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+[data-color="white"] {
+  color: #fff;
+}
+
+[data-color="peach"] {
+  color: var(--color-pale-peach);
+}
+
+[data-color="ocean-blue"] {
+  color: var(--color-ocean-blue);
+}
+
+[data-color="ocean-green"] {
+  color: var(--color-ocean-green);
+}
+
+.standout {
+  font-size: var(--size-700);
+  font-family: var(--base-font-family);
+}
+
+[data-color="ocean-blue"] {
+  color: var(--color-ocean-blue);
+}
+
+[data-color="ocean-green"] {
+  color: var(--color-ocean-green);
+}
+
+[data-color="text-color"] {
+  color: var(--text-color);
+}
+
+h1 + .subheading {
+  font-size: var(--size-600);
+}
+
+h2 + .subheading {
+  font-size: var(--size-600);
+}
+
+h3 + .subheading {
+  font-size: var(--size-400);
+}
+
+/* End Typography */

@@ -2,9 +2,16 @@
 <html lang="{{ locale | default: site.defaultLocale }}">
     <head>
         {% include 'partials/head' %}
+        {% capture mainCSS %}
+            {% include "../../.cache/main.css" %}
+        {% endcapture %}
+        <style>
+            {{ mainCSS | inlinecss }}
+        </style>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
+        {% include "partials/nav" %}
         {{ content | safe }}
     </body>
 </html>
