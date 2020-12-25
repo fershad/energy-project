@@ -32,7 +32,7 @@
 
         {% for siteLocale in site.locales %}
             {% unless siteLocale.code == locale %}
-                <li>
+                <li class="nav__link">
                     <a href="/{{siteLocale.code}}">{{siteLocale.name}}</a>
                 </li>
             {% endunless %}
