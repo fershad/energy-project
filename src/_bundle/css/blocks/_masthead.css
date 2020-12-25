@@ -1,0 +1,67 @@
+.masthead {
+  --base64: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAlgCWAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCACFAMgDASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAECAwQFBv/EACAQAQEAAwEAAwADAQAAAAAAAAABAgMREgQTIRQxUUH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGBEBAQEBAQAAAAAAAAAAAAAAABEBEgL/2gAMAwEAAhEDEQA/APgUnE8BAnieAqlPE8BUW8nkFTi/k8goLeTgKi3EcBUW4jgqBKAQJAQAIAAAA04nh1PRTynySp6IeU+Tp1FT5PKZS0IjynydTKCPCPDVFKRn4RcGkqeAxuCtxdHEeQc9xVuLpuCtwUc/Dja4K3ERkhpcVbAVE8QAADTieNfB9aKziWn11HigoNJgtNVoM5S1p9VRddRWXVsanxUzCgn0i1bxVbjQRKvKpxbGAvF5OmGDSY8ZqxXwi62sLYVY5ssOMso6dljmzrWazuKVFgi1plFiLE9R0FeCwDskjXCRyfatju4kV13CK+Ixm9fHbBNa4a/1069Esc+GyddWvbOG4mat/GlVy+NJGn3yKZ/InGW65s9MlVx1RfPZ2omQVN1TjHPCRtc/xjnbVhWVkMeIylU/SJXVhlItc45JlS51OV6dNzjPPYwuyq3K05KvlsZZZdT5tVuNazEqOlRxMVEWIa+VcsQU6FgCOnVUgtMl8c6yWxnQb47K6dedrn1ara79Px7xndIj9qPGVdX1zGHcYxvpqMMdNq11cafbjGezdEukUs/VsdcrDLb+pw3caI6L8eWMM9EjfH5E4y27o1mm4xuEjPPGGW5lls66OauX9pwnWdyWwy/UV1YYSwy1GvNt2WNMuLPWr5rqz4pJLUi5rKSosdPicZ54xFrnuI0sEVypQAmNdc/WUaYXiar0vjSfjumeOOLyMN3lbL5N5/bnuVqu3dvn/HJnvv8ArDLb1nclzylbXdf9Vu21jckemojb2i7GPpHVhW/3X/VctlrLqOkF7kr1AqJ6SoAbYbONpu/HHKt6WpHRnt6rNn6wtOlI6vt/FMtnWHo6hGnsZdBUAAmLSqJ6C/pHpXoCfR1UBPRACRACRACRACRCQAABACUJQAAAAAAAAAAAAAAAAAAAAAAAACRAAAAAAAAAAAAAAkAQAAAAAAAAAAAAAD//2Q==);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 75vh;
+  /* if you don't want it to take up the full screen, reduce this number */
+  overflow: hidden;
+  background-size: cover !important;
+  /* background-color: #000000; */
+  background-image: url("/img/tw-iss.jpg"), var(--base64);
+  background-position: center -200px;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+.masthead .headlineStat {
+  font-weight: 900;
+  font-size: var(--size-600);
+  padding: var(--size-500);
+  background: var(--color-rich-black);
+  color: var(--color-campfire-smoke);
+  font-family: var(--heading-font-family);
+  line-height: 1.65;
+  max-width: 70vw;
+  right: 15px;
+  bottom: var(--size-800);
+  position: absolute;
+  border: solid 2px var(--color-pale-peach);
+  box-shadow: 5px 5px 0 var(--color-pale-peach);
+}
+
+.masthead .photo-credit {
+  position: absolute;
+  color: var(--color-rich-black);
+  background: var(--color-pale-peach);
+  right: 15px;
+  bottom: -2px;
+  padding: 0.5rem var(--size-300);
+  border: solid 2px var(--color-pale-peach);
+}
+
+@media only screen and (min-width: 48em) {
+  /* .masthead {
+    background-image: url("/img/tw-iss-main.jpg"), var(--base64);
+  } */
+
+  .masthead .headlineStat {
+    max-width: 50vh;
+    font-size: var(--size-700);
+    right: calc(var(--size-900));
+    bottom: var(--size-900);
+  }
+
+  .masthead .photo-credit {
+    right: var(--size-900);
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .masthead {
+    background-position: center 75%;
+  }
+}
