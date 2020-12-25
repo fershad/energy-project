@@ -1,0 +1,17 @@
+<nav aria-label="Primary navigation">
+    <ul>
+        {% for item in nav %}
+            <li>
+                <a href="/{{ locale }}{{ item[1].link }}">{{ item[1] | defaultLocale: locale | capitalize }}</a>
+            </li>
+        {% endfor %}
+
+        {% for siteLocale in site.locales %}
+            {% unless siteLocale.code == locale %}
+                <li>
+                    <a href="/{{siteLocale.code}}">{{siteLocale.name}}</a>
+                </li>
+            {% endunless %}
+        {% endfor %}
+    </ul>
+</nav>

@@ -1,5 +1,10 @@
 const defaultLocale = 'en';
 
+const locales = [
+    { code: 'en', name: 'English' },
+    { code: 'zh', name: '中文版' },
+];
+
 const baseUrl = 'https://cleanenergyproject.tw';
 
 const name = {
@@ -33,4 +38,4 @@ const support = {
     },
 };
 
-module.exports = { defaultLocale, baseUrl, name, description, ogImgAlt, contact, support };
+module.exports = { defaultLocale, baseUrl, name, description, ogImgAlt, contact, support, locales };
