@@ -17,11 +17,12 @@
   background-color: #000;
 }
 
-.masthead .headlineStat {
+.masthead__headline {
   font-weight: 900;
   font-size: var(--size-600);
   padding: var(--size-500);
-  background: var(--color-rich-black);
+  /* background: var(--color-rich-black); */
+  background: var(--color-charcoal);
   color: var(--color-campfire-smoke);
   font-family: var(--heading-font-family);
   line-height: 1.65;
@@ -33,7 +34,7 @@
   box-shadow: 5px 5px 0 var(--color-pale-peach);
 }
 
-.masthead .photo-credit {
+.masthead__credit {
   position: absolute;
   color: var(--color-rich-black);
   background: var(--color-pale-peach);
@@ -48,14 +49,14 @@
     background-image: url("/img/tw-iss-main.jpg"), var(--base64);
   } */
 
-  .masthead .headlineStat {
+  .masthead__headline {
     max-width: 50vh;
     font-size: var(--size-700);
     right: calc(var(--size-900));
     bottom: var(--size-900);
   }
 
-  .masthead .photo-credit {
+  .masthead__credit {
     right: var(--size-900);
   }
 }

@@ -1,7 +1,14 @@
 ---
 layout: layouts/base
 ---
-{% include "partials/masthead" %}
+{% include "partials/masthead", mastheadHeadline: headline %}
 <main class="wrapper" data-wraps="content" id="main-content">
-    <h1>Taiwan Clean Energy Project</h1>
+    <h1>{{ site.name | defaultLocale: locale }}</h1>
+    <p>{{ page.homepage.intro | defaultLocale: locale | safe }}</p>
+    <section id="data">
+        <h2>{{ page.homepage.data.heading | defaultLocale: locale }}</h2>
+        <p class="subheading underlined" data-color="ocean-green">{% longMonth lastMonth.latestMonth %}
+            {% westernYear lastMonth.latestYear %}</p>
+        <p>{{ page.homepage.data.paragraph | defaultLocale: locale | safe }}</p>
+    </section>
 </main>

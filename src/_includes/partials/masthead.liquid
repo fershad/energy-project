@@ -1,8 +1,8 @@
 <div aria-label="Oblique night image of Taiwan taken from the International Space Station." class="masthead" role="img">
-    <div class="container">
-        <!-- <p class="headlineStat">
-            {{ pages.homepage[locale].hero.headline | default: pages.homepage[site.defaultLang].hero.headline | safe }}
-        </p> -->
-                                                <!-- <small class="photo-credit">{{ pages.homepage[locale].hero.credit | default: pages.homepage[site.defaultLang].hero.credit | safe }}</small> -->
+    <div class="wrapper">
+        <p class="masthead__headline">
+            {{ mastheadHeadline | safe }}
+        </p>
+        <small class="masthead__credit">{{ partial.masthead.credit | defaultLocale: locale | safe }}</small>
     </div>
 </div>

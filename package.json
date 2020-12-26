@@ -41,5 +41,8 @@
     "postcss-nesting": "^7.0.1",
     "postcss-uncss": "^0.17.0",
     "precss": "^4.0.0"
+  },
+  "dependencies": {
+    "airtable": "^0.10.1"
   }
 }

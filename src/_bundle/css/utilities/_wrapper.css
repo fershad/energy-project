@@ -17,6 +17,6 @@
   padding: var(--size-700) var(--size-300) var(--size-600) var(--size-300);
 
   @media (min-width: 48rem) {
-    padding: var(--size-900) var(--size-300) var(--size-800) var(--size-300);
+    padding: var(--size-900) var(--size-500) var(--size-800) var(--size-500);
   }
 }

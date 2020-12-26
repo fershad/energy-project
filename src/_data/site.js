@@ -14,8 +14,8 @@ const name = {
 
 const description = {
     en:
-        "The Taiwan Clean Energy Project is an endeavour to track the contribution of zero-carbon energy sources to Taiwan's overall energy generation mix.",
-    zh: '台灣清潔能源項目是一個努力在追踪零碳能源的貢獻對台灣的整體能源生產組合.',
+        "The Taiwan Clean Energy Project is an endeavour to track the contribution of low-carbon energy sources to Taiwan's overall energy generation mix.",
+    zh: '台灣清潔能源項目是一個努力在追踪低碳能源的貢獻對台灣的整體能源生產組合.',
 };
 
 const ogImgAlt = {
