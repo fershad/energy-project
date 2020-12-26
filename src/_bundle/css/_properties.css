@@ -25,6 +25,9 @@
   --color-shadow-blue: hsl(214, 19%, 54%);
   --color-campfire-smoke: hsl(30, 11%, 82%);
 
+  /* Potential dark mode color */
+  /* hsl(165,4%, 11% / 1) */
+
   --background-color: var(--color-campfire-smoke);
   --text-color: var(--color-rich-black);
 
