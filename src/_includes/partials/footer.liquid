@@ -1,0 +1,21 @@
+<footer class="footer">
+    <div class="wrapper">
+        <div class="maintainer">
+            <p>
+                {{ partial.footer.maintainer | defaultLocale: locale | safe }}
+            </p>
+        </div>
+        <div class="data-source">
+            <p>
+                {{ partial.footer.source | defaultLocale: locale | safe }}
+            </p>
+        </div>
+        <div class="carbon" data-carbon></div>
+        <div class="social">
+            <a class="icon-link" href="{{ site.contact.twitterURL }}">{% include "svg/twitter.svg" %}</a>
+            <a class="icon-link" href="//github.com/fishintaiwan/taiwan-clean-energy-project">{% include "svg/github.svg" %}</a>
+            <a href="{{ site.support.kofi.url }}" class="icon-link">{% include "svg/kofi.svg" %}</a>
+            <a href="{{ site.support.patreon.url }}" class="icon-link">{% include "svg/patreon.svg" %}</a>
+        </div>
+    </div>
+</footer>

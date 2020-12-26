@@ -1,4 +1,4 @@
-main.wrapper {
+.wrapper {
   display: grid;
   grid-template-columns: 1fr auto minmax(72rem, 1fr) auto 1fr;
   position: relative;
@@ -7,7 +7,7 @@ main.wrapper {
   width: 100%;
 }
 
-main.wrapper > * {
+.wrapper > * {
   grid-column: 3/4;
   overflow-y: hidden;
 }

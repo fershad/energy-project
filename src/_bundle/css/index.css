@@ -3,8 +3,9 @@
 
 @import "./utilities/_typography.css";
 @import "./utilities/_skip-link.css";
+@import "./utilities/_wrapper.css";
 
 @import "./blocks/_header.css";
 @import "./blocks/_nav.css";
-@import "./blocks/_main-wrapper.css";
 @import "./blocks/_masthead.css";
+@import "./blocks/_footer.css";
