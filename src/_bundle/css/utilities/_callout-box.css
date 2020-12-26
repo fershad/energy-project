@@ -1,0 +1,38 @@
+.callout-box {
+  width: 100%;
+  padding: var(--size-300) var(--size-400);
+  max-width: 320px;
+}
+
+.callout-box[data-color="ocean-blue"] {
+  border: solid 2px var(--color-ocean-blue);
+  box-shadow: 5px 5px 0 var(--color-ocean-blue);
+}
+
+.callout-box[data-color="ocean-green"] {
+  border: solid 2px var(--color-ocean-green);
+  box-shadow: 5px 5px 0 var(--color-ocean-green);
+}
+
+.callout-box[data-color="rich-black"] {
+  border: solid 2px var(--color-rich-black);
+  box-shadow: 5px 5px 0 var(--color-rich-black);
+}
+
+.callout-box[data-color="charcoal"] {
+  border: solid 2px var(--color-charcoal);
+  box-shadow: 5px 5px 0 var(--color-charcoal);
+}
+
+.callout-box[data-color="text-color"] {
+  border: solid 2px var(--text-color);
+  box-shadow: 5px 5px 0 var(--text-color);
+}
+
+.callout-box h1,
+.callout-box h2,
+.callout-box h3,
+.callout-box h4,
+.callout-box h5 {
+  font-family: var(--base-font-family);
+}

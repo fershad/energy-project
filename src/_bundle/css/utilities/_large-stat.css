@@ -1,0 +1,16 @@
+.large-stat {
+  font-size: var(--size-800);
+}
+
+.stat p {
+  font-size: var(--size-600);
+}
+
+.large-stat,
+.stat p {
+  margin-bottom: calc(var(--size-300) * -1);
+}
+
+.large-stat + small {
+  font-size: var(--size-400);
+}

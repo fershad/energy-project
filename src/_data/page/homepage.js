@@ -15,6 +15,15 @@ const data = {
             See <a href="/en/data/">historical data here</a>.`,
         zh: '在下面的數據顯示了使用清潔能源生產的能源佔總能源生產的百分比. <a href="/zh/data/">看所有個月的數據</a>.',
     },
+    grid: {
+        totalTitle: {
+            en: 'Total Clean Energy Generation',
+            zh: '總清潔能源生產',
+        },
+    },
+    note: {
+        en: 'Why this energy mix? Read the FAQ.',
+    },
 };
 
 module.exports = { intro, data };

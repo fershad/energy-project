@@ -22,11 +22,12 @@ module.exports = (eleventyConfig) => {
           return content[locale]
         }
 
-        // Shortcode to inline CSS
-        eleventyConfig.addFilter("inlinecss", require("./src/_11ty/shortcodes/inline-css"));
-
-        return cotent[defaultLocale]
+        return content[defaultLocale]
       })
+
+      // Filter to inline CSS
+      // eleventyConfig.addFilter("inlinecss", require("./src/_11ty/filter/inline-css"));
+      eleventyConfig.addShortcode("direction", require("./src/_11ty/shortcode/upDown"));
     
       eleventyConfig.setDataDeepMerge(true)
       return {
