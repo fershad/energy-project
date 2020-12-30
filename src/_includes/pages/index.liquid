@@ -19,6 +19,16 @@ layout: layouts/base
         </p>
         <p>{{ page.homepage.data.paragraph | defaultLocale: locale | safe }}</p>
         <div class="swiper">
+            {% unless locale == 'zh' %}
+                {% capture lastYearMonth %}
+                    {{ lastMonth.lastYearMonth | escape | date: "%b" }}.
+                    {{ lastMonth.lastYear | plus: 1911 }}
+                {% endcapture %}
+            {% else %}
+                {% capture lastYearMonth %}
+                    {{ lastMonth.lastYear | plus: 1911 }}年{{ lastMonth.lastYearMonth }}月
+                {% endcapture %}
+            {% endunless %}
             <!-- Grid showing Clean Energy % -->
             {% assign totalValues = lastMonth.total.lowCarbon.total %}
             {% assign totalChange = lastMonth.total.lowCarbon.change %}

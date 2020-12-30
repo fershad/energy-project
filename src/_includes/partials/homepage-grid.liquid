@@ -1,90 +1,108 @@
 <div class="data-grid" data-columns="{{ gridCols }}">
     <div class="callout-box" data-color="ocean-green">
-      <h3 class="underlined standout">
-        {% if renewable != true %}
-        {{ page.homepage.data.grid.totalCleanTitle | defaultLocale: locale }}
-        {% else %}
-        {{ page.homepage.data.grid.totalRenewableTitle | defaultLocale: locale }}
-        {% endif %}
-      </h3>
-      <div class="text-right">
-        <p class="large-stat">{{ totalValues.latest }}%</p>
-        <small>{% direction totalChange.changeDirection %} {{ totalChange.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear | plus: 1911 }}</small>
-      </div>
+        <h3 class="underlined standout">
+            {% if renewable != true %}
+                {{ page.homepage.data.grid.totalCleanTitle | defaultLocale: locale }}
+            {% else %}
+                {{ page.homepage.data.grid.totalRenewableTitle | defaultLocale: locale }}
+            {% endif %}
+        </h3>
+        <div class="text-right">
+            <p class="large-stat">{{ totalValues.latest }}%</p>
+            <small>{% direction totalChange.changeDirection %}
+                {{ totalChange.percentChange }}% v.
+                {{ lastYearMonth }}</small>
+        </div>
     </div>
     <div class="auto-grid">
-      {% if lastMonth.wind.latest %}  
-      <div class="callout-box" data-color="text-color">
-        <h3 data-color="text-color">{{ energyTypes.wind | defaultLocale: locale | capitalize }}</h3>
-        <div class="text-right stat">
-          <p>{{ lastMonth.wind.latest }}%</p> 
-          <small>{% direction lastMonth.wind.change.changeDirection %} {{ lastMonth.wind.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-        </div>
-      </div>
-      {% endif %}
-      {% if lastMonth.solar.latest %}  
-      <div class="callout-box" data-color="text-color">
-        <h3 data-color="text-color">{{ energyTypes.solar | defaultLocale: locale | capitalize }}</h3>
-        <div class="text-right stat">
-          <p>{{ lastMonth.solar.latest }}%</p> 
-          <small>{% direction lastMonth.solar.change.changeDirection %} {{ lastMonth.solar.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-        </div>
-      </div>
-      {% endif %}
-      {% if lastMonth.hydro.latest %}  
-      <div class="callout-box" data-color="text-color">
-        <h3 data-color="text-color">{{ energyTypes.hydro | defaultLocale: locale | capitalize }}</h3>
-        <div class="text-right stat">
-          <p>{{ lastMonth.hydro.latest }}%</p> 
-          <small>{% direction lastMonth.hydro.change.changeDirection %} {{ lastMonth.hydro.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-        </div>
-      </div>
-      {% endif %}
-      {% if lastMonth.geo.latest %}
-      <div class="callout-box" data-color="text-color">
-        <h3 data-color="text-color">{{ energyTypes.geo | defaultLocale: locale | capitalize }}</h3>
-        <div class="text-right stat">
-          <p>{{ lastMonth.geo.latest }}%</p> 
-          <small>{% direction lastMonth.geo.change.changeDirection %} {{ lastMonth.geo.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-        </div>
-      </div>
-      {% endif %}
+        {% if lastMonth.wind.latest %}
+            <div class="callout-box" data-color="text-color">
+                <h3 data-color="text-color">{{ energyTypes.wind | defaultLocale: locale | capitalize }}</h3>
+                <div class="text-right stat">
+                    <p>{{ lastMonth.wind.latest }}%</p>
+                    <small>{% direction lastMonth.wind.change.changeDirection %}
+                        {{ lastMonth.wind.change.percentChange }}% v.
+                        {{ lastYearMonth }}</small>
+                </div>
+            </div>
+        {% endif %}
+        {% if lastMonth.solar.latest %}
+            <div class="callout-box" data-color="text-color">
+                <h3 data-color="text-color">{{ energyTypes.solar | defaultLocale: locale | capitalize }}</h3>
+                <div class="text-right stat">
+                    <p>{{ lastMonth.solar.latest }}%</p>
+                    <small>{% direction lastMonth.solar.change.changeDirection %}
+                        {{ lastMonth.solar.change.percentChange }}% v.
+                        {{ lastYearMonth }}</small>
+                </div>
+            </div>
+        {% endif %}
+        {% if lastMonth.hydro.latest %}
+            <div class="callout-box" data-color="text-color">
+                <h3 data-color="text-color">{{ energyTypes.hydro | defaultLocale: locale | capitalize }}</h3>
+                <div class="text-right stat">
+                    <p>{{ lastMonth.hydro.latest }}%</p>
+                    <small>{% direction lastMonth.hydro.change.changeDirection %}
+                        {{ lastMonth.hydro.change.percentChange }}% v.
+                        {{ lastYearMonth }}</small>
+                </div>
+            </div>
+        {% endif %}
+        {% if lastMonth.geo.latest %}
+            <div class="callout-box" data-color="text-color">
+                <h3 data-color="text-color">{{ energyTypes.geo | defaultLocale: locale | capitalize }}</h3>
+                <div class="text-right stat">
+                    <p>{{ lastMonth.geo.latest }}%</p>
+                    <small>{% direction lastMonth.geo.change.changeDirection %}
+                        {{ lastMonth.geo.change.percentChange }}% v.
+                        {{ lastYearMonth }}</small>
+                </div>
+            </div>
+        {% endif %}
 
-      {% if renewable != true %}  
-      {% if lastMonth.nuclear.latest %}
-      <div class="callout-box" data-color="text-color">
-        <h3 data-color="text-color">{{ energyTypes.nuclear | defaultLocale: locale | capitalize }}</h3>
-        <div class="text-right stat">
-          <p>{{ lastMonth.nuclear.latest }}%</p> 
-          <small>{% direction lastMonth.nuclear.change.changeDirection %} {{ lastMonth.nuclear.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-        </div>
-      </div>
-      {% endif %}
-      {% endif %}
-      
-      {% if renewable == true %}  
-      {% if lastMonth.biomass.latest %}
-      <div class="callout-box" data-color="text-color">
-        <h3 data-color="text-color">{{ energyTypes.biomass | defaultLocale: locale | capitalize }}</h3>
-        <div class="text-right stat">
-          <p>{{ lastMonth.biomass.latest }}%</p> 
-          <small>{% direction lastMonth.biomass.change.changeDirection %} {{ lastMonth.biomass.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-        </div>
-      </div>
-      {% endif %}
-      {% if lastMonth.waste.latest %}
-      <div class="callout-box" data-color="text-color">
-        <h3 data-color="text-color">{{ energyTypes.waste | defaultLocale: locale | capitalize }}</h3>
-        <div class="text-right stat">
-          <p>{{ lastMonth.waste.latest }}%</p> 
-          <small>{% direction lastMonth.waste.change.changeDirection %} {{ lastMonth.waste.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-        </div>
-      </div>
-      {% endif %}
-      {% endif %}
+        {% if renewable != true %}
+            {% if lastMonth.nuclear.latest %}
+                <div class="callout-box" data-color="text-color">
+                    <h3 data-color="text-color">{{ energyTypes.nuclear | defaultLocale: locale | capitalize }}</h3>
+                    <div class="text-right stat">
+                        <p>{{ lastMonth.nuclear.latest }}%</p>
+                        <small>{% direction lastMonth.nuclear.change.changeDirection %}
+                            {{ lastMonth.nuclear.change.percentChange }}% v.
+                            {{ lastYearMonth }}</small>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+
+        {% if renewable == true %}
+            {% if lastMonth.biomass.latest %}
+                <div class="callout-box" data-color="text-color">
+                    <h3 data-color="text-color">{{ energyTypes.biomass | defaultLocale: locale | capitalize }}</h3>
+                    <div class="text-right stat">
+                        <p>{{ lastMonth.biomass.latest }}%</p>
+                        <small>{% direction lastMonth.biomass.change.changeDirection %}
+                            {{ lastMonth.biomass.change.percentChange }}% v.
+                            {{ lastYearMonth }}</small>
+                    </div>
+                </div>
+            {% endif %}
+            {% if lastMonth.waste.latest %}
+                <div class="callout-box" data-color="text-color">
+                    <h3 data-color="text-color">{{ energyTypes.waste | defaultLocale: locale | capitalize }}</h3>
+                    <div class="text-right stat">
+                        <p>{{ lastMonth.waste.latest }}%</p>
+                        <small>{% direction lastMonth.waste.change.changeDirection %}
+                            {{ lastMonth.waste.change.percentChange }}% v.
+                            {{ lastYearMonth }}</small>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
 
     </div>
-    <aside>
-      {{ page.homepage.data.note | defaultLocale: locale | safe }}
-    </aside>
-  </div>
+    {% if renewable != true %}
+        <aside>
+            {{ page.homepage.data.note | defaultLocale: locale | safe }}
+        </aside>
+    {% endif %}
+</div>
