@@ -16,8 +16,12 @@ const data = {
         zh: '在下面的數據顯示了使用清潔能源生產的能源佔總能源生產的百分比. <a href="/zh/data/">看所有個月的數據</a>.',
     },
     grid: {
-        totalTitle: {
+        totalCleanTitle: {
             en: 'Total Clean Energy Generation',
+            zh: '總清潔能源生產',
+        },
+        totalRenewableTitle: {
+            en: 'Total Renewable Energy Generation',
             zh: '總清潔能源生產',
         },
     },

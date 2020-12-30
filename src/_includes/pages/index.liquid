@@ -18,66 +18,14 @@ layout: layouts/base
             {% endunless %}
         </p>
         <p>{{ page.homepage.data.paragraph | defaultLocale: locale | safe }}</p>
-        <div class="data-grid">
-            <div class="callout-box" data-color="ocean-green">
-              <h3 class="underlined standout">
-                {{ page.homepage.data.grid.totalTitle | defaultLocale: locale }}
-              </h3>
-              <div class="text-right">
-                <p class="large-stat">{{ lastMonth.total.latest }}%</p>
-                <small>{% direction lastMonth.total.change.changeDirection %} {{ lastMonth.total.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear | plus: 1911 }}</small>
-              </div>
-            </div>
-            <div class="auto-grid">
-              {% if lastMonth.wind.latest %}  
-              <div class="callout-box" data-color="text-color">
-                <h3 data-color="text-color">{{ energyTypes.wind | defaultLocale: locale | capitalize }}</h3>
-                <div class="text-right stat">
-                  <p>{{ lastMonth.wind.latest }}%</p> 
-                  <small>{% direction lastMonth.wind.change.changeDirection %} {{ lastMonth.wind.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-                </div>
-              </div>
-              {% endif %}
-              {% if lastMonth.solar.latest %}  
-              <div class="callout-box" data-color="text-color">
-                <h3 data-color="text-color">{{ energyTypes.solar | defaultLocale: locale | capitalize }}</h3>
-                <div class="text-right stat">
-                  <p>{{ lastMonth.solar.latest }}%</p> 
-                  <small>{% direction lastMonth.solar.change.changeDirection %} {{ lastMonth.solar.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-                </div>
-              </div>
-              {% endif %}
-              {% if lastMonth.hydro.latest %}  
-              <div class="callout-box" data-color="text-color">
-                <h3 data-color="text-color">{{ energyTypes.hydro | defaultLocale: locale | capitalize }}</h3>
-                <div class="text-right stat">
-                  <p>{{ lastMonth.hydro.latest }}%</p> 
-                  <small>{% direction lastMonth.hydro.change.changeDirection %} {{ lastMonth.hydro.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-                </div>
-              </div>
-              {% endif %}
-              {% if lastMonth.geo.latest %}
-              <div class="callout-box" data-color="text-color">
-                <h3 data-color="text-color">{{ energyTypes.geo | defaultLocale: locale | capitalize }}</h3>
-                <div class="text-right stat">
-                  <p>{{ lastMonth.geo.latest }}%</p> 
-                  <small>{% direction lastMonth.geo.change.changeDirection %} {{ lastMonth.geo.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-                </div>
-              </div>
-              {% endif %}
-              {% if lastMonth.nuclear.latest %}
-              <div class="callout-box" data-color="text-color">
-                <h3 data-color="text-color">{{ energyTypes.nuclear | defaultLocale: locale | capitalize }}</h3>
-                <div class="text-right stat">
-                  <p>{{ lastMonth.nuclear.latest }}%</p> 
-                  <small>{% direction lastMonth.nuclear.change.changeDirection %} {{ lastMonth.nuclear.change.percentChange }}% v. {{ lastMonth.lastYearMonth }} {{ lastMonth.lastYear }}</span></small>
-                </div>
-              </div>
-              {% endif %}
-            </div>
-            <aside>
-              {{ page.homepage.data.note | defaultLocale: locale | safe }}
-            </aside>
-          </div>
+        <!-- Grid showing Clean Energy % -->
+        {% assign totalValues = lastMonth.total.lowCarbon.total %}
+        {% assign totalChange = lastMonth.total.lowCarbon.change %}
+        {% include "partials/homepage-grid", renewable: false %}
+        
+        {% assign totalValues = lastMonth.total.renewable.total %}
+        {% assign totalChange = lastMonth.total.renewable.change %}
+        <!-- Grid showing Renewable Energy % -->
+        {% include "partials/homepage-grid", renewable: true %}
     </section>
 </main>

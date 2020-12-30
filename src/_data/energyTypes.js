@@ -23,7 +23,7 @@ const nuclear = {
     zh: '核能',
 };
 
-const bio = {
+const biomass = {
     en: 'biomass',
     zh: '生質能',
 };
@@ -33,4 +33,4 @@ const waste = {
     zh: '廢棄物',
 };
 
-module.exports = { wind, solar, hydro, geo, nuclear, bio, waste };
+module.exports = { wind, solar, hydro, geo, nuclear, biomass, waste };
