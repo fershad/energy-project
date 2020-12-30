@@ -1,4 +1,9 @@
 <div class="data-grid" data-columns="{{ gridCols }}">
+    {% if renewable != true %}
+        <p>{{ page.homepage.data.paragraph | defaultLocale: locale | safe }}</p>
+    {% else %}
+        <p>{{ page.homepage.data.paragraphRenewable | defaultLocale: locale | safe }}</p>
+    {% endif %}
     <div class="callout-box" data-color="ocean-green">
         <h3 class="underlined standout">
             {% if renewable != true %}

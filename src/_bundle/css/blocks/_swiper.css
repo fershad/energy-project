@@ -4,4 +4,5 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
+  padding-bottom: var(--size-400);
 }
