@@ -8,6 +8,9 @@
   --auto-max-grid-size: 320px;
   justify-items: center;
   margin: var(--size-700) 0 0 0;
+  min-width: 100%;
+  width: 100%;
+  scroll-snap-align: start;
 }
 
 .data-grid > .callout-box:first-of-type {
@@ -22,11 +25,17 @@
 
 @media only screen and (min-width: 48em) {
   .data-grid {
-    --auto-grid-cols: 2;
     grid-row-gap: initial;
     grid-template-columns: 320px 1fr;
     grid-column-gap: var(--size-600);
     justify-items: left;
+  }
+
+  .data-grid[data-columns="2"] {
+    --auto-grid-cols: 2;
+  }
+  .data-grid[data-columns="3"] {
+    --auto-grid-cols: 3;
   }
 
   .data-grid > .callout-box:first-of-type {

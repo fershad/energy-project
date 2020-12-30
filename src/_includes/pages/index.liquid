@@ -18,14 +18,18 @@ layout: layouts/base
             {% endunless %}
         </p>
         <p>{{ page.homepage.data.paragraph | defaultLocale: locale | safe }}</p>
-        <!-- Grid showing Clean Energy % -->
-        {% assign totalValues = lastMonth.total.lowCarbon.total %}
-        {% assign totalChange = lastMonth.total.lowCarbon.change %}
-        {% include "partials/homepage-grid", renewable: false %}
-        
-        {% assign totalValues = lastMonth.total.renewable.total %}
-        {% assign totalChange = lastMonth.total.renewable.change %}
-        <!-- Grid showing Renewable Energy % -->
-        {% include "partials/homepage-grid", renewable: true %}
+        <div class="swiper">
+            <!-- Grid showing Clean Energy % -->
+            {% assign totalValues = lastMonth.total.lowCarbon.total %}
+            {% assign totalChange = lastMonth.total.lowCarbon.change %}
+            {% assign gridCols = 2 %}
+            {% include "partials/homepage-grid", renewable: false %}
+
+            {% assign totalValues = lastMonth.total.renewable.total %}
+            {% assign totalChange = lastMonth.total.renewable.change %}
+            {% assign gridCols = 3 %}
+            <!-- Grid showing Renewable Energy % -->
+            {% include "partials/homepage-grid", renewable: true %}
+        </div>
     </section>
 </main>
