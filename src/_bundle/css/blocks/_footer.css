@@ -4,6 +4,7 @@ footer {
   min-height: 10vh;
   bottom: 0;
   line-height: 1.5;
+  padding: var(--size-500) 0;
 }
 
 footer .container {

@@ -1,0 +1,25 @@
+.divider[data-type="hills"] {
+  overflow: hidden;
+  position: relative;
+  background: var(--background-color);
+}
+
+.divider[data-type="hills"] .windmill {
+  position: absolute;
+  height: var(--size-800);
+}
+
+.divider[data-type="hills"] .windmill:nth-of-type(1) {
+  left: var(--size-500);
+  bottom: calc(0px + (var(--size-300)));
+}
+
+.divider[data-type="hills"] .windmill:nth-of-type(2) {
+  transform: scale(0.4);
+  left: var(--size-700);
+  bottom: calc((0px + (var(--size-300))) * 1.5);
+}
+
+.divider[data-type="hills"] .hills {
+  fill: var(--color-ocean-green);
+}
