@@ -1,0 +1,46 @@
+:root {
+  --link-external: url('data:image/svg+xml;utf8, <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z" fill="currentColor" /><path d="M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z" fill="currentColor" /></svg>');
+}
+
+a:not([class]),
+a:not([class]):visited {
+  color: currentColor;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s cubic-bezier(0.21, 0.5, 0.73, 0.84);
+  transition-delay: 0.05s;
+  box-shadow: 0 3px 0px 0px var(--text-color);
+}
+
+a:not([class]):hover,
+a:not([class]):focus {
+  box-shadow: 0 3px 0px 0px var(--color-ocean-blue);
+  color: var(--color-ocean-blue);
+}
+
+[data-external]:after {
+  content: "";
+  background: currentColor;
+  margin-inline: 0.2rem var(--size-300);
+  display: inline-block;
+  transform: scale(0.75);
+  transition: all 0.2s cubic-bezier(0.21, 0.5, 0.73, 0.84);
+  user-select: none;
+  font-weight: 900;
+  height: 1rem;
+  width: 1rem;
+  -webkit-mask: var(--link-external) no-repeat 50% 50%;
+  mask: var(--link-external) no-repeat 50% 50%;
+}
+
+[data-external]:hover:after {
+  color: var(--color-ocean-blue);
+  transform: translate3d(0, -10%, 0) scale(0.75);
+}
+
+.icon-link,
+.icon-link:visited,
+.icon-link:hover,
+.icon-link:focus {
+  box-shadow: none;
+}
