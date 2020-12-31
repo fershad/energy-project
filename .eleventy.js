@@ -23,7 +23,24 @@ module.exports = (eleventyConfig) => {
         }
 
         return content[defaultLocale]
-      })
+      });
+
+      // Filter to return the localized news stories
+      eleventyConfig.addFilter("getLocalized", function (arr, locale) {
+
+        let localized = {}
+    
+        for (const key in arr) {
+          if (arr.hasOwnProperty(key)) {
+            const language = arr[key].language;
+            if (language === locale) {
+              localized[key] = arr[key]
+            }
+          }
+        }
+    
+        return localized
+      });
 
       // Filter to inline CSS
       // eleventyConfig.addFilter("inlinecss", require("./src/_11ty/filter/inline-css"));

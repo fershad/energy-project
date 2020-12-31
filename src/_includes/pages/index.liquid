@@ -48,7 +48,7 @@ layout: layouts/base
         {% include "svg/hills.svg" %}
     </div>
 
-    <section>
+    <section id="action">
         {% assign homepageActions = collections.homepageActionsEN %}
 
         {% if locale == zh %}
@@ -68,5 +68,24 @@ layout: layouts/base
                 </div>
             {% endfor %}
         </div>
+    </section>
+
+    <section id="news">
+        {% assign localeNews = news | getLocalized: locale %}
+
+        <h2>{{ nav.news | defaultLocale: locale | capitalize }}</h2>
+        <p>{{ page.homepage.news.paragraph | defaultLocale: locale | safe }}</p>
+
+        {% for story in localeNews limit: 5 %}
+            <div class="article">
+                <a href="{{ story[1].link }}" data-external>{{ story[1].title }}</a>
+                <p class="author" data-color="ocean-green">{{ story[1].author }}</p>
+                <small class="text-right">Published on
+                    {{story[1].publishedDate | date: "%B %e, %Y"}}
+                    @
+                    {{ story[1].platform }}</small>
+            </div>
+        {% endfor %}
+
     </section>
 </main>
