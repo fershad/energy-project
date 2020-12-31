@@ -5,13 +5,16 @@ layout: layouts/base
 
 {% include "partials/masthead", mastheadHeadline: headline %}
 <main class="wrapper flow" data-wraps="content" id="main-content">
-    <h1>{{ site.name | defaultLocale: locale }}</h1>
-    <p>{{ page.homepage.intro | defaultLocale: locale | safe }}</p>
+    <section id="intro">
+        <h1>{{ site.name | defaultLocale: locale }}</h1>
+        <p>{{ page.homepage.intro | defaultLocale: locale | safe }}</p>
+    </section>
+
     <section id="data">
         <h2 data-style="regular">{{ page.homepage.data.heading | defaultLocale: locale }}</h2>
         <p class="subheading underlined" data-color="ocean-green">
             {% unless locale == 'zh' %}
-                {{ lastMonth.latestMonth | escape | date: "%B"}},
+                {{ lastMonth.latestMonth | escape | date: "%B"}}
                 {{ lastMonth.latestYear | plus: 1911}}
             {% else %}
                 {{ lastMonth.latestYear | plus: 1911}}年{{ lastMonth.latestMonth }}月
@@ -42,13 +45,13 @@ layout: layouts/base
         </div>
     </section>
 
-    <div class="divider full-width" data-type="hills">
+    <div class="divider" data-type="hills">
         {% include "svg/windmill.svg" %}
         {% include "svg/windmill.svg" %}
         {% include "svg/hills.svg" %}
     </div>
 
-    <section id="action">
+    <section data-divider="regular" id="action">
         {% assign homepageActions = collections.homepageActionsEN %}
 
         {% if locale == zh %}

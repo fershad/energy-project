@@ -1,3 +1,25 @@
+section {
+  position: relative;
+}
+
 section[data-color="ocean-green"] {
   background: var(--color-ocean-green);
+}
+
+section[data-divider="regular"] {
+  padding-bottom: 3rem;
+}
+
+section[data-divider="regular"]::after {
+  content: "";
+  position: absolute;
+  bottom: var(--size-300);
+  left: calc(50% - 90px);
+  height: 15px;
+  width: 180px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0.0001px 2px,
+    var(--color-ocean-green) 2px 4px
+  );
 }

@@ -1,3 +1,8 @@
+.header__nav *:focus {
+  outline-offset: 0.3rem;
+  outline-color: var(--color-campfire-smoke);
+}
+
 .header__nav {
   display: grid;
   align-items: center;
@@ -17,14 +22,30 @@
   width: 3.5rem;
 }
 
-.nav-button {
+.header__logo svg g {
+  transition: all 0.2s cubic-bezier(0.21, 0.5, 0.73, 0.84);
+}
+
+.header__logo a:hover svg g,
+.header__logo a:focus svg g {
+  stroke-width: 12px;
+  stroke: var(--color-ocean-green);
+}
+
+.header__logo a,
+.header__logo a:hover,
+.header__logo a:focus {
+  box-shadow: none;
+}
+
+.nav__button {
   display: flex;
   align-items: center;
   background-color: transparent;
   border: none;
 }
 
-.nav-button__text {
+.nav__button-text {
   color: var(--color-campfire-smoke);
   margin-inline-end: var(--size-300);
 }
@@ -42,24 +63,24 @@
   padding-top: 4rem;
 }
 
-.nav-button[aria-expanded="true"] + .nav__menu-list {
+.nav__button[aria-expanded="true"] + .nav__menu-list {
   display: flex;
   transform-origin: 100% 0%;
   animation: menu-reveal 1s;
 }
 
-.nav-button__icon .menu0.a,
-.nav-button__icon .menu0.b {
+.nav__button-icon .menu0.a,
+.nav__button-icon .menu0.b {
   transform-origin: 50%;
   transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
-.nav-button[aria-expanded="true"] .nav-button__icon .menu0.a {
+.nav__button[aria-expanded="true"] .nav__button-icon .menu0.a {
   transform-origin: 25%;
   transform: rotate(45deg);
 }
 
-.nav-button[aria-expanded="true"] .nav-button__icon .menu0.b {
+.nav__button[aria-expanded="true"] .nav__button-icon .menu0.b {
   transform-origin: 25%;
   transform: rotate(-45deg);
 }
@@ -152,7 +173,7 @@ li.nav__link {
   }
 }
 
-.no-js .nav-button {
+.no-js .nav__button {
   display: none;
 }
 
@@ -175,7 +196,7 @@ li.nav__link {
     grid-template: ". . logo menu . ." 3.5rem;
   }
 
-  .nav-button {
+  .nav__button {
     display: none;
   }
 

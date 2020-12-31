@@ -1,3 +1,7 @@
+.action-grid {
+  margin-bottom: var(--size-600);
+}
+
 @media (min-width: 32rem) {
   .action-grid {
     column-gap: var(--size-300);
