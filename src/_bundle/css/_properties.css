@@ -16,9 +16,9 @@
   --auto-grid-cols: 2;
 
   /* Set colours */
-  --color-charcoal: hsl(165, 4%, 21%);
+  --color-charcoal: hsl(168, 5%, 21%);
   --color-ocean-blue: hsl(197, 96%, 31%);
-  --color-ocean-green: hsl(174deg 82% 28%);
+  --color-ocean-green: hsl(174, 82%, 28%);
   --color-pale-peach: hsl(41, 100%, 84%);
   --color-tea-green: hsl(88, 53%, 80%);
   --color-rich-black: hsl(222, 43%, 9%);
