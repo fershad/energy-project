@@ -5,4 +5,9 @@
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
   padding-bottom: var(--size-400);
+  scrollbar-width: 0;
+}
+
+.swiper::-webkit-scrollbar {
+  display: none;
 }

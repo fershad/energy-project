@@ -4,22 +4,18 @@
   background: var(--background-color);
 }
 
-.divider[data-type="hills"] .windmill {
-  position: absolute;
-  height: var(--size-800);
+@media (max-width: 36rem) {
+  .divider[data-type] {
+    margin-top: calc(var(--flow-space) * 0.75);
+  }
 }
 
-.divider[data-type="hills"] .windmill:nth-of-type(1) {
-  left: var(--size-500);
-  bottom: calc(0px + (var(--size-300)));
+.divider[data-type] svg {
+  max-width: 100%;
+  height: 100%;
 }
 
-.divider[data-type="hills"] .windmill:nth-of-type(2) {
-  transform: scale(0.4);
-  left: var(--size-700);
-  bottom: calc((0px + (var(--size-300))) * 1.5);
-}
-
-.divider[data-type="hills"] .hills {
-  fill: var(--color-ocean-green);
+.divider[data-last="true"] {
+  bottom: -10px;
+  position: relative;
 }

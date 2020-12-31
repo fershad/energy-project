@@ -45,9 +45,7 @@ layout: layouts/base
         </div>
     </section>
 
-    <div class="divider" data-type="hills">
-        <!-- {% include "svg/windmill.svg" %}
-        {% include "svg/windmill.svg" %} -->
+    <div class="divider full-width" data-type="hills">
         {% include "svg/hill-divider.svg" %}
     </div>
 
@@ -73,6 +71,7 @@ layout: layouts/base
         </div>
     </section>
 
+
     <section id="news">
         {% assign localeNews = news | getLocalized: locale %}
 
@@ -91,4 +90,7 @@ layout: layouts/base
         {% endfor %}
 
     </section>
+    <div class="divider full-width" data-last="true" data-type>
+        {% include "svg/seaside.svg" %}
+    </div>
 </main>
