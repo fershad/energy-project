@@ -28,6 +28,15 @@ module.exports = (eleventyConfig) => {
       // Filter to inline CSS
       // eleventyConfig.addFilter("inlinecss", require("./src/_11ty/filter/inline-css"));
       eleventyConfig.addShortcode("direction", require("./src/_11ty/shortcode/upDown"));
+
+      // Create action collections to be used on the homepage
+      eleventyConfig.addCollection("homepageActionsEN", function (collectionApi) {
+        return collectionApi.getFilteredByTags("action", "homepage", "en");
+      });
+    
+      eleventyConfig.addCollection("homepageActionsZH", function (collectionApi) {
+        return collectionApi.getFilteredByTags("action", "homepage", "zh");
+      });
     
       eleventyConfig.setDataDeepMerge(true)
       return {

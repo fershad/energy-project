@@ -1,0 +1,14 @@
+.sub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 32rem) {
+  .sub-grid[data-cols="5"] {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .sub-grid[data-rows="3"] {
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,5 @@
+.full-width {
+  grid-column: -1/1;
+  margin-left: calc(var(--size-500) * -1);
+  margin-right: calc(var(--size-500) * -1);
+}

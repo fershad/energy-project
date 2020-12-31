@@ -1,0 +1,36 @@
+.action {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-300);
+}
+
+.action--thumbnail {
+  width: 100%;
+  object-fit: cover;
+  height: 120px;
+}
+
+@media (min-width: 32rem) {
+  .action {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .action--thumbnail {
+    margin-inline-end: var(--size-400);
+    width: 120px;
+  }
+}
+
+.action--content.heading {
+  font-size: var(--size-600);
+  font-weight: 900;
+  font-family: var(--heading-font-family);
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+  word-spacing: 0;
+  max-width: 75ch;
+  margin: var(--size-300) 0;
+  color: var(--text-color);
+}
