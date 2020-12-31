@@ -23,3 +23,7 @@ section[data-divider="regular"]::after {
     var(--color-ocean-green) 2px 4px
   );
 }
+
+section[data-overflow="allow"] {
+  overflow: visible;
+}

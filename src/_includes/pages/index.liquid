@@ -49,7 +49,7 @@ layout: layouts/base
         {% include "svg/hill-divider.svg" %}
     </div>
 
-    <section data-divider="regular" id="action">
+    <section data-divider="regular" data-overflow="allow" id="action">
         {% assign homepageActions = collections.homepageActionsEN %}
 
         {% if locale == zh %}
@@ -58,15 +58,17 @@ layout: layouts/base
 
         <h2>{{ nav.action | defaultLocale: locale | capitalize }}</h2>
         <p>{{ page.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
-        <div class="action-grid sub-grid flow" data-cols="5">
+        <div class="action-grid auto-grid">
             {% for action in homepageActions limit: 3 reversed %}
-                <div class="action">
-                    <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="120" height="120" class="action--thumbnail">
-                    <div class="action--content">
-                        <p class="action--content heading">{{ action.data.title }}</p>
-                        <p>{{ action.data.subtag }}</p>
+                <a href="{{ action.data.permalink }}" class="card" data-style="polka" data-color="ocean-blue" data-type="image-card">
+                    <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="240" height="240" class="card--image">
+                    <div class="card--content">
+                        <p class="card--content--heading underlined" data-color="ocean-blue">
+                            {{ action.data.title }}
+                        </p>
+                        <p class="card--content--subtag">{{ action.data.subtag }}</p>
                     </div>
-                </div>
+                </a>
             {% endfor %}
         </div>
     </section>

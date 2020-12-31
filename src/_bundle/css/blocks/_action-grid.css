@@ -1,10 +1,15 @@
 .action-grid {
   margin-bottom: var(--size-600);
+  margin-top: var(--size-600);
+  --auto-grid-gap: var(--size-major);
+  --auto-grid-cols: 1;
 }
 
-@media (min-width: 32rem) {
+@media (min-width: 36rem) {
   .action-grid {
-    column-gap: var(--size-300);
+    --auto-grid-cols: 3;
+  }
+  /*  column-gap: var(--size-300);
   }
   .action-grid *:nth-child(even) {
     grid-column: -1/3;
@@ -12,5 +17,5 @@
 
   .action-grid *:nth-child(odd) {
     grid-column: 1/4;
-  }
+  } */
 }

@@ -1,0 +1,95 @@
+.card {
+  width: 100%;
+  border: 2px solid var(--color-ocean-blue);
+  border-radius: 18px 18px 0;
+  position: relative;
+  background: var(--background-color);
+  transition: all 0.4s ease-in-out;
+}
+
+.card::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 18px 18px 0;
+  /*     background-color: var(--color-ocean-blue); */
+  background-image: radial-gradient(
+      var(--color-ocean-blue) 20%,
+      transparent 20%
+    ),
+    radial-gradient(var(--color-ocean-blue) 20%, transparent 20%);
+  display: block;
+  z-index: -1;
+  background-position: 0 0, 3.5px 3.5px;
+  background-size: 7px 7px;
+  background-color: var(--background-color);
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover::after {
+  border-radius: 0 18px 18px;
+  background-image: radial-gradient(
+      var(--color-ocean-green) 20%,
+      transparent 20%
+    ),
+    radial-gradient(var(--color-ocean-green) 20%, transparent 20%);
+}
+
+.card:hover {
+  border: 2px solid var(--color-ocean-green);
+  border-radius: 0 18px 18px;
+}
+
+.card:hover .card--content--heading::after {
+  background-color: var(--color-ocean-green);
+}
+
+.card:hover .card--image {
+  border-radius: 0 18px 18px;
+}
+
+.card:hover .card--content--heading {
+  color: var(--color-ocean-green);
+}
+
+.card--image {
+  border-radius: 18px 18px 0;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.card--content {
+  padding: var(--size-300) var(--size-400);
+}
+
+.card--content--heading {
+  font-size: var(--size-600);
+  font-weight: 900;
+  font-family: var(--heading-font-family);
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+  word-spacing: 0;
+  max-width: 75ch;
+  margin: var(--size-300) 0;
+  color: var(--text-color);
+  transition: all 0.4s ease-in-out;
+}
+
+.card--content--heading::after {
+  transition: all 0.4s ease-in-out;
+}
+
+.card--content--subtag {
+  color: var(--text-color);
+}
+
+a.card {
+  text-decoration: none;
+}
+
+a.card .content [data-external]:hover {
+  color: inherit;
+}
