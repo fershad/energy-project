@@ -99,17 +99,23 @@ a.card .content [data-external]:hover {
   animation: cardHover 0.4s forwards;
 }
 
-.card:hover .card--content--heading {
+/* .card:hover .card--content--heading {
   color: var(--color-ocean-green);
-}
+} */
 
 @keyframes cardHover {
+  from {
+    border-radius: 18px 18px 0;
+  }
   to {
     border-radius: 0 18px 18px;
   }
 }
 
 @keyframes card {
+  from {
+    border-radius: 0 18px 18px;
+  }
   to {
     border-radius: 18px 18px 0;
   }
