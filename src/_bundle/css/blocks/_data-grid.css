@@ -11,11 +11,16 @@
   min-width: 100%;
   width: 100%;
   scroll-snap-align: start;
+  grid-template-rows: auto 1fr auto;
 }
 
-.data-grid > p:first-of-type {
+.data-grid > .data-grid--intro {
   grid-row: 1;
   grid-column: -1/1;
+}
+
+.data-grid--intro p {
+  margin-bottom: 0;
 }
 
 .data-grid > .callout-box:first-of-type {
@@ -28,9 +33,30 @@
   /* font-size: var(--size-400); */
 }
 
+.data-grid .swiper--actions {
+  grid-column: -1/1;
+}
+
+.swiper--actions a.link--button {
+  margin-block-end: var(--size-600);
+  display: inline-block;
+}
+
+.data-grid .swiper--actions {
+  grid-column: -1/1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.swiper--actions[data-direction="reverse"] {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 @media only screen and (min-width: 48em) {
   .data-grid {
-    grid-row-gap: initial;
     grid-template-columns: 320px 1fr;
     grid-column-gap: var(--size-600);
     justify-items: left;
@@ -49,11 +75,25 @@
 
   .data-grid aside {
     grid-column: 2/3;
-    grid-row: 5/4;
+    /* grid-row: 5/4; */
   }
 
-  .data-grid .swipe-link {
-    grid-column: 1/2;
-    grid-row: 5/4;
+  .data-grid .swiper--actions {
+    grid-column: -1/1;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .swiper--actions a.link--button {
+    margin-block-end: 0;
+  }
+
+  .swiper--actions a.link--button:first-of-type {
+    margin-inline-end: var(--size-400);
+  }
+
+  .swiper--actions[data-direction="reverse"] {
+    flex-direction: row;
   }
 }

@@ -11,14 +11,12 @@ const data = {
         zh: '最新數據',
     },
     paragraph: {
-        en: `The data below shows the energy generated using clean energy sources as a percentage of total energy production. 
-            See <a href="/en/data/">historical data here</a>.`,
-        zh: '在下面的數據顯示了使用清潔能源生產的能源佔總能源生產的百分比. <a href="/zh/data/">看所有個月的數據</a>.',
+        en: `The data below shows the energy generated using <b>low-carbon energy sources</b> as a percentage of total energy production.`,
+        zh: `在下面的數據顯示了使用<b>低碳能源</b>生產的能源佔總能源生產的百分比.`,
     },
     paragraphRenewable: {
-        en: `The data below shows the energy generated using only renewable energy sources as a percentage of total energy production. 
-            See <a href="/en/data/">historical data here</a>.`,
-        zh: '在下面的數據顯示了使用再生能源生產的能源佔總能源生產的百分比. <a href="/zh/data/">看所有個月的數據</a>.',
+        en: `The data below shows the energy generated using only <b>renewable energy sources</b> as a percentage of total energy production.`,
+        zh: `在下面的數據顯示了使用<b>再生能源</b>生產的能源佔總能源生產的百分比.`,
     },
     grid: {
         totalCleanTitle: {
@@ -32,6 +30,10 @@ const data = {
     },
     note: {
         en: 'Why this energy mix? Read the FAQ.',
+    },
+    historical: {
+        en: `See historical data.`,
+        zh: `看所有個月的數據.`,
     },
 };
 

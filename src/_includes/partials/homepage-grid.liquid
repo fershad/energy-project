@@ -4,11 +4,13 @@
     <div class="data-grid" data-columns="{{ gridCols }}" id="renewable-grid">
         {% endif %}
     
+        <div class="data-grid--intro">
     {% if renewable != true %}
-        <p>{{ page.homepage.data.paragraph | defaultLocale: locale | safe }}</p>
-    {% else %}
-        <p>{{ page.homepage.data.paragraphRenewable | defaultLocale: locale | safe }}</p>
-    {% endif %}
+            <p>{{ page.homepage.data.paragraph | defaultLocale: locale | safe }} {{ page.homepage.data.note | defaultLocale: locale | safe }}</p>
+            {% else %}
+            <p>{{ page.homepage.data.paragraphRenewable | defaultLocale: locale | safe }}</p>
+            {% endif %}
+        </div>
     <div class="callout-box" data-color="ocean-green">
         <h3 class="underlined standout">
             {% if renewable != true %}
@@ -111,11 +113,14 @@
 
     </div>
     {% if renewable != true %}
-        <a class="link--button swiper-link" href="#" data-target="renewable-grid">See <strong>all renewables</strong> <span class="arrow--key arrow--right">{% include "svg/arrow-left.svg" %}</span>.</a>
-        <aside>
-            {{ page.homepage.data.note | defaultLocale: locale | safe }}
-        </aside>
+            <div class="swiper--actions" data-direction="reverse">
+                <a class="link--button" href="/{{ locale }}/data">{{ page.homepage.data.historical | defaultLocale: locale }}</a>
+                <a class="link--button swiper-link" href="#" data-target="renewable-grid">Show <strong>all renewables</strong> <span class="arrow--key arrow--right">{% include "svg/arrow-left.svg" %}</span>.</a>
+            </div>
         {% else %}
-        <a class="link--button swiper-link"  href="#" data-target="clean-grid">See <strong>only low-carbon sources</strong> <span class="arrow--key arrow--left">{% include "svg/arrow-left.svg" %}</span>.</a>
+        <div class="swiper--actions">
+            <a class="link--button swiper-link"  href="#" data-target="clean-grid"><span class="arrow--key arrow--left">{% include "svg/arrow-left.svg" %}</span> Show <strong>only low-carbon</strong>.</a>
+            <a class="link--button" href="/{{ locale }}/data">{{ page.homepage.data.historical | defaultLocale: locale }}</a>
+        </div>
     {% endif %}
 </div>
