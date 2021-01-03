@@ -1,4 +1,9 @@
-<div class="data-grid" data-columns="{{ gridCols }}">
+{% if renewable != true %}
+<div class="data-grid" data-columns="{{ gridCols }}" id="clean-grid">
+    {% else %}
+    <div class="data-grid" data-columns="{{ gridCols }}" id="renewable-grid">
+        {% endif %}
+    
     {% if renewable != true %}
         <p>{{ page.homepage.data.paragraph | defaultLocale: locale | safe }}</p>
     {% else %}
@@ -106,8 +111,11 @@
 
     </div>
     {% if renewable != true %}
+        <a class="link--button swiper-link" href="#" data-target="renewable-grid">See <strong>all renewables</strong> <span class="arrow--key arrow--right">{% include "svg/arrow-left.svg" %}</span>.</a>
         <aside>
             {{ page.homepage.data.note | defaultLocale: locale | safe }}
         </aside>
+        {% else %}
+        <a class="link--button swiper-link"  href="#" data-target="clean-grid">See <strong>only low-carbon sources</strong> <span class="arrow--key arrow--left">{% include "svg/arrow-left.svg" %}</span>.</a>
     {% endif %}
 </div>

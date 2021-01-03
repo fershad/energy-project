@@ -2,12 +2,17 @@
   display: flex;
   gap: var(--size-600);
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
   padding-bottom: var(--size-400);
-  scrollbar-width: 0;
 }
 
-.swiper::-webkit-scrollbar {
+.js .swiper {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: 0;
+  scroll-behavior: smooth;
+}
+
+.js .swiper::-webkit-scrollbar {
   display: none;
 }

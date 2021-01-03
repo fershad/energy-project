@@ -44,6 +44,10 @@ layout: layouts/base
             {% include "partials/homepage-grid", renewable: true %}
         </div>
     </section>
+    {% capture swiper %}
+        {% include "../_bundle/scripts/swiper.js" %}
+    {% endcapture %}
+    <script>{{ swiper }}</script>
 
     <div class="divider full-width" data-type="hills">
         {% include "svg/hill-divider.svg" %}
