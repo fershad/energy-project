@@ -25,4 +25,6 @@
 @import "./blocks/_card.css";
 @import "./blocks/_sub-grid.css";
 @import "./blocks/_action.css";
+@import "./blocks/_article-holder.css";
+@import "./blocks/_article.css";
 @import "./blocks/_footer.css";
