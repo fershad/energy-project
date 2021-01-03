@@ -31,7 +31,6 @@
                 <a href="/{{ locale }}{{ item[1].link }}">{{ item[1] | defaultLocale: locale | capitalize }}</a>
             </li>
         {% endfor %}
-
         {% for siteLocale in site.locales %}
             {% unless siteLocale.code == locale %}
                 <li class="nav__link">

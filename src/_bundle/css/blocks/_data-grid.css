@@ -86,7 +86,6 @@
     grid-column: -1/1;
     width: 100%;
     flex-direction: row;
-    justify-content: center;
   }
 
   .swiper--actions a.link--button {
@@ -99,5 +98,11 @@
 
   .swiper--actions[data-direction="reverse"] {
     flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .data-grid .swiper--actions {
+    justify-content: center;
   }
 }

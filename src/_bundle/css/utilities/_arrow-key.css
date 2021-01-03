@@ -1,6 +1,5 @@
-p .arrow--key svg {
+.arrow--key svg {
   height: var(--size-400);
-  width: var(--size-400);
 }
 
 .arrow--key.arrow--right svg {

@@ -1,8 +1,8 @@
 const defaultLocale = 'en';
 
 const locales = [
-    { code: 'en', name: 'English' },
-    { code: 'zh', name: '中文版' },
+    { code: 'en', name: 'EN' },
+    { code: 'zh', name: '中' },
 ];
 
 const baseUrl = 'https://cleanenergyproject.tw';

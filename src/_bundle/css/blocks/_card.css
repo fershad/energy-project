@@ -73,6 +73,8 @@ a.card .content [data-external]:hover {
 }
 
 .card:hover::after {
+  top: -10px;
+  left: -10px;
   /* border-radius: 0 18px 18px; */
   border: 2px solid var(--color-ocean-green);
   animation: cardHover 0.4s forwards;

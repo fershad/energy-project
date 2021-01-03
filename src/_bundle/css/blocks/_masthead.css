@@ -20,13 +20,13 @@
 .masthead__headline {
   font-weight: 900;
   font-size: var(--size-600);
-  padding: var(--size-500);
+  padding: var(--size-300);
   /* background: var(--color-rich-black); */
   background: var(--color-charcoal);
   color: var(--color-campfire-smoke);
   font-family: var(--heading-font-family);
   line-height: 1.65;
-  max-width: 70vw;
+  max-width: 100%;
   right: 15px;
   bottom: var(--size-800);
   position: absolute;
@@ -54,6 +54,7 @@
     font-size: var(--size-700);
     right: calc(var(--size-900));
     bottom: var(--size-900);
+    padding: var(--size-500);
   }
 
   .masthead__credit {
