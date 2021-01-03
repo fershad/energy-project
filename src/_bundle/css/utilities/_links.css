@@ -91,8 +91,6 @@ a.link--button:hover {
 
 a.link--button:hover::after {
   /* border-radius: 0 18px 18px; */
-  top: -10px;
-  left: -10px;
   border: 2px solid var(--color-ocean-green);
   animation: cardHover 0.4s forwards;
   background-image: radial-gradient(

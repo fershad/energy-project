@@ -32,9 +32,15 @@
             </li>
         {% endfor %}
         {% for siteLocale in site.locales %}
+            {% for item in collections.all %}
+                {% if item.data.translationKey == translationKey and siteLocale.code == locale %}
+                    {% assign translatedUrl = item.url %}
+                {% endif %}
+            {% endfor %}
+
             {% unless siteLocale.code == locale %}
                 <li class="nav__link">
-                    <a href="/{{siteLocale.code}}">{{siteLocale.name}}</a>
+                    <a href="{{ translatedUrl }}">{{siteLocale.name}}</a>
                 </li>
             {% endunless %}
         {% endfor %}
