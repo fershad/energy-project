@@ -60,7 +60,7 @@ layout: layouts/base
         <p>{{ page.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
         <div class="action-grid auto-grid">
             {% for action in homepageActions limit: 3 reversed %}
-                <a href="{{ action.data.permalink }}" class="card" data-style="polka" data-color="ocean-blue" data-type="image-card">
+                <a href="{{ action.data.permalink }}" class="card">
                     <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="240" height="240" class="card--image">
                     <div class="card--content">
                         <p class="card--content--heading underlined" data-color="ocean-blue">

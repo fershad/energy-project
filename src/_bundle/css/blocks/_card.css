@@ -1,10 +1,11 @@
 .card {
   width: 100%;
   border: 2px solid var(--color-ocean-blue);
-  border-radius: 18px 18px 0;
+  /* border-radius: 0 6% 6% 0; */
   position: relative;
   background: var(--background-color);
-  transition: all 0.4s ease-in-out;
+  /* transition: all 0.4s ease-in-out; */
+  animation: bounceOut 0.4s forwards;
 }
 
 .card::after {
@@ -14,7 +15,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  border-radius: 18px 18px 0;
+  /* border-radius: 0 6% 6% 0; */
   /*     background-color: var(--color-ocean-blue); */
   background-image: radial-gradient(
       var(--color-ocean-blue) 20%,
@@ -26,39 +27,15 @@
   background-position: 0 0, 3.5px 3.5px;
   background-size: 7px 7px;
   background-color: var(--background-color);
-  transition: all 0.4s ease-in-out;
-}
-
-.card:hover::after {
-  border-radius: 0 18px 18px;
-  background-image: radial-gradient(
-      var(--color-ocean-green) 20%,
-      transparent 20%
-    ),
-    radial-gradient(var(--color-ocean-green) 20%, transparent 20%);
-}
-
-.card:hover {
-  border: 2px solid var(--color-ocean-green);
-  border-radius: 0 18px 18px;
-}
-
-.card:hover .card--content--heading::after {
-  background-color: var(--color-ocean-green);
-}
-
-.card:hover .card--image {
-  border-radius: 0 18px 18px;
-}
-
-.card:hover .card--content--heading {
-  color: var(--color-ocean-green);
+  /* transition: all 0.4s ease-in-out; */
+  animation: bounceOut 0.4s forwards;
 }
 
 .card--image {
-  border-radius: 18px 18px 0;
+  /* border-radius: 0 6% 6% 0; */
   width: 100%;
-  transition: all 0.4s ease-in-out;
+  /* transition: all 0.4s ease-in-out; */
+  animation: bounceOut 0.4s forwards;
 }
 
 .card--content {
@@ -92,4 +69,52 @@ a.card {
 
 a.card .content [data-external]:hover {
   color: inherit;
+}
+
+.card:hover::after {
+  /* border-radius: 0 18px 18px; */
+  animation: bounce 0.4s forwards;
+  background-image: radial-gradient(
+      var(--color-ocean-green) 20%,
+      transparent 20%
+    ),
+    radial-gradient(var(--color-ocean-green) 20%, transparent 20%);
+}
+
+.card:hover {
+  border: 2px solid var(--color-ocean-green);
+  /* border-radius: 0 18px 18px; */
+  animation: bounce 0.4s forwards;
+}
+
+.card:hover .card--content--heading::after {
+  background-color: var(--color-ocean-green);
+  animation: bounce 0.4s forwards;
+}
+
+.card:hover .card--image {
+  /* border-radius: 0 18px 18px; */
+  animation: bounce 0.4s forwards;
+}
+
+.card:hover .card--content--heading {
+  color: var(--color-ocean-green);
+}
+
+@keyframes bounce {
+  0% {
+    border-radius: 0 6% 6% 0;
+  }
+  100% {
+    border-radius: 6% 0 0 6%;
+  }
+}
+
+@keyframes bounceOut {
+  100% {
+    border-radius: 0 6% 6% 0;
+  }
+  0% {
+    border-radius: 6% 0 0 6%;
+  }
 }
