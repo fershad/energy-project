@@ -91,6 +91,10 @@
   font-weight: 700;
 }
 
+.nav__link[data-hidden="true"] {
+  display: none;
+}
+
 li.nav__link {
   transform-origin: 100% 50%;
   animation: nav-item-reveal 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) both;

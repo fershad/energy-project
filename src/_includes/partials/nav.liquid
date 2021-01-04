@@ -31,18 +31,24 @@
                 <a href="/{{ locale }}{{ item[1].link }}">{{ item[1] | defaultLocale: locale | capitalize }}</a>
             </li>
         {% endfor %}
+
         {% for siteLocale in site.locales %}
+            {% assign currentLocale = siteLocale.code %}
+            {% assign translatedUrl = /{{ currentLocale }} %}
+
             {% for item in collections.all %}
-                {% if item.data.translationKey == translationKey and siteLocale.code == locale %}
-                    {% assign translatedUrl = item.url %}
+                {% if item.data.translationKey == translationKey %}
+                    {% if currentLocale == item.data.locale %}
+                        {% assign translatedUrl = item.url %}
+                    {% endif %}
                 {% endif %}
             {% endfor %}
 
-            {% unless siteLocale.code == locale %}
-                <li class="nav__link">
-                    <a href="{{ translatedUrl }}">{{siteLocale.name}}</a>
-                </li>
-            {% endunless %}
+            <li class="nav__link" {% if currentLocale == locale %} data-hidden="true" {% endif %}>
+                <a href="{{ translatedUrl }}">{{ siteLocale.name }}</a>
+            </li>
         {% endfor %}
+
+
     </ul>
 </nav>
