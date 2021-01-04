@@ -3,18 +3,17 @@ layout: layouts/base
 ---
 
 <main class="wrapper flow" data-wraps="content" id="main-content">
+    {% if locale == 'zh' %}
+        {% assign actions = collections.ActionsZH %}
+    {% else %}
+        {% assign actions = collections.ActionsEN %}
+    {% endif %}
 
     <section data-overflow="allow" id="action">
-        {% assign homepageActions = collections.homepageActionsEN %}
-
-        {% if locale == zh %}
-            {% assign homepageActions = collections.homepageActionsZH %}
-        {% endif %}
-
         <h2>{{ page.homepage.action.heading | defaultLocale: locale | capitalize }}</h2>
         <p>{{ page.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
         <div class="action-grid auto-grid">
-            {% for action in homepageActions limit: 3 reversed %}
+            {% for action in actions %}
                 <a href="{{ action.data.permalink }}" class="card">
                     <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="240" height="240" class="card--image">
                     <div class="card--content">

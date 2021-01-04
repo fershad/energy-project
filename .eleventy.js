@@ -54,6 +54,14 @@ module.exports = (eleventyConfig) => {
       eleventyConfig.addCollection("homepageActionsZH", function (collectionApi) {
         return collectionApi.getFilteredByTags("action", "homepage", "zh");
       });
+
+      eleventyConfig.addCollection("ActionsZH", function (collectionApi) {
+        return collectionApi.getFilteredByTags("action", "zh");
+      });
+
+      eleventyConfig.addCollection("ActionsEN", function (collectionApi) {
+        return collectionApi.getFilteredByTags("action", "en");
+      });
     
       eleventyConfig.setDataDeepMerge(true)
       return {
