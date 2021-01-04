@@ -1,0 +1,34 @@
+---
+layout: layouts/base
+---
+
+<main class="wrapper flow" data-wraps="content" id="main-content">
+
+    <section data-overflow="allow" id="action">
+        {% assign homepageActions = collections.homepageActionsEN %}
+
+        {% if locale == zh %}
+            {% assign homepageActions = collections.homepageActionsZH %}
+        {% endif %}
+
+        <h2>{{ page.homepage.action.heading | defaultLocale: locale | capitalize }}</h2>
+        <p>{{ page.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
+        <div class="action-grid auto-grid">
+            {% for action in homepageActions limit: 3 reversed %}
+                <a href="{{ action.data.permalink }}" class="card">
+                    <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="240" height="240" class="card--image">
+                    <div class="card--content">
+                        <p class="card--content--heading underlined" data-color="ocean-blue">
+                            {{ action.data.title }}
+                        </p>
+                        <p class="card--content--subtag">{{ action.data.subtag }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <div class="divider full-width" data-last="true" data-type>
+        {% include "svg/seaside.svg" %}
+    </div>
+</main>
