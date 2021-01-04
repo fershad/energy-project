@@ -4,3 +4,9 @@
   border-bottom: 2px solid var(--color-campfire-smoke);
   padding: 0 var(--size-300);
 }
+
+@media (min-width: 36rem) {
+  .site-header {
+    padding: 0;
+  }
+}

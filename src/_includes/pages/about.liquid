@@ -1,0 +1,68 @@
+---
+layout: layouts/base
+---
+
+<main class="wrapper flow" data-wraps="content" id="main-content">
+    <section id="intro">
+        <h1>{{ nav.about | defaultLocale: locale | capitalize }}</h1>
+        <p>{{ page.about.intro | defaultLocale: locale | safe }}</p>
+    </section>
+
+    <section id="aims">
+        <h2>{{ page.about.aims.heading | defaultLocale: locale }}</h2>
+        <p>{{ page.about.aims.paragraph | defaultLocale: locale | safe }}</p>
+        <p>{{ page.about.aims.why | defaultLocale: locale | safe }}</p>
+        <h3>{{ page.about.aims.roadmap.heading | defaultLocale: locale }}</h3>
+        <p>{{ page.about.aims.roadmap.paragraph | defaultLocale: locale | safe }}</p>
+    </section>
+
+    <section id="who">
+        <h2>{{ page.about.who.heading | defaultLocale: locale }}</h2>
+        {{ page.about.who.paragraph | defaultLocale: locale | safe }}
+    </section>
+
+    <section id="contribute">
+        <h2>{{ page.about.contribute.heading | defaultLocale: locale }}</h2>
+        <p>{{ page.about.contribute.paragraph | defaultLocale: locale | safe }}</p>
+        <ul>
+            {% for item in page.about.contribute.list %}
+                <li>{{ item[1] | defaultLocale: locale }}</li>
+            {% endfor %}
+        </ul>
+        <div class="cta-button-holder" data-align="left">
+            <a class="link--button" href="mailto:cleanenergyproject@fershad.com">{{ site.emailMe | defaultLocale: locale }}</a>
+        </div>
+    </section>
+
+    <section id="contribute">
+        <h2>{{ page.about.support.heading | defaultLocale: locale }}</h2>
+        <p>{{ page.about.support.paragraph | defaultLocale: locale | safe }}</p>
+        <ul>
+            {% for item in page.about.support.list %}
+                <li>{{ item[1] | defaultLocale: locale }}</li>
+            {% endfor %}
+        </ul>
+        <h3>{{ page.about.support.ways.heading | defaultLocale: locale }}</h3>
+        <!-- <p>{{ page.about.support.ways.paragraph | defaultLocale: locale }}</p> -->
+        <div class="auto-grid">
+            <div>
+                <h4>{{ page.about.support.ways.once.heading | defaultLocale: locale }}</h4>
+                <p>Make a one-off contribution to help cover the expenses of this project.</p>
+                <div class="cta-button-holder" data-align="left">
+                    <a href="{{ site.support.kofi.url }}" class="link--button">{% include "svg/kofi.svg" %}{{ site.support.kofi.action | defaultLocale: locale }}</a>
+                </div>
+            </div>
+            <div>
+                <h4>{{ page.about.support.ways.monthly.heading | defaultLocale: locale }}</h4>
+                <p>Support work on this project with a small, monthly contribution.</p>
+                <div class="cta-button-holder" data-align="left">
+                    <a href="{{ site.support.patreon.url }}" class="link--button">{% include "svg/patreon.svg" %}{{ site.support.patreon.action | defaultLocale: locale }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider full-width" data-last="true" data-type>
+        {% include "svg/seaside.svg" %}
+    </div>
+</main>

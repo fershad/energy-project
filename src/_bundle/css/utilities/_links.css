@@ -114,6 +114,12 @@ a.link--button[data-style="round"]:hover::after {
   animation: buttonRoundHover 0.4s forwards;
 }
 
+a.link--button svg {
+  margin-inline-end: var(--size-400);
+  overflow: visible;
+  max-height: var(--size-500);
+}
+
 @keyframes buttonRoundHover {
   from {
     border-radius: 50% 50% 50% 0;

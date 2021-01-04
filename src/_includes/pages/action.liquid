@@ -10,7 +10,7 @@ layout: layouts/base
     {% endif %}
 
     <section data-overflow="allow" id="action">
-        <h2>{{ page.homepage.action.heading | defaultLocale: locale | capitalize }}</h2>
+        <h1>{{ page.homepage.action.heading | defaultLocale: locale | capitalize }}</h1>
         <p>{{ page.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
         <div class="action-grid auto-grid">
             {% for action in actions %}

@@ -32,10 +32,17 @@ const contact = {
 const support = {
     kofi: {
         url: 'https://ko-fi.com/cleanenergy_tw',
+        action: { en: 'Support on Ko-fi', zh: '' },
     },
     patreon: {
         url: 'https://www.patreon.com/cleanenergy_tw',
+        action: { en: 'Support on Patreon', zh: '' },
     },
 };
 
-module.exports = { defaultLocale, baseUrl, name, description, ogImgAlt, contact, support, locales };
+const emailMe = {
+    en: 'Email me',
+    zh: '聯絡我',
+};
+
+module.exports = { defaultLocale, baseUrl, name, description, ogImgAlt, contact, support, locales, emailMe };
