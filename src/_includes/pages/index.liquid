@@ -84,7 +84,7 @@ layout: layouts/base
     <section id="news">
         {% assign localeNews = news | getLocalized: locale %}
 
-        <h2>{{ nav.news | defaultLocale: locale | capitalize }}</h2>
+        <h2>{{ page.homepage.news.heading | defaultLocale: locale | capitalize }}</h2>
         <p>{{ page.homepage.news.paragraph | defaultLocale: locale | safe }}</p>
 
         <div class="article--holder">

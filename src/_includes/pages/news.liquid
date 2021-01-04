@@ -1,0 +1,25 @@
+---
+layout: layouts/base
+---
+<main class="wrapper flow" data-wraps="content" id="main-content">
+    <section id="news">
+        <h2>{{ page.homepage.news.heading | defaultLocale: locale | capitalize }}</h2>
+        <p>{{ page.homepage.news.paragraph | defaultLocale: locale | safe }}</p>
+
+        <div class="article--holder">
+            {% for story in news %}
+                <div class="article">
+                    <small>{{story[1].publishedDate | date: "%B %e, %Y"}}
+                        |
+                        {{ story[1].platform }}</small>
+                    <a href="{{ story[1].link }}" data-external class="article--title">{{ story[1].title }}</a>
+                    <p class="article--author" data-color="ocean-green">{{ story[1].author }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+    </section>
+    <div class="divider full-width" data-last="true" data-type>
+        {% include "svg/seaside.svg" %}
+    </div>
+</main>
