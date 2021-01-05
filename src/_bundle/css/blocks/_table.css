@@ -1,0 +1,24 @@
+table {
+  border-collapse: collapse;
+  margin-bottom: var(--size-400);
+}
+
+tr th {
+  background-color: var(--color-charcoal);
+  color: var(--color-campfire-smoke);
+  border-inline-end: 1px solid var(--color-campfire-smoke);
+}
+
+tr th:last-child {
+  border-inline-end: 1px solid var(--color-charcoal);
+}
+
+tr th,
+tr td {
+  padding: 0.3rem var(--size-300);
+}
+
+tr td {
+  border: 1px solid var(--color-charcoal);
+  text-align: center;
+}

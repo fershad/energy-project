@@ -13,6 +13,8 @@
 @import "./utilities/_z-index.css";
 @import "./utilities/_cta-holder.css";
 @import "./utilities/_arrow-key.css";
+@import "./utilities/_table-caption.css";
+@import "./utilities/_table-wrapper.css";
 /* @import "./utilities/_turbine.css"; */
 
 @import "./blocks/_header.css";
@@ -28,4 +30,5 @@
 @import "./blocks/_action.css";
 @import "./blocks/_article-holder.css";
 @import "./blocks/_article.css";
+@import "./blocks/_table.css";
 @import "./blocks/_footer.css";

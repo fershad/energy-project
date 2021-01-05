@@ -1,0 +1,6 @@
+table caption[data-align="left"] {
+  text-align: left;
+  max-width: max-content;
+  position: sticky;
+  left: 0;
+}

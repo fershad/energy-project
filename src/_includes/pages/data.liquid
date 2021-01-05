@@ -1,0 +1,85 @@
+---
+layout: layouts/base
+---
+
+<main class="wrapper flow" data-wraps="content" id="main-content">
+    <div id="intro">
+        <h1>{{ nav.data | defaultLocale: locale | capitalize }}</h1>
+        <p>{{ page.data.intro.paragraph | defaultLocale: locale | safe }}</p>
+    </div>
+
+    <section id="MOE">
+        {% assign energyData = productionData.data yearlyData %}
+        <h2>{{ page.data.moe.heading | defaultLocale: locale }}</h2>
+        <p>{{ page.data.moe.paragraph | defaultLocale: locale | safe }}<br/>
+            {{ page.data.moe.source | defaultLocale: locale | safe }}</p>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        {% for data in energyData %}
+                            <th colspan="{{ data.years.size | times: 12 }}" class="decade">{{ data.decade }}</th>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for data in energyData %}
+                            {% for years in data.years %}
+                                {% for year in years %}
+                                    {% if forloop.first %}
+                                        <th colspan="12" scope="col">{{ year.fields.Year | plus: 1911 }}</th>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for data in energyData %}
+                            {% for years in data.years %}
+                                {% for year in years %}
+                                    <th>{{ year.fields.Month }}</th>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="global-carbon-project">
+        <h2>{{ page.data.globalCarbon.heading | defaultLocale: locale }}</h2>
+        <p>{{ page.data.globalCarbon.paragraph | defaultLocale: locale | safe }}<br/>
+            {{ page.data.globalCarbon.source | defaultLocale: locale | safe }}</p>
+        <div class="table-wrapper">
+            <table>
+                <caption data-align="left">
+                    <h3>{{ page.data.globalCarbon.table.caption | defaultLocale: locale }}</h3>
+                    <p>{{ page.data.globalCarbon.table.note | defaultLocale: locale | safe }}</p>
+                </caption>
+                <thead>
+                    <tr>
+                        {% for year in emissionsData reversed %}
+                            <th class="charcoal">{{ year.fields.Year }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for year in emissionsData reversed %}
+                            <td>{{ year.fields.CO2 | round }}</td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="divider full-width" data-last="true" data-type>
+        {% include "svg/seaside.svg" %}
+    </div>
+</main>
