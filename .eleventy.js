@@ -112,6 +112,10 @@ module.exports = (eleventyConfig) => {
         
         // const uniqueYears = years.filter(unique)
         years.push(monthlyData)
+        // This removes the first empty element of the arrays that are reset below
+        if (years[0].length == 0) {
+          years.shift();
+        }
         const data = {'decade': decade, 'years': years} 
         decades.push(data)
         return decades

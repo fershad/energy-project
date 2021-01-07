@@ -33,4 +33,24 @@ const waste = {
     zh: '廢棄物',
 };
 
-module.exports = { wind, solar, hydro, geo, nuclear, biomass, waste };
+const pumped = {
+    en: 'pumped hydro',
+    zh: '抽蓄水力',
+};
+
+const coal = {
+    en: 'coal',
+    zh: '燃煤',
+};
+
+const oil = {
+    en: 'oil',
+    zh: '燃油',
+};
+
+const gas = {
+    en: 'gas',
+    zh: '燃氣',
+};
+
+module.exports = { coal, oil, gas, pumped, wind, solar, hydro, geo, nuclear, biomass, waste };
