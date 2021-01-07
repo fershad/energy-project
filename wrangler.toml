@@ -1,5 +1,5 @@
 name = "tw-energy"
-type = "webpack"
+type = "javascript"
 account_id = "a35d1765ea70fc364f2336970c9059df"
 workers_dev = true
 
