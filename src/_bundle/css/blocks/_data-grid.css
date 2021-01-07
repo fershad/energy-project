@@ -55,7 +55,7 @@
   flex-direction: column-reverse;
 }
 
-.no-js .swiper--actions {
+.no-js .swiper--actions .swiper-link {
   display: none;
 }
 
