@@ -1,0 +1,15 @@
+{
+    "dateTime": [{%- for item in productionData.data -%}"{{ item.Month }}/01/{{ item.Year | plus: 1911 }} CST"{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "pumpedHydro": [{%- for item in productionData.data -%}{{ item.Pumped_Hydro | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "coal": [{%- for item in productionData.data -%}{{ item.Coal | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "oil": [{%- for item in productionData.data -%}{{ item.Oil | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "gas": [{%- for item in productionData.data -%}{{ item.Gas | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "solar": [{%- for item in productionData.data -%}{{ item.Solar | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "wind": [{%- for item in productionData.data -%}{{ item.Wind | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "hydro": [{%- for item in productionData.data -%}{{ item.Hydroelectric | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "geo": [{%- for item in productionData.data -%}{{ item.Geothermal | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "nuclear": [{%- for item in productionData.data -%}{{ item.Nuclear | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "waste": [{%- for item in productionData.data -%}{{ item.Waste | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "biomass": [{%- for item in productionData.data -%}{{ item.Biomass | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+    "totalClean": [{%- for item in productionData.data -%}{{ item.totalClean | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%}]
+}
