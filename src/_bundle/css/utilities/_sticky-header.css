@@ -1,6 +1,15 @@
-th[data-sticky][data-direction="row"] {
-    position: sticky;
-    left: 0;
-    text-align: left;
-    width: 100%;
+[data-sticky] {
+  position: sticky;
+}
+
+[data-sticky][data-direction="row"] {
+  left: 0;
+}
+
+th.decade {
+  text-align: left;
+}
+
+th.energy {
+  text-align: right;
 }

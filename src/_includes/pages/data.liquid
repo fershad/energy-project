@@ -17,17 +17,17 @@ layout: layouts/base
             <table>
                 <thead>
                     <tr>
-                        <td data-direction="row" data-sticky rowspan="3"></td>
+                        <td rowspan="3"></td>
                         {% for data in energyData %}
                             <th colspan="{{ data.years.size | times: 12 }}" class="decade" data-sticky data-direction="row">{{ data.decade }}'s</th>
                         {% endfor %}
                     </tr>
                     <tr>
                         {% for data in energyData %}
-                            {% for years in data.years reversed %}
+                            {% for years in data.years %}
                                 {% for year in years %}
                                     {% if forloop.first %}
-                                        <th colspan="12" scope="col">{{ year.fields.Year | plus: 1911 }}</th>
+                                        <th class="year" colspan="12" scope="col">{{ year.fields.Year | plus: 1911 }}</th>
                                     {% endif %}
                                 {% endfor %}
                             {% endfor %}
@@ -45,7 +45,7 @@ layout: layouts/base
                 </thead>
                 <tbody>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.pumped | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.pumped | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -55,7 +55,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.coal | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.coal | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -65,7 +65,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.oil | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.oil | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -75,7 +75,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.gas | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.gas | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -85,7 +85,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.nuclear | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.nuclear | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -95,7 +95,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.wind | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.wind | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -105,7 +105,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.solar | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.solar | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -115,7 +115,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.hydro | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.hydro | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -125,7 +125,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.biomass | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.biomass | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
@@ -135,7 +135,7 @@ layout: layouts/base
                         {% endfor %}
                     </tr>
                     <tr>
-                        <th data-direction="row" data-sticky scope="row">{{ energyTypes.waste | defaultLocale: locale | capitalize }}</th>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.waste | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
                                 {% for year in years %}
