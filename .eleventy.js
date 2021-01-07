@@ -1,4 +1,5 @@
 const site = require ('./src/_data/site')
+const dev = process.env.NODE_ENV !== 'production';
 
 module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy({
@@ -119,6 +120,13 @@ module.exports = (eleventyConfig) => {
         const data = {'decade': decade, 'years': years} 
         decades.push(data)
         return decades
+      })
+
+      eleventyConfig.addShortcode("analytics", function() {
+        if(dev) {
+          return `<!-- Fathom analytics code here -->`
+        }
+        return `<!-- Fathom - beautiful, simple website analytics --><script src="https://heron.cleanenergyproject.tw/script.js" data-site="ZRTUZXPV" defer></script><!-- / Fathom -->`
       })
     
       eleventyConfig.setDataDeepMerge(true)
