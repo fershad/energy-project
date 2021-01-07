@@ -9,43 +9,43 @@ import svelte from 'rollup-plugin-svelte';
 
 const dev = process.env.NODE_ENV !== 'production';
 export default [
-    // {
-    //     input: 'src/_bundle/index.js',
-    //     output: [
-    //         {
-    //             sourcemap: false,
-    //             format: 'iife',
-    //             name: 'index',
-    //             file: 'dist/assets/index.bundle.legacy.js',
-    //         },
-    //         {
-    //             sourcemap: false,
-    //             format: 'es',
-    //             name: 'index',
-    //             file: 'dist/assets/index.bundle.js',
-    //         },
-    //     ],
-    //     plugins: [
-    //         replace({
-    //             DEV_MODE: dev,
-    //         }),
-    //         json(),
-    //         svelte({
-    //             dev,
-    //         }),
-    //         svg(),
+    {
+        input: 'src/_bundle/carbon.js',
+        output: [
+            {
+                sourcemap: false,
+                format: 'cjs',
+                name: 'index',
+                file: '_site/assets/carbon.bundle.legacy.js',
+            },
+            {
+                sourcemap: false,
+                format: 'es',
+                name: 'index',
+                file: '_site/assets/carbon.bundle.js',
+            },
+        ],
+        plugins: [
+            replace({
+                DEV_MODE: dev,
+            }),
+            json(),
+            svelte({
+                dev,
+            }),
+            svg(),
 
-    //         resolve({
-    //             browser: true,
-    //             dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/'),
-    //         }),
-    //         commonjs(),
-    //         !dev && terser(),
-    //     ],
-    //     watch: {
-    //         clearScreen: false,
-    //     },
-    // },
+            resolve({
+                browser: true,
+                dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/'),
+            }),
+            commonjs(),
+            !dev && terser(),
+        ],
+        watch: {
+            clearScreen: false,
+        },
+    },
     {
         input: 'src/_bundle/css.js',
         output: [
