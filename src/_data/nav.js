@@ -29,9 +29,9 @@ module.exports = {
     //     zh: '支持',
     //     link: '/about#support',
     // },
-    carbon: {
-        en: 'carbon',
-        zh: '二氧化碳',
-        link: '/carbon',
-    },
+    // carbon: {
+    //     en: 'carbon',
+    //     zh: '二氧化碳',
+    //     link: '/carbon',
+    // },
 };

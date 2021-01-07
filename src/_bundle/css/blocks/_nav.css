@@ -231,4 +231,8 @@ li.nav__link {
     display: inline-block;
     margin-inline-end: var(--size-400);
   }
+
+  li.nav__link {
+    animation: none;
+  }
 }
