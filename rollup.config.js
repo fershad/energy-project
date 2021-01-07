@@ -8,15 +8,34 @@ import json from '@rollup/plugin-json';
 import svelte from 'rollup-plugin-svelte';
 
 const dev = process.env.NODE_ENV !== 'production';
+
+const plugins = [
+    replace({
+        DEV_MODE: dev,
+    }),
+    json(),
+    svelte({
+        dev,
+    }),
+    svg(),
+
+    resolve({
+        browser: true,
+        dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/'),
+    }),
+    commonjs(),
+    !dev && terser(),
+];
+
 export default [
     {
         input: 'src/_bundle/carbon.js',
         output: [
             {
                 sourcemap: false,
-                format: 'cjs',
+                format: 'iife',
                 name: 'index',
-                file: '_site/assets/carbon.bundle.legacy.js',
+                file: '_site/assets/carbon.legacy.js',
             },
             {
                 sourcemap: false,
@@ -25,23 +44,49 @@ export default [
                 file: '_site/assets/carbon.bundle.js',
             },
         ],
-        plugins: [
-            replace({
-                DEV_MODE: dev,
-            }),
-            json(),
-            svelte({
-                dev,
-            }),
-            svg(),
-
-            resolve({
-                browser: true,
-                dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/'),
-            }),
-            commonjs(),
-            !dev && terser(),
+        plugins,
+        watch: {
+            clearScreen: false,
+        },
+    },
+    {
+        input: 'src/_bundle/chartProduction.js',
+        output: [
+            {
+                sourcemap: false,
+                format: 'iife',
+                name: 'index',
+                file: '_site/assets/chartProduction.legacy.js',
+            },
+            {
+                sourcemap: false,
+                format: 'es',
+                name: 'index',
+                file: '_site/assets/chartProduction.bundle.js',
+            },
         ],
+        plugins,
+        watch: {
+            clearScreen: false,
+        },
+    },
+    {
+        input: 'src/_bundle/chartEmissions.js',
+        output: [
+            {
+                sourcemap: false,
+                format: 'iife',
+                name: 'index',
+                file: '_site/assets/chartEmissions.legacy.js',
+            },
+            {
+                sourcemap: false,
+                format: 'es',
+                name: 'index',
+                file: '_site/assets/chartEmissions.bundle.js',
+            },
+        ],
+        plugins,
         watch: {
             clearScreen: false,
         },

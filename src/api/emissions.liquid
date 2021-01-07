@@ -1,8 +1,12 @@
+---
+permalink: '/api/emissions.json'
+---
+
 [
-    {%- for item in emissionData -%}
+    {%- for item in emissionsData -%}
             {
-                "x": {{ item.Year }},
-                "y": {{ item.CO2 | round }}
+                "x": {{ item.fields.Year }},
+                "y": {{ item.fields.CO2 | round }}
             }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
 ]

@@ -2,10 +2,8 @@
   import ApexCharts from "apexcharts";
 
   async function getJSON() {
-    console.log("getJSON");
     const response = await fetch("/api/production.json");
     const data = await response.json();
-
     return data;
   }
 
@@ -174,60 +172,9 @@
     });
   }
 
-  // async function brushChart(data) {
-  //   var optionsLine = {
-  //     series: [
-  //       {
-  //         data: data.totalClean
-  //       }
-  //     ],
-  //     chart: {
-  //       id: "brush-chart",
-  //       height: 130,
-  //       type: "area",
-  //       brush: {
-  //         target: "prod-chart",
-  //         enabled: true
-  //       },
-  //       selection: {
-  //         enabled: true,
-  //         xaxis: {
-  //           min: new Date("19 Jun 2017").getTime(),
-  //           max: new Date("14 Aug 2017").getTime()
-  //         }
-  //       }
-  //     },
-  //     colors: ["#008FFB"],
-  //     fill: {
-  //       type: "gradient",
-  //       gradient: {
-  //         opacityFrom: 0.91,
-  //         opacityTo: 0.1
-  //       }
-  //     },
-  //     xaxis: {
-  //       type: "datetime",
-  //       tooltip: {
-  //         enabled: false
-  //       }
-  //     },
-  //     yaxis: {
-  //       tickAmount: 2
-  //     }
-  //   };
-
-  //   var chartLine = new ApexCharts(
-  //     document.querySelector("#chart-brush"),
-  //     optionsLine
-  //   );
-  //   chartLine.render();
-  // }
-
   async function buildChart() {
-    console.log("Build ...");
     const data = await getJSON();
     await lineChart(data);
-    // await brushChart(data);
   }
 
   buildChart();

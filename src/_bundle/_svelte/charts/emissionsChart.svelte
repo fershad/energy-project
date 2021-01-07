@@ -41,7 +41,7 @@
       },
       grid: {
         row: {
-          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+          colors: ["#1F3B4D", "transparent"], // takes an array which will be repeated on columns
           opacity: 0.5
         }
       },
@@ -71,7 +71,6 @@
   }
 
   async function buildChart() {
-    console.log("Build ...");
     const data = await getJSON();
     const chart = await lineChart(data);
   }
