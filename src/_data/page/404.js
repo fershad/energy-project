@@ -8,3 +8,5 @@ const intro = {
         zh: '',
     },
 };
+
+module.exports = { intro };
