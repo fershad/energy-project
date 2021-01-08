@@ -32,7 +32,8 @@
   animation: card 0.4s forwards;
 }
 
-.card--image {
+.card--image,
+.card img {
   /* border-radius: 0 18px 18px 0; */
   width: 100%;
   /* transition: all 0.4s ease-in-out; */
@@ -94,7 +95,8 @@ a.card .content [data-external]:hover {
   animation: cardHover 0.4s forwards;
 }
 
-.card:hover .card--image {
+.card:hover .card--image,
+.card:hover img {
   /* border-radius: 0 18px 18px; */
   animation: cardHover 0.4s forwards;
 }
