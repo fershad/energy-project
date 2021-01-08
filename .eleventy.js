@@ -1,9 +1,45 @@
 const site = require ('./src/_data/site')
 const dev = process.env.NODE_ENV !== 'production';
 
+const Image = require("@11ty/eleventy-img");
+async function imageShortcode(src, alt, widths, sizes) {
+  const defaultWidths = [300, 600, 1200]
+  let defaultFormats = ["webp", "jpeg"]
+  let srcset
+  
+  if (!dev) { 
+    defaultFormats = ["avif", "webp", "jpeg"]
+  }
+
+  try {
+    srcset = widths.split`", "`.map(x=>+x)
+  } catch {
+    srcset = defaultWidths
+  }
+  let metadata = await Image(`./public${src}`, {
+    widths: srcset,
+    formats: defaultFormats,
+    outputDir: './_site/img/'
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
+}
+
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({
     public: './'
+  })
+
+  eleventyConfig.addPassthroughCopy({
+    img: './'
   })
 
   eleventyConfig.setBrowserSyncConfig({
@@ -14,6 +50,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true
   });
+
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
 
   eleventyConfig.setDataDeepMerge(true)
 

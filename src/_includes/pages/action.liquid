@@ -15,7 +15,7 @@ layout: base
         <div class="action-grid auto-grid">
             {% for action in actions %}
                 <a href="{{ action.data.permalink }}" class="card">
-                    <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="240" height="240" class="card--image">
+                    <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="320" height="240" class="card--image">
                     <div class="card--content">
                         <p class="card--content--heading underlined" data-color="ocean-blue">
                             {{ action.data.title }}
