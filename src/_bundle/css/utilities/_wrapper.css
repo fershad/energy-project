@@ -20,7 +20,7 @@
 
 .wrapper > * {
   grid-column: 4/5;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .wrapper[data-wraps="content"] {
