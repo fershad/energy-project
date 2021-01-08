@@ -5,7 +5,7 @@ shortName: Use Ecosia
 tags:
     - homepage
 thumbnail: { 
-    src: "/img/actions/plant-trees-search.jpg", 
+    src: "./src/_includes/img/actions/plant-trees-search.jpg", 
     alt: "A green tree sapling in a lush green environment.",
     caption: '<span>Photo by <a href="https://unsplash.com/@aiokr?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">aiokr chen</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 }

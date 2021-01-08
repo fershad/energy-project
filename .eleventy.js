@@ -16,7 +16,7 @@ async function imageShortcode(src, alt, widths, sizes) {
   } catch {
     srcset = defaultWidths
   }
-  let metadata = await Image(`./public${src}`, {
+  let metadata = await Image(src, {
     widths: srcset,
     formats: defaultFormats,
     outputDir: './_site/img/'
