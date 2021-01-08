@@ -1,4 +1,5 @@
 const site = require ('./src/_data/site')
+const purgeStyles = require('./src/_11ty/filter/purge-css')
 const dev = process.env.NODE_ENV !== 'production';
 
 const Image = require("@11ty/eleventy-img");
@@ -168,6 +169,8 @@ module.exports = (eleventyConfig) => {
         }
         return `<!-- Fathom - beautiful, simple website analytics --><script src="https://heron.cleanenergyproject.tw/script.js" data-site="ZRTUZXPV" defer></script><!-- / Fathom -->`
       })
+
+      eleventyConfig.addTransform('purge-styles', purgeStyles);
     
       return {
         dir: {
