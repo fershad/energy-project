@@ -1,16 +1,16 @@
 ---
-layout: layouts/base
+layout: base
 ---
 
 <main class="wrapper flow" data-wraps="content" id="main-content">
     <section id="intro">
-        <h1>{{ page.faq.intro.heading | defaultLocale: locale | capitalize }}</h1>
-        <p>{{ page.faq.intro.paragraph | defaultLocale: locale | safe }}</p>
+        <h1>{{ pages.faq.intro.heading | defaultLocale: locale | capitalize }}</h1>
+        <p>{{ pages.faq.intro.paragraph | defaultLocale: locale | safe }}</p>
     </section>
 
     <section id="questions flow">
         <div class="faq">
-            {% for question in page.faq.questions %}
+            {% for question in pages.faq.questions %}
                 <details>
                     <summary>
                         <h2 class="question">{{ question.question | defaultLocale: locale | safe }}</h2>

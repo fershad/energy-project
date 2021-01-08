@@ -1,5 +1,6 @@
 <script>
   import { getLocale } from "./helpers";
+  // TODO: USE CANONICAL URL FOR THIS!
   const url = window.location.href;
   const corsAnywhere = "https://evening-retreat-25659.herokuapp.com/";
   const carbonCalculator = "https://api.websitecarbon.com/site?url=";

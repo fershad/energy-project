@@ -1,5 +1,5 @@
 ---
-layout: layouts/base
+layout: base
 ---
 {% assign lastMonth = productionData.latestMonth %}
 
@@ -7,11 +7,11 @@ layout: layouts/base
 <main class="wrapper flow" data-wraps="content" id="main-content">
     <section id="intro">
         <h1>{{ site.name | defaultLocale: locale }}</h1>
-        <p>{{ page.homepage.intro | defaultLocale: locale | safe }}</p>
+        <p>{{ pages.homepage.intro | defaultLocale: locale | safe }}</p>
     </section>
 
     <section id="data">
-        <h2 data-style="regular">{{ page.homepage.data.heading | defaultLocale: locale }}</h2>
+        <h2 data-style="regular">{{ pages.homepage.data.heading | defaultLocale: locale }}</h2>
         <p class="subheading underlined" data-color="ocean-green">
             {% unless locale == 'zh' %}
                 {{ lastMonth.latestMonth | escape | date: "%B"}}
@@ -60,8 +60,8 @@ layout: layouts/base
             {% assign homepageActions = collections.homepageActionsZH %}
         {% endif %}
 
-        <h2>{{ page.homepage.action.heading | defaultLocale: locale | capitalize }}</h2>
-        <p>{{ page.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
+        <h2>{{ pages.homepage.action.heading | defaultLocale: locale | capitalize }}</h2>
+        <p>{{ pages.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
         <div class="action-grid auto-grid">
             {% for action in homepageActions limit: 3 reversed %}
                 <a href="{{ action.data.permalink }}" class="card">
@@ -76,7 +76,7 @@ layout: layouts/base
             {% endfor %}
         </div>
         <div class="cta-button-holder">
-            <a class="link--button" href="/{{ locale }}/actions">{{ page.homepage.action.cta | defaultLocale: locale }}</a>
+            <a class="link--button" href="/{{ locale }}/actions">{{ pages.homepage.action.cta | defaultLocale: locale }}</a>
         </div>
     </section>
 
@@ -84,8 +84,8 @@ layout: layouts/base
     <section id="news">
         {% assign localeNews = news | getLocalized: locale %}
 
-        <h2>{{ page.homepage.news.heading | defaultLocale: locale | capitalize }}</h2>
-        <p>{{ page.homepage.news.paragraph | defaultLocale: locale | safe }}</p>
+        <h2>{{ pages.homepage.news.heading | defaultLocale: locale | capitalize }}</h2>
+        <p>{{ pages.homepage.news.paragraph | defaultLocale: locale | safe }}</p>
 
         <div class="article--holder">
             {% for story in localeNews limit: 5 %}

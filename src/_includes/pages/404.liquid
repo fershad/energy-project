@@ -1,11 +1,11 @@
 ---
-layout: layouts/base
+layout: base
 ---
 
 <main class="wrapper flow" data-wraps="content" id="main-content">
     <section id="intro">
-        <h1>{{ page.404.intro.heading | defaultLocale: locale | capitalize }}</h1>
-        <p>{{ page.404.intro.paragraph | defaultLocale: locale | safe }}</p>
+        <h1>{{ pages.404.intro.heading | defaultLocale: locale | capitalize }}</h1>
+        <p>{{ pages.404.intro.paragraph | defaultLocale: locale | safe }}</p>
     </section>
 
 

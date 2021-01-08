@@ -1,4 +1,4 @@
-const layout = 'layouts/base';
+// const layout = 'layouts/base';
 const locale = 'en';
 
-module.exports = { locale, layout };
+module.exports = { locale };

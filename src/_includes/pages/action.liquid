@@ -1,5 +1,5 @@
 ---
-layout: layouts/base
+layout: base
 ---
 
 <main class="wrapper flow" data-wraps="content" id="main-content">
@@ -10,8 +10,8 @@ layout: layouts/base
     {% endif %}
 
     <section data-overflow="allow" id="action">
-        <h1>{{ page.homepage.action.heading | defaultLocale: locale | capitalize }}</h1>
-        <p>{{ page.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
+        <h1>{{ pages.homepage.action.heading | defaultLocale: locale | capitalize }}</h1>
+        <p>{{ pages.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
         <div class="action-grid auto-grid">
             {% for action in actions %}
                 <a href="{{ action.data.permalink }}" class="card">

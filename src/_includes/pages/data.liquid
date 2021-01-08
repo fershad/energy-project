@@ -1,18 +1,18 @@
 ---
-layout: layouts/base
+layout: base
 ---
 
 <main class="wrapper flow" data-wraps="content" id="main-content">
     <div id="intro">
         <h1>{{ nav.data | defaultLocale: locale | capitalize }}</h1>
-        <p>{{ page.data.intro.paragraph | defaultLocale: locale | safe }}</p>
+        <p>{{ pages.data.intro.paragraph | defaultLocale: locale | safe }}</p>
     </div>
 
     <section id="MOE">
         {% assign energyData = productionData.data yearlyData %}
-        <h2>{{ page.data.moe.heading | defaultLocale: locale }}</h2>
-        <p>{{ page.data.moe.paragraph | defaultLocale: locale | safe }}<br/>
-            {{ page.data.moe.source | defaultLocale: locale | safe }}</p>
+        <h2>{{ pages.data.moe.heading | defaultLocale: locale }}</h2>
+        <p>{{ pages.data.moe.paragraph | defaultLocale: locale | safe }}<br/>
+            {{ pages.data.moe.source | defaultLocale: locale | safe }}</p>
             <!-- TODO: Hide this chart unless the user requests it. -->
             <div data-production-chart style="margin: 0 var(--size-500);">
                 <div id="chart">
@@ -178,9 +178,9 @@ layout: layouts/base
     </section>
 
     <section id="global-carbon-project">
-        <h2>{{ page.data.globalCarbon.heading | defaultLocale: locale }}</h2>
-        <p>{{ page.data.globalCarbon.paragraph | defaultLocale: locale | safe }}<br/>
-            {{ page.data.globalCarbon.source | defaultLocale: locale | safe }}</p>
+        <h2>{{ pages.data.globalCarbon.heading | defaultLocale: locale }}</h2>
+        <p>{{ pages.data.globalCarbon.paragraph | defaultLocale: locale | safe }}<br/>
+            {{ pages.data.globalCarbon.source | defaultLocale: locale | safe }}</p>
             <!-- TODO: Hide this chart unless the user requests it. -->
             <div data-emissions-chart style="margin: 0 var(--size-500);">
                 <div id="emissionsChart"></div>
@@ -191,8 +191,8 @@ layout: layouts/base
         <div class="table-wrapper">
             <table>
                 <caption data-align="left">
-                    <h3>{{ page.data.globalCarbon.table.caption | defaultLocale: locale }}</h3>
-                    <p>{{ page.data.globalCarbon.table.note | defaultLocale: locale | safe }}</p>
+                    <h3>{{ pages.data.globalCarbon.table.caption | defaultLocale: locale }}</h3>
+                    <p>{{ pages.data.globalCarbon.table.note | defaultLocale: locale | safe }}</p>
                 </caption>
                 <thead>
                     <tr>

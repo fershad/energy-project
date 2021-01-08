@@ -8,7 +8,8 @@
 
 <meta name="description" content="{{ pageDescription }}">
 <!-- Helps prevent duplicate content issues -->
-<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="canonical" href="{{ site.baseUrl }}{{ page.url }}">
 
 <!-- Gives a reference to a location in your document that may be in another language -->
-<link rel="alternate" href="{{ site.url }}/zh{{ page.url }}" hreflang="zh-TW">
+<!-- TODO: Fix this!! -->
+<link rel="alternate" href="{{ site.baseUrl }}/zh{{ page.url }}" hreflang="zh-TW">

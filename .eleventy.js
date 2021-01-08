@@ -2,18 +2,20 @@ const site = require ('./src/_data/site')
 const dev = process.env.NODE_ENV !== 'production';
 
 module.exports = (eleventyConfig) => {
-    eleventyConfig.addPassthroughCopy({
-        public: './'
-      })
-      
-    eleventyConfig.setBrowserSyncConfig({
-        files: ['dist/**/*'],
-        open: false,
-      })
+  eleventyConfig.addPassthroughCopy({
+    public: './'
+  })
 
-      eleventyConfig.setLiquidOptions({
-        dynamicPartials: true
-      });
+  eleventyConfig.setBrowserSyncConfig({
+    files: ['dist/**/*'],
+    open: false,
+  })
+
+  eleventyConfig.setLiquidOptions({
+    dynamicPartials: true
+  });
+
+  eleventyConfig.setDataDeepMerge(true)
 
       // Check if localized content for the current language exists.
       // Return the default (en) content if not present.
@@ -129,7 +131,6 @@ module.exports = (eleventyConfig) => {
         return `<!-- Fathom - beautiful, simple website analytics --><script src="https://heron.cleanenergyproject.tw/script.js" data-site="ZRTUZXPV" defer></script><!-- / Fathom -->`
       })
     
-      eleventyConfig.setDataDeepMerge(true)
       return {
         dir: {
           input: 'src'
