@@ -49,10 +49,6 @@ layout: base
     {% endcapture %}
     <script>{{ swiper }}</script>
 
-    <div class="divider full-width" data-type="hills">
-        {% include "svg/hill-divider.svg" %}
-    </div>
-
     <section data-divider="regular" data-overflow="allow" id="action">
         {% assign homepageActions = collections.homepageActionsEN %}
 
@@ -64,9 +60,8 @@ layout: base
         <p>{{ pages.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
         <div class="action-grid auto-grid">
             {% for action in homepageActions limit: 3 reversed %}
-                <a href="{{ action.data.permalink }}" class="card">
+                <a href="{{ action.url }}" class="card">
                     {% image action.data.thumbnail.src,  action.data.thumbnail.alt, "300, 600", "(max-width: 36rem) 100vw, 33vw" %}
-                    <!-- <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="320" height="240" class="card--image"> -->
                     <div class="card--content">
                         <p class="card--content--heading underlined" data-color="ocean-blue">
                             {{ action.data.title }}
@@ -101,7 +96,4 @@ layout: base
         </div>
 
     </section>
-    <div class="divider full-width" data-last="true" data-type>
-        {% include "svg/seaside.svg" %}
-    </div>
 </main>
