@@ -1,9 +1,13 @@
-const site = require ('./src/_data/site')
 const purgeStyles = require('./src/_11ty/transforms/purge-css')
-const { rasterImage, svgImage } = require('./src/_11ty/shortcode/image')
-const dev = process.env.NODE_ENV !== 'production';
-const htmlmin = require('html-minifier')
+const htmlMin = require('./src/_11ty/transforms/html-min')
+const {
+  rasterImage,
+  svgImage
+} = require('./src/_11ty/shortcode/image')
+const localiser = require('./src/_11ty/filter/localiser')
+const yearlyData = require('./src/_11ty/filter/byDecades')
 
+const dev = process.env.NODE_ENV !== 'production';
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({
@@ -19,147 +23,58 @@ module.exports = (eleventyConfig) => {
     dynamicPartials: true
   });
 
+  eleventyConfig.setDataDeepMerge(true)
+  // ! Shortcodes
+  //* Image shortcodes
   eleventyConfig.addShortcode("image", rasterImage);
   eleventyConfig.addShortcode("svgImage", svgImage);
 
-  eleventyConfig.setDataDeepMerge(true)
+  //* Add direction arrow besides stats
+  eleventyConfig.addShortcode("direction", require("./src/_11ty/shortcode/upDown"));
 
-      // Check if localized content for the current language exists.
-      // Return the default (en) content if not present.
-      eleventyConfig.addFilter("defaultLocale", (content, locale) => {
-        const defaultLocale = site.defaultLocale
-        if(content[locale]) {
-          return content[locale]
-        }
+  //* Add fathom analytics tracking script in build
+  eleventyConfig.addShortcode("analytics", function () {
+    if (dev) {
+      return `<!-- Fathom analytics code here -->`
+    }
+    return `<!-- Fathom - beautiful, simple website analytics --><script src="https://heron.cleanenergyproject.tw/script.js" data-site="ZRTUZXPV" defer></script><!-- / Fathom -->`
+  })
 
-        return content[defaultLocale]
-      });
+  // ! Filters
+  //*  Localisation filter - looks for current locale, defaults to EN
+  eleventyConfig.addFilter('defaultLocale', localiser);
 
-      // Filter to return the localized news stories
-      eleventyConfig.addFilter("getLocalized", function (arr, locale) {
+  //* Filter to take yearly data & group by decades (used for MOE data)
+  eleventyConfig.addFilter("yearlyData", yearlyData)
 
-        let localized = {}
-    
-        for (const key in arr) {
-          if (arr.hasOwnProperty(key)) {
-            const language = arr[key].language;
-            if (language === locale) {
-              localized[key] = arr[key]
-            }
-          }
-        }
-    
-        return localized
-      });
+  // ! Collections
+  //* Create action collections to be used on the homepage
+  eleventyConfig.addCollection("homepageActionsEN", function (collectionApi) {
+    return collectionApi.getFilteredByTags("action", "homepage", "en");
+  });
 
-      // Filter to inline CSS
-      // eleventyConfig.addFilter("inlinecss", require("./src/_11ty/filter/inline-css"));
-      eleventyConfig.addShortcode("direction", require("./src/_11ty/shortcode/upDown"));
+  eleventyConfig.addCollection("homepageActionsZH", function (collectionApi) {
+    return collectionApi.getFilteredByTags("action", "homepage", "zh");
+  });
 
-      // Create action collections to be used on the homepage
-      eleventyConfig.addCollection("homepageActionsEN", function (collectionApi) {
-        return collectionApi.getFilteredByTags("action", "homepage", "en");
-      });
-    
-      eleventyConfig.addCollection("homepageActionsZH", function (collectionApi) {
-        return collectionApi.getFilteredByTags("action", "homepage", "zh");
-      });
+  eleventyConfig.addCollection("ActionsZH", function (collectionApi) {
+    return collectionApi.getFilteredByTags("action", "zh");
+  });
 
-      eleventyConfig.addCollection("ActionsZH", function (collectionApi) {
-        return collectionApi.getFilteredByTags("action", "zh");
-      });
+  eleventyConfig.addCollection("ActionsEN", function (collectionApi) {
+    return collectionApi.getFilteredByTags("action", "en");
+  });
 
-      eleventyConfig.addCollection("ActionsEN", function (collectionApi) {
-        return collectionApi.getFilteredByTags("action", "en");
-      });
+  // ! Transforms
+  //* Inline critical CSS & purge all unused CSS per page
+  eleventyConfig.addTransform('purge-styles', purgeStyles);
 
-      eleventyConfig.addFilter("yearlyData", function (arr) {
-        // Loop array to get each unique year
-        // Loop through again & assign monthly data for each year
-        const decades = [];
-        let prevYear = 0;
-        let prevDecade = 0;
-        let years = [];
-        let monthlyData = [];
-        let decade;
-    
-        for (let i = 0; i < arr.length; i++) {
-          const el = arr[i]
-          const westernYear = el.fields.Year + 1911;
-          let thisDecade = Math.floor(westernYear / 10) * 10;
-    
-          if (prevDecade == 0) {
-            prevDecade = thisDecade
-          }
-    
-          if (thisDecade != prevDecade) {
-            years.push(monthlyData)
-            // This removes the first empty element of the arrays that are reset below
-            if (years[0].length == 0) {
-              years.shift();
-            }
-            const data = {'decade': decade, 'years': years} 
-            decades.push(data)
-            years = []
-            monthlyData = []
-            prevDecade = thisDecade;
-          }
+  //* Minify the HTML
+  eleventyConfig.addTransform("htmlmin", htmlMin);
 
-          decade = thisDecade;
-    
-          if (prevYear == 0) {
-            prevYear = westernYear
-          }
-    
-          if (westernYear != prevYear) {
-            years.push(monthlyData)
-            monthlyData = [];
-            prevYear = westernYear
-          }
-    
-          monthlyData.push(el)
-        }
-        
-        // const uniqueYears = years.filter(unique)
-        years.push(monthlyData)
-        // This removes the first empty element of the arrays that are reset below
-        if (years[0].length == 0) {
-          years.shift();
-        }
-        const data = {'decade': decade, 'years': years} 
-        decades.push(data)
-        return decades
-      })
-
-      eleventyConfig.addShortcode("analytics", function() {
-        if(dev) {
-          return `<!-- Fathom analytics code here -->`
-        }
-        return `<!-- Fathom - beautiful, simple website analytics --><script src="https://heron.cleanenergyproject.tw/script.js" data-site="ZRTUZXPV" defer></script><!-- / Fathom -->`
-      })
-
-      eleventyConfig.addTransform('purge-styles', purgeStyles);
-
-      eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-        // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-        if( outputPath.endsWith(".html") ) {
-          let minified = htmlmin.minify(content, {
-            useShortDoctype: true,
-            removeComments: true,
-            collapseWhitespace: true,
-            collapseInlineTagWhitespace: false,
-            minifyCSS: true,
-            minifyJS: true
-          });
-          return minified;
-        }
-    
-        return content;
-      });
-    
-      return {
-        dir: {
-          input: 'src'
-        },
-      }
+  return {
+    dir: {
+      input: 'src'
+    },
+  }
 }
