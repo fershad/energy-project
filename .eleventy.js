@@ -1,6 +1,7 @@
 const site = require ('./src/_data/site')
-const purgeStyles = require('./src/_11ty/filter/purge-css')
+const purgeStyles = require('./src/_11ty/transforms/purge-css')
 const dev = process.env.NODE_ENV !== 'production';
+const htmlmin = require('html-minifier')
 
 const Image = require("@11ty/eleventy-img");
 async function imageShortcode(src, alt, widths, sizes) {
@@ -171,6 +172,23 @@ module.exports = (eleventyConfig) => {
       })
 
       eleventyConfig.addTransform('purge-styles', purgeStyles);
+
+      eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+        // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+        if( outputPath.endsWith(".html") ) {
+          let minified = htmlmin.minify(content, {
+            useShortDoctype: true,
+            removeComments: true,
+            collapseWhitespace: true,
+            collapseInlineTagWhitespace: false,
+            minifyCSS: true,
+            minifyJS: true
+          });
+          return minified;
+        }
+    
+        return content;
+      });
     
       return {
         dir: {
