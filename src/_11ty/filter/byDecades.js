@@ -1,4 +1,4 @@
-module.exports = async arr => {
+module.exports = arr => {
     // Loop array to get each unique year
     // Loop through again & assign monthly data for each year
     const decades = [];
