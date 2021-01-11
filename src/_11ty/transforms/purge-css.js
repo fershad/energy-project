@@ -53,7 +53,7 @@ module.exports = async (content, outputPath) => {
             const [{ css: output }] = await new PurgeCSS().purge({
                 content: [{ raw: $(body).html(), extension: 'html' }],
                 css: [{ raw: uncritical }],
-                safelist: ['no-js'],
+                safelist: ['no-js', 'webp', 'avif'],
             });
             const result = output;
             const inlineStyle = `<style type="text/css">${result}</style>`;
