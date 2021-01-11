@@ -27,6 +27,7 @@ async function rasterImage(src, alt, widths, sizes) {
     const imageAttributes = {
         alt,
         sizes,
+        //! Disable these if you want to lint responsive images during development.
         loading: 'lazy',
         decoding: 'async',
     };
