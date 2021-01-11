@@ -26,7 +26,8 @@
   font-weight: 900;
 }
 
-a.article--title:hover {
+a.article--title:hover,
+a.article--title:focus {
   color: var(--color-ocean-green);
 }
 

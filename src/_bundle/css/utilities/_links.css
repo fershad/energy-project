@@ -82,17 +82,20 @@ a.link--button::after {
   animation: card 0.4s forwards;
 }
 
-a.link--button:hover {
+a.link--button:hover,
+a.link--button:focus {
   color: var(--color-ocean-green);
   border: 2px solid var(--color-ocean-green);
   /* border-radius: 0 18px 18px; */
   animation: cardHover 0.4s forwards;
 }
 
-a.link--button:hover::after {
+a.link--button:hover::after,
+a.link--button:focus::after {
   /* border-radius: 0 18px 18px; */
   border: 2px solid var(--color-ocean-green);
   animation: cardHover 0.4s forwards;
+  background-color: var(--color-ocean-green);
   background-image: radial-gradient(
       var(--color-ocean-green) 20%,
       transparent 20%

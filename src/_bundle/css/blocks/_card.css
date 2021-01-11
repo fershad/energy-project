@@ -73,10 +73,13 @@ a.card .content [data-external]:hover {
   color: inherit;
 }
 
-.card:hover::after {
+.card:hover::after,
+.card:focus::after,
+.card:focus-within::after {
   /* border-radius: 0 18px 18px; */
   border: 2px solid var(--color-ocean-green);
   animation: cardHover 0.4s forwards;
+  background-color: var(--color-ocean-green);
   background-image: radial-gradient(
       var(--color-ocean-green) 20%,
       transparent 20%
@@ -84,7 +87,13 @@ a.card .content [data-external]:hover {
     radial-gradient(var(--color-ocean-green) 20%, transparent 20%);
 }
 
-.card:hover {
+a.link--button:focus {
+  outline: none;
+}
+
+.card:hover,
+.card:focus,
+.card:focus-within {
   border: 2px solid var(--color-ocean-green);
   /* border-radius: 0 18px 18px; */
   animation: cardHover 0.4s forwards;
