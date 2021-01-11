@@ -61,7 +61,7 @@ layout: base
         <div class="action-grid auto-grid">
             {% for action in homepageActions limit: 3 reversed %}
                 <a href="{{ action.url }}" class="card">
-                    {% image action.data.thumbnail.src,  action.data.thumbnail.alt, "300, 600", "(max-width: 36rem) 100vw, 33vw" %}
+                    {% image action.data.thumbnail.src,  action.data.thumbnail.alt, "300, 600", "(min-width: 780px) 321px, (min-width: 580px) 252px, (min-width: 540px) calc(100vw - 28px), calc(9.55vw + 442px)" %}
                     <div class="card--content">
                         <p class="card--content--heading underlined" data-color="ocean-blue">
                             {{ action.data.title }}

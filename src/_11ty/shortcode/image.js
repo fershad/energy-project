@@ -12,7 +12,8 @@ async function rasterImage(src, alt, widths, sizes) {
     }
 
     try {
-        srcset = widths.split`", "`.map(x => +x);
+        srcset = widths.split(',');
+        srcset = srcset.map(x => +x);
     } catch {
         srcset = defaultWidths;
     }
