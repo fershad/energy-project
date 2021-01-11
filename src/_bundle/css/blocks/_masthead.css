@@ -21,14 +21,13 @@
   background-image: url("/img/tw-iss-min.jpg"), var(--base64);
 }
 
-.avif .masthead {
-  background-image: url("/img/tw-iss.avif"), var(--base64);
-}
-
 .webp .masthead {
   background-image: url("/img/tw-iss.webp"), var(--base64);
 }
 
+.avif .masthead {
+  background-image: url("/img/tw-iss.avif"), var(--base64);
+}
 .masthead__headline {
   font-weight: 900;
   font-size: var(--size-600);
