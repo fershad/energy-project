@@ -23,23 +23,16 @@ footer .social svg {
   height: var(--size-600);
   width: var(--size-600);
   overflow: visible;
+  filter: drop-shadow(4px 4px 0 var(--color-ocean-green));
+  transition: filter 0.15s ease-in-out;
 }
 
 footer .social svg path {
   fill: var(--color-campfire-smoke);
 }
 
-footer .social svg path.underlay {
-  fill: var(--color-ocean-green);
-  position: absolute;
-  transform: translate(2px, 1px);
-  transition: transform 0.15s ease-in-out;
-}
-
-footer .social svg:hover path.underlay {
-  fill: var(--color-ocean-green);
-  position: absolute;
-  transform: translate(0px, 0px);
+footer .social svg:hover {
+  filter: drop-shadow(0 0 0 var(--color-ocean-green));
 }
 
 @media only screen and (min-width: 48em) {

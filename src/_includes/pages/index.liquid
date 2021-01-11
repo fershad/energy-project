@@ -10,7 +10,7 @@ layout: base
         <p>{{ pages.homepage.intro | defaultLocale: locale | safe }}</p>
     </section>
 
-    <section id="data">
+    <section  data-divider="regular" id="data">
         <h2 data-style="regular">{{ pages.homepage.data.heading | defaultLocale: locale }}</h2>
         <p class="subheading underlined" data-color="ocean-green">
             {% unless locale == 'zh' %}

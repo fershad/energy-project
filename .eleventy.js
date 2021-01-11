@@ -1,47 +1,13 @@
 const site = require ('./src/_data/site')
 const purgeStyles = require('./src/_11ty/transforms/purge-css')
+const { rasterImage, svgImage } = require('./src/_11ty/shortcode/image')
 const dev = process.env.NODE_ENV !== 'production';
 const htmlmin = require('html-minifier')
 
-const Image = require("@11ty/eleventy-img");
-async function imageShortcode(src, alt, widths, sizes) {
-  const defaultWidths = [300, 600, 1200]
-  let defaultFormats = ["webp", "jpeg"]
-  let srcset
-  
-  if (!dev) { 
-    defaultFormats = ["avif", "webp", "jpeg"]
-  }
-
-  try {
-    srcset = widths.split`", "`.map(x=>+x)
-  } catch {
-    srcset = defaultWidths
-  }
-  let metadata = await Image(src, {
-    widths: srcset,
-    formats: defaultFormats,
-    outputDir: './_site/img/'
-  });
-
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
-}
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({
     public: './'
-  })
-
-  eleventyConfig.addPassthroughCopy({
-    img: './'
   })
 
   eleventyConfig.setBrowserSyncConfig({
@@ -53,7 +19,8 @@ module.exports = (eleventyConfig) => {
     dynamicPartials: true
   });
 
-  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addShortcode("image", rasterImage);
+  eleventyConfig.addShortcode("svgImage", svgImage);
 
   eleventyConfig.setDataDeepMerge(true)
 
