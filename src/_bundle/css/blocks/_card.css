@@ -38,6 +38,9 @@
   width: 100%;
   /* transition: all 0.4s ease-in-out; */
   animation: card 0.4s forwards;
+  max-height: 15rem;
+  object-fit: cover;
+  min-height: 15rem;
 }
 
 .card--content {
