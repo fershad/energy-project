@@ -1,11 +1,12 @@
 <script>
-  const wcID = selector => document.getElementById(selector);
+  import { getLocale } from "./helpers";
   const wcU =
     encodeURIComponent(document.querySelector("link[rel='canonical']").href) ||
     encodeURIComponent(window.location.href);
 
   const newRequest = async function(render = true) {
     // Run the API request because there is no cached result available
+    // Using proxy & site URL to capture more accurate number
     const r = await fetch("https://api.websitecarbon.com/b?url=" + wcU);
 
     if (!r.ok) {
@@ -14,8 +15,6 @@
 
     try {
       const d = await r.json();
-      d.t = new Date().getTime();
-      // Save the result into localStorage with a timestamp
       localStorage.setItem("wcb_" + wcU, JSON.stringify(d));
       return d;
     } catch (e) {
@@ -41,6 +40,7 @@
         }
 
         // Return the cached response
+        console.log(r);
         return r;
       }
 
@@ -51,12 +51,19 @@
   }
 
   const data = getCarbon();
+  const locale = getLocale(wcU);
 </script>
 
 {#await data}
   <!-- data is pending -->
   <div id="wcb_p">
-    <span id="wcb_g">Measuring CO<sub>2</sub>&hellip;</span>
+    {#if locale == 'zh'}
+      <!-- content here -->
+      <span id="wcb_g">CO<sub>2</sub> 檢查中&hellip;</span>
+    {:else}
+      <!-- else content here -->
+      <span id="wcb_g">Measuring CO<sub>2</sub>&hellip;</span>
+    {/if}
     <a
       id="wcb_a"
       target="_blank"
@@ -66,17 +73,36 @@
 {:then value}
   <!-- data was fulfilled -->
   <div id="wcb_p">
-    <span id="wcb_g">{value.c}g of CO<sub>2</sub>/view</span>
+    {#if locale == 'zh'}
+      <!-- content here -->
+      <span id="wcb_g">{value.c}克二氧化碳<sub>2</sub>/每次看</span>
+    {:else}
+      <!-- else content here -->
+      <span id="wcb_g">{value.c}g of CO<sub>2</sub>/view</span>
+    {/if}
     <a
       id="wcb_a"
       target="_blank"
       rel="noopener"
       href="https://websitecarbon.com">Website Carbon</a>
-  </div><span id="wcb_2">Cleaner than {value.p}% of pages tested</span>
+  </div>
+  {#if locale == 'zh'}
+    <!-- content here -->
+    <span id="wcb_2">清潔比 {value.p}% 的頁面經過測試</span>
+  {:else}
+    <!-- else content here -->
+    <span id="wcb_2">Cleaner than {value.p}% of pages tested</span>
+  {/if}
 {:catch error}
   <!-- data was rejected -->
   <div id="wcb_p">
-    <span id="wcb_g">No results</span>
+    {#if locale == 'zh'}
+      <!-- content here -->
+      <span id="wcb_g">沒結果</span>
+    {:else}
+      <!-- else content here -->
+      <span id="wcb_g">No results</span>
+    {/if}
     <a
       id="wcb_a"
       target="_blank"

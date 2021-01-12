@@ -35,7 +35,9 @@ module.exports = (eleventyConfig) => {
   //* Add fathom analytics tracking script in build
   eleventyConfig.addShortcode("analytics", function () {
     if (dev) {
-      return `<!-- Fathom analytics code here -->`
+      return `<!-- Fathom - beautiful, simple website analytics -->
+      <script src="https://heron.cleanenergyproject.tw/script.js" data-site="TMLDWNIR" defer></script>
+      <!-- / Fathom -->`
     }
 
     if (process.env.NODE_ENV === 'staging') {
@@ -43,7 +45,7 @@ module.exports = (eleventyConfig) => {
       <script src="https://heron.cleanenergyproject.tw/script.js" data-site="TMLDWNIR" defer></script>
       <!-- / Fathom -->`
     }
-    
+
     return `<!-- Fathom - beautiful, simple website analytics --><script src="https://heron.cleanenergyproject.tw/script.js" data-site="ZRTUZXPV" defer></script><!-- / Fathom -->`
   })
 
