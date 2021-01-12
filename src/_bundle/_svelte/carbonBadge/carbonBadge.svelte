@@ -1,5 +1,5 @@
 <script>
-  import { getLocale } from "./helpers";
+  import { getLocale } from "../helpers";
   const wcU =
     encodeURIComponent(document.querySelector("link[rel='canonical']").href) ||
     encodeURIComponent(window.location.href);
