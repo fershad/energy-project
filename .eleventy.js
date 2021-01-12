@@ -37,6 +37,13 @@ module.exports = (eleventyConfig) => {
     if (dev) {
       return `<!-- Fathom analytics code here -->`
     }
+
+    if (process.env.NODE_ENV === 'staging') {
+      return `<!-- Fathom - beautiful, simple website analytics -->
+      <script src="https://heron.cleanenergyproject.tw/script.js" data-site="TMLDWNIR" defer></script>
+      <!-- / Fathom -->`
+    }
+    
     return `<!-- Fathom - beautiful, simple website analytics --><script src="https://heron.cleanenergyproject.tw/script.js" data-site="ZRTUZXPV" defer></script><!-- / Fathom -->`
   })
 
