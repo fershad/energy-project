@@ -7,18 +7,25 @@ footer {
   padding: var(--size-500) 0;
 }
 
-footer .container {
+footer .wrapper .carbon {
+  grid-row: 1;
+}
+
+footer .wrapper {
   padding: 2rem var(--size-500);
   display: grid;
   gap: 1.15rem;
 }
 
-footer .container .social {
+footer .wrapper .social {
   text-align: center;
 }
 
-footer .social svg {
+footer .social a:not(:first-of-type) {
   margin-left: var(--size-600);
+}
+
+footer .social svg {
   position: relative;
   height: var(--size-600);
   width: var(--size-600);
@@ -36,33 +43,35 @@ footer .social svg:hover {
 }
 
 @media only screen and (min-width: 48em) {
-  footer .container {
-    grid-template-columns: 1fr minmax(auto, 0.5fr);
+  footer .wrapper {
+    grid-template-areas:
+      ". . . maintain carbon . ."
+      ". . . data . . ."
+      ". . . nav social . .";
   }
 
-  footer .container .maintainer,
-  footer .container .data-source,
-  footer .container .nav__list {
-    grid-column: 1;
+  footer .wrapper .maintainer,
+  footer .wrapper .data-source,
+  footer .wrapper .nav__list {
+    grid-column: 4;
   }
 
-  footer .container .carbon,
-  footer .container .social {
-    grid-column: 2;
-    text-align: right;
+  footer .wrapper .carbon,
+  footer .wrapper .social {
+    grid-column: 5;
   }
 
-  footer .container .maintainer,
-  footer .container .carbon {
+  footer .wrapper .maintainer,
+  footer .wrapper .carbon {
     grid-row: 1;
   }
 
-  footer .container .data-source {
+  footer .wrapper .data-source {
     grid-row: 2;
   }
 
-  footer .container .nav__list,
-  footer .container .social {
+  footer .wrapper .nav__list,
+  footer .wrapper .social {
     grid-row: 3;
   }
 
