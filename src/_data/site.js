@@ -5,7 +5,8 @@ const locales = [
     { code: 'zh', name: '中' },
 ];
 
-const baseUrl = 'https://cleanenergyproject.tw';
+const baseUrl =
+    process.env.NODE_ENV === 'production' ? 'https://cleanenergyproject.tw' : 'https://tw-energy.fershad.workers.dev';
 
 const name = {
     en: 'Taiwan Clean Energy Project',

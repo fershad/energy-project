@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all clean:* -p build:*",
+    "stage": "cross-env NODE_ENV=staging npm-run-all clean:* -p build:*",
     "build:11ty": "eleventy --quiet",
     "build:rollup": "rollup -c",
     "clean:dist": "rimraf _site",

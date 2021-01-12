@@ -18,7 +18,10 @@ const plugins = [
         dev,
     }),
     svg(),
-
+    postcss({
+        inject: true,
+        minimize: !dev,
+    }),
     resolve({
         browser: true,
         dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/'),
