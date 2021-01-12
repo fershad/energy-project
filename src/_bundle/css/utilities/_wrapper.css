@@ -1,8 +1,8 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: var(--size-300) 1fr auto minmax(auto, 72rem) auto 1fr var(
-      --size-300
-    );
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--size-400);
+  padding-right: var(--size-400);
   position: relative;
   overflow-y: hidden;
   height: 100%;
@@ -10,24 +10,27 @@
   /* padding: 0 var(--size-300); */
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 62rem) {
   .wrapper {
+    display: grid;
+    padding-left: 0;
+    padding-right: 0;
     grid-template-columns: var(--size-500) 1fr auto minmax(auto, 72rem) auto 1fr var(
         --size-500
       );
   }
-}
 
-.wrapper > * {
-  grid-column: 4/5;
-  /* overflow-y: hidden; */
+  .wrapper > * {
+    grid-column: 4/5;
+    /* overflow-y: hidden; */
+  }
 }
 
 .wrapper[data-wraps="content"] {
   --flow-space: var(--size-800);
   padding-top: var(--size-700);
 
-  @media (min-width: 48rem) {
+  @media (min-width: 62rem) {
     padding-top: var(--size-900);
   }
 }
