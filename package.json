@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm-run-all clean:* -p build:*",
-    "stage": "cross-env NODE_ENV=staging npm-run-all clean:* -p build:*",
+    "build": "cross-env NODE_ENV=production npm-run-all clean:build -p build:*",
+    "stage": "cross-env NODE_ENV=staging npm-run-all clean:stage -p build:*",
     "build:11ty": "eleventy --quiet",
     "build:rollup": "rollup -c",
-    "clean:dist": "rimraf _site",
-    "dev": "npm-run-all clean:* -p dev:*",
+    "clean:build": "rimraf _site",
+    "clean:stage": "rimraf _staging",
+    "dev": "npm-run-all clean:stage -p dev:*",
     "dev:11ty": "eleventy --serve --quiet",
     "dev:rollup": "rollup -c -w"
   },
