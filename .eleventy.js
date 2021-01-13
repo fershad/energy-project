@@ -4,6 +4,7 @@ const {
   rasterImage,
   svgImage
 } = require('./src/_11ty/shortcode/image')
+const analytics = require('./src/_11ty/shortcode/analytics')
 const localiser = require('./src/_11ty/filter/localiser')
 const yearlyData = require('./src/_11ty/filter/byDecades')
 
@@ -33,21 +34,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("direction", require("./src/_11ty/shortcode/upDown"));
 
   //* Add fathom analytics tracking script in build
-  eleventyConfig.addShortcode("analytics", function () {
-    if (dev) {
-      return `<!-- Fathom - beautiful, simple website analytics -->
-      <script src="https://heron.cleanenergyproject.tw/script.js" data-site="TMLDWNIR" defer></script>
-      <!-- / Fathom -->`
-    }
-
-    if (process.env.NODE_ENV === 'staging') {
-      return `<!-- Fathom - beautiful, simple website analytics -->
-      <script src="https://heron.cleanenergyproject.tw/script.js" data-site="TMLDWNIR" defer></script>
-      <!-- / Fathom -->`
-    }
-
-    return `<!-- Fathom - beautiful, simple website analytics --><script src="https://heron.cleanenergyproject.tw/script.js" data-site="ZRTUZXPV" defer></script><!-- / Fathom -->`
-  })
+  eleventyConfig.addShortcode("analytics", analytics)
 
   // ! Filters
   //*  Localisation filter - looks for current locale, defaults to EN
