@@ -2,6 +2,7 @@
 title: Plant trees while you search
 subtag: Protect your privacy, and do a small bit to help the environment while you search online.
 shortName: Use Ecosia
+hasMore: true
 tags:
     - homepage
 thumbnail: { 

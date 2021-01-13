@@ -45,6 +45,9 @@
 
 .card--content {
   padding: var(--size-300) var(--size-400);
+  display: block;
+  z-index: 0;
+  position: relative;
 }
 
 .card--content--heading {
@@ -72,14 +75,19 @@ a.card {
   text-decoration: none;
 }
 
+.card--action {
+  display: inline-block;
+  margin-bottom: var(--size-300);
+  position: relative;
+}
+
 a.card .content [data-external]:hover {
   color: inherit;
 }
 
-.card:hover::after,
+/* .card:hover::after,
 .card:focus::after,
 .card:focus-within::after {
-  /* border-radius: 0 18px 18px; */
   border: 2px solid var(--color-ocean-green);
   animation: cardHover 0.4s forwards;
   background-color: var(--color-ocean-green);
@@ -88,30 +96,28 @@ a.card .content [data-external]:hover {
       transparent 20%
     ),
     radial-gradient(var(--color-ocean-green) 20%, transparent 20%);
-}
+} */
 
 a.link--button:focus {
   outline: none;
 }
 
-.card:hover,
+/* .card:hover,
 .card:focus,
 .card:focus-within {
   border: 2px solid var(--color-ocean-green);
-  /* border-radius: 0 18px 18px; */
   animation: cardHover 0.4s forwards;
-}
+} */
 
-.card:hover .card--content--heading::after {
+/* .card:hover .card--content--heading::after {
   background-color: var(--color-ocean-green);
   animation: cardHover 0.4s forwards;
 }
 
 .card:hover .card--image,
 .card:hover img {
-  /* border-radius: 0 18px 18px; */
   animation: cardHover 0.4s forwards;
-}
+} */
 
 /* .card:hover .card--content--heading {
   color: var(--color-ocean-green);
