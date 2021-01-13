@@ -55,6 +55,7 @@ a:not([class]):focus {
   text-decoration: none;
   font-weight: 900;
   transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .link--button::after {
