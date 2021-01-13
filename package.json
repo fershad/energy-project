@@ -54,7 +54,8 @@
     "svelte": "^3.31.0"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "airtable": "^0.10.1"
+    "@quasibit/eleventy-plugin-sitemap": "^2.0.3",
+    "airtable": "^0.10.1",
+    "dotenv": "^8.2.0"
   }
 }
