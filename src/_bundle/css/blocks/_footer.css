@@ -19,7 +19,7 @@ footer .wrapper .carbon {
 footer .wrapper {
   padding: 2rem var(--size-500);
   display: grid;
-  gap: 1.15rem;
+  gap: var(--size-500);
 }
 
 footer .wrapper .social {
@@ -77,11 +77,36 @@ footer .social svg:hover {
   max-width: 100%;
 }
 
+footer .nav__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer .nav__list .nav__menu-list {
+  display: inline-flex;
+  flex-direction: row;
+  min-height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+footer .nav__link {
+  font-size: var(--size-500);
+  display: inline-block;
+  margin-inline-end: var(--size-400);
+}
+
+footer li.nav__link {
+  animation: none;
+}
+
 @media only screen and (min-width: 48em) {
   footer .wrapper {
     grid-template-areas:
       ". . . maintain carbon . ."
-      ". . . data . . ."
+      ". . . subscription . . ."
       ". . . nav social . .";
   }
 
@@ -112,6 +137,10 @@ footer .social svg:hover {
 
   footer .nav__list > *:first-of-type {
     padding-left: 0;
+  }
+
+  footer .nav__list {
+    justify-content: flex-start;
   }
 }
 

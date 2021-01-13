@@ -20,9 +20,11 @@
     </button>
     <ul class="nav__menu-list">
         {% for item in nav %}
-            <li class="nav__link">
-                <a href="/{{ locale }}{{ item[1].link }}">{{ item[1] | defaultLocale: locale | capitalize }}</a>
-            </li>
+        {% if item[1].header %}    
+        <li class="nav__link">
+            <a href="/{{ locale }}{{ item[1].link }}">{{ item[1] | defaultLocale: locale | capitalize }}</a>
+        </li>
+        {% endif %}
         {% endfor %}
 
         {% for siteLocale in site.locales %}

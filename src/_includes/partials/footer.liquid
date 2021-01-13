@@ -6,7 +6,7 @@
             </p>
         </div>
         <div class="subscription">
-            <p>{{ partial.footer.subscription.intro | defaultLocale: locale }}</p>
+            <p>{{ partial.footer.subscribe.intro | defaultLocale: locale }}</p>
             <form
   action="https://buttondown.email/api/emails/embed-subscribe/cleanenergyprojecttw"
   method="post"
@@ -14,16 +14,25 @@
   onsubmit="window.open('https://buttondown.email/cleanenergyprojecttw', 'popupwindow')"
   class="embeddable-buttondown-form"
 >
-  <label for="bd-email">{{ partial.footer.subscription.email | defaultLocale: locale }}</label>
+  <label for="bd-email">{{ partial.footer.subscribe.email | defaultLocale: locale }}</label>
   <div class="subscription--input">
       <input type="email" name="email" id="bd-email" placeholder="you@email.com" />
       <input type="hidden" value="1" name="embed" />
-      <button class="link--button" type="submit">{{ partial.footer.subscription.button | defaultLocale: locale }}</button>
+      <button class="link--button" type="submit">{{ partial.footer.subscribe.button | defaultLocale: locale }}</button>
   </div>
 </form>
 <small>
   {{ partial.footer.subscribe.buttondown | defaultLocale: locale | safe }}
 </small>
+        </div>
+        <div class="nav__list">
+            <ul class="nav__menu-list" role="navigation">
+                {% for item in nav %}
+                    <li class="nav__link">
+                        <a href="/{{ locale }}{{ item[1].link }}">{{ item[1] | defaultLocale: locale | capitalize }}</a>
+                    </li>
+                {% endfor %}      
+            </ul>
         </div>
         <div data-carbon id="wcb" class="carbon carbonbadge wcb-d"></div>
         <div class="social">
