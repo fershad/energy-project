@@ -5,7 +5,7 @@ shortName: Lobby for action
 tags:
     - homepage
 thumbnail: { 
-    src: "https://change.greenpeace.org.tw/2020/petition/zh-TW.2020.climate.greenhouse-gas.signup.mc/images/social_share_new.png", 
+    src: "./src/_includes/img/actions/greenpeace.jpg", 
     alt: "Green fields with a wind turbine in the middle.",
     caption: 'Photo credit: Greenpeace Taiwan'
 }
