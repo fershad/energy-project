@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /*.html$
+Disallow: /api/*
+Sitemap: https://cleanenergyproject.tw/sitemap.xml
