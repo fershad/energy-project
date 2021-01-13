@@ -19,6 +19,11 @@ module.exports = {
         zh: '關於',
         link: '/about',
     },
+    faq: {
+        en: 'FAQs',
+        zh: '',
+        link: '/faq',
+    },
     // contribute: {
     //     en: 'contribute',
     //     zh: '貢獻',
