@@ -70,7 +70,8 @@ module.exports = (eleventyConfig) => {
 
   return {
     dir: {
-      input: 'src'
+      input: 'src',
+      output: process.env.NODE_ENV === 'staging' ? '_staging' : '_site'
     },
   }
 }
