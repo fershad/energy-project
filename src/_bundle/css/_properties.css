@@ -59,8 +59,7 @@ main {
   position: relative;
 }
 
-a:not([class]),
-a:visited {
+a:not([class]) {
   color: currentColor;
 }
 

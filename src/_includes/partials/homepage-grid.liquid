@@ -115,11 +115,11 @@
     {% if renewable != true %}
             <div class="swiper--actions" data-direction="reverse">
                 <a class="link--button" href="/{{ locale }}/data">{{ pages.homepage.data.historical | defaultLocale: locale }}</a>
-                <a class="link--button swiper-link" href="#" data-target="renewable-grid">Show <strong>all renewables</strong> <span class="arrow--key arrow--right">{% include "svg/arrow-left.svg" %}</span></a>
+                <button class="link--button swiper-link" data-target="renewable-grid">Show <strong>all renewables</strong> <span class="arrow--key arrow--right">{% include "svg/arrow-left.svg" %}</span></button>
             </div>
         {% else %}
         <div class="swiper--actions">
-            <a class="link--button swiper-link"  href="#" data-target="clean-grid"><span class="arrow--key arrow--left">{% include "svg/arrow-left.svg" %}</span> Show <strong>only low-carbon</strong></a>
+            <button class="link--button swiper-link" data-target="clean-grid"><span class="arrow--key arrow--left">{% include "svg/arrow-left.svg" %}</span> Show <strong>only low-carbon</strong></button>
             <a class="link--button" href="/{{ locale }}/data">{{ pages.homepage.data.historical | defaultLocale: locale }}</a>
         </div>
     {% endif %}
