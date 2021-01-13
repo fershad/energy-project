@@ -21,7 +21,7 @@ async function rasterImage(src, alt, widths, sizes) {
     const metadata = await Image(src, {
         widths: srcset,
         formats: defaultFormats,
-        outputDir: './_site/img/',
+        outputDir: process.env.NODE_ENV === 'production' ? './_site/img/' : './_staging/img/',
     });
 
     const imageAttributes = {
@@ -39,7 +39,7 @@ async function rasterImage(src, alt, widths, sizes) {
 async function svgImage(src, alt) {
     const metadata = await Image(src, {
         formats: ['svg'],
-        outputDir: './_site/img/svg/',
+        outputDir: process.env.NODE_ENV === 'production' ? './_site/img/svg/' : './_staging/img/svg/',
         urlPath: '/img/svg/',
     });
 
