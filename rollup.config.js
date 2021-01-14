@@ -8,14 +8,7 @@ import json from '@rollup/plugin-json';
 import svelte from 'rollup-plugin-svelte';
 
 const dev = process.env.NODE_ENV !== 'production';
-
-const output = () => {
-    if (process.env.NODE_ENV !== 'staging') {
-        return '_staging';
-    }
-
-    return '_site';
-};
+const output = process.env.NODE_ENV !== 'production' ? '_staging' : '_site';
 
 const plugins = [
     replace({
