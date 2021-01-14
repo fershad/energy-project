@@ -139,7 +139,7 @@ footer li.nav__link {
     padding-left: 0;
   }
 
-  footer .nav__list {
+  footer .nav__list .nav__menu-list {
     justify-content: flex-start;
   }
 }

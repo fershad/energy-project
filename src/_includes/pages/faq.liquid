@@ -10,12 +10,10 @@ layout: base
 
     <section id="questions flow">
             {% for question in pages.faq.questions %}
-                <details>
-                    <summary>
-                        <h2 class="question">{{ question.question | defaultLocale: locale | safe }}</h2>
-                    </summary>
-                    <p class="answer">{{ question.answer | defaultLocale: locale | safe }}</p>
-                </details>
+                        <div>
+                            <h2 class="question">{{ question.question | defaultLocale: locale | safe }}</h2>
+                        <p class="answer">{{ question.answer | defaultLocale: locale | safe }}</p>
+                        </div>
             {% endfor %}
     </section>
 </main>
