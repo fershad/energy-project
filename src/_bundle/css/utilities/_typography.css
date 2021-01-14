@@ -4,6 +4,15 @@ p {
   max-width: 75ch;
 }
 
+blockquote {
+  margin: var(--size-400) 0 var(--size-400) var(--size-800);
+  max-width: 75ch;
+  padding-left: var(--size-400);
+  border-left: 10px solid var(--color-ocean-blue);
+  color: var(--color-ocean-blue);
+  font-style: italic;
+}
+
 li {
   max-width: 75ch;
 }
