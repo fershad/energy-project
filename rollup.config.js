@@ -9,6 +9,14 @@ import svelte from 'rollup-plugin-svelte';
 
 const dev = process.env.NODE_ENV !== 'production';
 
+const output = () => {
+    if (process.env.NODE_ENV !== 'staging') {
+        return '_staging';
+    }
+
+    return '_site';
+};
+
 const plugins = [
     replace({
         DEV_MODE: dev,
@@ -38,13 +46,13 @@ export default [
                 sourcemap: false,
                 format: 'iife',
                 name: 'index',
-                file: '_site/assets/carbon.legacy.js',
+                file: `${output}/assets/carbon.legacy.js`,
             },
             {
                 sourcemap: false,
                 format: 'es',
                 name: 'index',
-                file: '_site/assets/carbon.bundle.js',
+                file: `${output}/assets/carbon.bundle.js`,
             },
         ],
         plugins,
@@ -59,13 +67,13 @@ export default [
                 sourcemap: false,
                 format: 'iife',
                 name: 'index',
-                file: '_site/assets/chartProduction.legacy.js',
+                file: `${output}/assets/chartProduction.legacy.js`,
             },
             {
                 sourcemap: false,
                 format: 'es',
                 name: 'index',
-                file: '_site/assets/chartProduction.bundle.js',
+                file: `${output}/assets/chartProduction.bundle.js`,
             },
         ],
         plugins,
@@ -80,13 +88,13 @@ export default [
                 sourcemap: false,
                 format: 'iife',
                 name: 'index',
-                file: '_site/assets/chartEmissions.legacy.js',
+                file: `${output}/assets/chartEmissions.legacy.js`,
             },
             {
                 sourcemap: false,
                 format: 'es',
                 name: 'index',
-                file: '_site/assets/chartEmissions.bundle.js',
+                file: `${output}/assets/chartEmissions.bundle.js`,
             },
         ],
         plugins,
