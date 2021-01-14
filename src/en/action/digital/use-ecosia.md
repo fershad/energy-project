@@ -7,8 +7,8 @@ tags:
     - homepage
 thumbnail: { 
     src: "./src/_includes/img/actions/ecosia.jpg", 
-    alt: "A green tree sapling in a lush green environment.",
-    caption: '<span>Photo by <a href="https://unsplash.com/@aiokr?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">aiokr chen</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
+    alt: "The Ecosia homepage. Ecosia logo in the center of the screen, search input below, and background image of farm fields.",
+    caption: 'Screenshot of the Ecosia homepage'
 }
 contributors:
     - 

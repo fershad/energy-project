@@ -2,10 +2,11 @@
 title: Lobby for action
 subtag: Lobby governments at the local and national level to adopt climate focused policies.
 shortName: Lobby for action
+hasMore: true
 tags:
     - homepage
 thumbnail: { 
-    src: "./src/_includes/img/actions/greenpeace.jpg", 
+    src: "./src/_includes/img/actions/greenpeace.png", 
     alt: "Green fields with a wind turbine in the middle.",
     caption: 'Photo credit: Greenpeace Taiwan'
 }

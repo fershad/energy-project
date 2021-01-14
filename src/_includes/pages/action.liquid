@@ -14,15 +14,18 @@ layout: base
         <p>{{ pages.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
         <div class="action-grid auto-grid">
             {% for action in actions %}
-                <a href="{{ action.data.permalink }}" class="card">
-                    <img src="{{ action.data.thumbnail.src }}" alt="{{ action.data.thumbnail.alt }}" width="320" height="240" class="card--image">
-                    <div class="card--content">
-                        <p class="card--content--heading underlined" data-color="ocean-blue">
-                            {{ action.data.title }}
-                        </p>
-                        <p class="card--content--subtag">{{ action.data.subtag }}</p>
-                    </div>
-                </a>
+            <div class="card" {% if  action.data.hasMore %}data-more="true"{% endif %}>
+                {% image action.data.thumbnail.src,  action.data.thumbnail.alt, "252, 504, 321 642", "(min-width: 780px) 321px, (min-width: 580px) 252px, (min-width: 540px) calc(100vw - 28px), calc(9.55vw + 442px)" %}
+                <div class="card--content">
+                    <p class="card--content--heading underlined" data-color="ocean-blue">
+                        {{ action.data.title }}
+                    </p>
+                    <p class="card--content--subtag">{{ action.data.subtag }}</p>
+                    {% if action.data.hasMore %}
+                        <a href="{{ action.url }}" class="link--button card--action">Read more</a>
+                    {% endif %}
+                </div>
+            </div>
             {% endfor %}
         </div>
     </section>
