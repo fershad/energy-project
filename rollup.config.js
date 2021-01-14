@@ -60,13 +60,55 @@ export default [
                 sourcemap: false,
                 format: 'iife',
                 name: 'index',
-                file: `${output}/assets/chartProduction.legacy.js`,
+                file: `${output}/assets/productionChart.legacy.js`,
             },
             {
                 sourcemap: false,
                 format: 'es',
                 name: 'index',
-                file: `${output}/assets/chartProduction.bundle.js`,
+                file: `${output}/assets/productionChart.bundle.js`,
+            },
+        ],
+        plugins,
+        watch: {
+            clearScreen: false,
+        },
+    },
+    {
+        input: 'src/_bundle/showProduction.js',
+        output: [
+            {
+                sourcemap: false,
+                format: 'cjs',
+                name: 'index',
+                file: `${output}/assets/showProduction.legacy.js`,
+            },
+            {
+                sourcemap: false,
+                format: 'es',
+                name: 'index',
+                file: `${output}/assets/showProduction.bundle.js`,
+            },
+        ],
+        plugins,
+        watch: {
+            clearScreen: false,
+        },
+    },
+    {
+        input: 'src/_bundle/showEmissions.js',
+        output: [
+            {
+                sourcemap: false,
+                format: 'cjs',
+                name: 'index',
+                file: `${output}/assets/showEmissions.legacy.js`,
+            },
+            {
+                sourcemap: false,
+                format: 'es',
+                name: 'index',
+                file: `${output}/assets/showEmissions.bundle.js`,
             },
         ],
         plugins,
@@ -79,15 +121,15 @@ export default [
         output: [
             {
                 sourcemap: false,
-                format: 'iife',
+                format: 'cjs',
                 name: 'index',
-                file: `${output}/assets/chartEmissions.legacy.js`,
+                file: `${output}/assets/emissionsChart.legacy.js`,
             },
             {
                 sourcemap: false,
                 format: 'es',
                 name: 'index',
-                file: `${output}/assets/chartEmissions.bundle.js`,
+                file: `${output}/assets/emissionsChart.bundle.js`,
             },
         ],
         plugins,

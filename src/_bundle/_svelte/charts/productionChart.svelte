@@ -179,3 +179,16 @@
 
   buildChart();
 </script>
+
+<div id="chart">
+  <div class="toolbar">
+    <button id="one_year"> Past 1 year </button>
+
+    <button id="ten_years"> Past 10 Years </button>
+
+    <button class="active" id="twenty_years"> Past 20 Years </button>
+
+    <button id="all"> All </button>
+  </div>
+  <div id="chart-timeline" />
+</div>

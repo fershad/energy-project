@@ -14,32 +14,8 @@ layout: base
         <p>{{ pages.data.moe.paragraph | defaultLocale: locale | safe }}<br/>
             {{ pages.data.moe.source | defaultLocale: locale | safe }}</p>
             <!-- TODO: Hide this chart unless the user requests it. -->
-            <div data-production-chart style="margin: 0 var(--size-500);">
-                <div id="chart">
-                    <div class="toolbar">
-                        <button id="one_year">
-                            {{ pages.data[locale].percentage.chart.toolbar.oneYear | default: pages.data[site.defaultLanguage].chart.toolbar.oneYear }}
-                        </button>
-    
-                        <button id="ten_years">
-                            {{ pages.data[locale].percentage.chart.toolbar.tenYear | default: pages.data[site.defaultLanguage].chart.toolbar.tenYear }}
-                        </button>
-    
-                        <button class="active" id="twenty_years">
-                            {{ pages.data[locale].percentage.chart.toolbar.twentyYear | default: pages.data[site.defaultLanguage].chart.toolbar.twentyYear }}
-                        </button>
-    
-                        <button id="all">
-                            {{ pages.data[locale].percentage.chart.toolbar.allYear | default: pages.data[site.defaultLanguage].chart.toolbar.allYear }}
-                        </button>
-                    </div>
-                    <div id="chart-timeline"></div>
-                </div>
-            </div>
-            <!-- Fetch chart data -->
-            <script src="/assets/chartProduction.bundle.js" type="module"></script>
-            <script nomodule src="/assets/chartProduction.legacy.js"></script>
-
+            <div data-production-button></div>
+            <script src="/assets/showProduction.bundle.js" type="module"></script>
         <div class="table-wrapper">
             <table>
                 <thead>
@@ -181,13 +157,8 @@ layout: base
         <h2>{{ pages.data.globalCarbon.heading | defaultLocale: locale }}</h2>
         <p>{{ pages.data.globalCarbon.paragraph | defaultLocale: locale | safe }}<br/>
             {{ pages.data.globalCarbon.source | defaultLocale: locale | safe }}</p>
-            <!-- TODO: Hide this chart unless the user requests it. -->
-            <div data-emissions-chart style="margin: 0 var(--size-500);">
-                <div id="emissionsChart"></div>
-            </div>
-            <!-- Fetch chart data -->
-            <script src="/assets/chartEmissions.bundle.js" type="module"></script>
-            <script nomodule src="/assets/chartEmissions.legacy.js"></script>
+            <div data-emissions-button></div>
+            <script src="/assets/showEmissions.bundle.js" type="module"></script>
         <div class="table-wrapper">
             <table>
                 <caption data-align="left">
