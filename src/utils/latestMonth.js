@@ -21,7 +21,7 @@ const calculateTotal = (values = []) => {
         const element = values[index] || 0;
         total += element;
     }
-    return total;
+    return total.toFixed(2);
 };
 
 const latestMonth = async data => {
