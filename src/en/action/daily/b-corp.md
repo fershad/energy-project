@@ -10,6 +10,9 @@ thumbnail: {
     alt: "B Corporation certification logo.",
     caption: "B Corporations are certified on social and environmental performance. Source <a href='https://bullhorncreative.com/'>Bullhorn Creative</a>"
 }
+actions:
+    - Find [B Corps in Taiwan](https://bcorporation.net/directory?search=&industry=&country=Taiwan&state=&city=) (or [globally](https://bcorporation.net/directory))
+    - Find [companies committed to net zero](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46) by 2030
 contributors:
     - 
         - display: "Fershad"
@@ -25,5 +28,11 @@ Over 800 B Corps have committed to reducing their greenhouse gas emissions to [n
 
 Support purpose-driven companies, especially those who are committed to net zero emissions.
 
-- Find [B Corps in Taiwan](https://bcorporation.net/directory?search=&industry=&country=Taiwan&state=&city=) (or [globally](https://bcorporation.net/directory))
-- Find [companies committed to net zero](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46) by 2030
+<div class="take-action">
+<h2>
+    What can you do?
+</h2>
+{% for action in actions %}
+{{ action }}
+{% endfor %}
+</div>
