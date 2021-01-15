@@ -5,7 +5,7 @@ shortName: farmers-market
 thumbnail: { 
     src: "./src/_includes/img/actions/market.jpg", 
     alt: "Farmer's market in Taiwan",
-    caption: "Photo credit: <a href="https://shanghaiskies.com/">Shanghai Skies blog</a>"
+    caption: 'Photo credit: <a href="https://shanghaiskies.com/">Shanghai Skies blog</a>'
 }
 contributors:
     - 
