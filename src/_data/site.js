@@ -6,7 +6,9 @@ const locales = [
 ];
 
 const baseUrl =
-    process.env.NODE_ENV === 'production' ? 'https://cleanenergyproject.tw' : 'https://tw-energy.fershad.workers.dev';
+    process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'
+        ? 'https://cleanenergyproject.tw'
+        : 'https://tw-energy.fershad.workers.dev';
 
 const name = {
     en: 'Taiwan Clean Energy Project',
