@@ -28,7 +28,7 @@ async function rasterImage(src, alt, widths, sizes) {
         alt,
         sizes,
         //! Disable these if you want to lint responsive images during development.
-        loading: 'lazy',
+        loading: !dev ? 'lazy' : 'eager',
         decoding: 'async',
     };
 
