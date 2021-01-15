@@ -4,7 +4,7 @@ const dev = process.env.NODE_ENV !== 'production';
 
 async function rasterImage(src, alt, widths, sizes) {
     const defaultWidths = [300, 600, 1200];
-    let defaultFormats = ['webp', 'jpeg'];
+    let defaultFormats = ['jpeg'];
     let srcset;
 
     if (!dev) {
