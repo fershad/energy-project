@@ -61,7 +61,7 @@ layout: base
         <div class="action-grid auto-grid">
             {% for action in homepageActions limit: 3 reversed %}
                 <div class="card" {% if  action.data.hasMore %}data-more="true"{% endif %}>
-                    {% image action.data.thumbnail.src,  action.data.thumbnail.alt, "252, 504, 321 642", "(min-width: 780px) 321px, (min-width: 580px) 252px, (min-width: 540px) calc(100vw - 28px), calc(9.55vw + 442px)" %}
+                    {% image action.data.thumbnail.src,  action.data.thumbnail.alt, "321, 642, 269, 538, 252, 504, 524", "(min-width: 1280px) 321px, (min-width: 1040px) calc(23.64vw + 23px), (min-width: 580px) calc(2.27vw + 239px), calc(100vw - 36px)" %}
                     <div class="card--content">
                         <p class="card--content--heading underlined" data-color="ocean-blue">
                             {{ action.data.title }}
