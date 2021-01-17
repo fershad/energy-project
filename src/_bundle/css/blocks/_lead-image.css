@@ -1,5 +1,16 @@
+.lead-image {
+  margin-bottom: var(--size-800);
+}
+
 .lead-image img {
   width: 100%;
   object-fit: cover;
   max-height: 55vh;
+}
+
+.lead-image figcaption {
+  text-align: center;
+  padding: var(--size-300) var(--size-400);
+  font-size: var(--size-400);
+  max-width: 100%;
 }

@@ -13,7 +13,3 @@ contributors:
         - twitter: "@fershad"
         - github: "fishintaiwan"
 ---
-
-<h1>
-    {{ title }}
-</h1>

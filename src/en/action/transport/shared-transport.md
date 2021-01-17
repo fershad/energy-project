@@ -19,7 +19,3 @@ contributors:
         - twitter: ""
         - github: ""
 ---
-
-<h1>
-    {{ title }}
-</h1>

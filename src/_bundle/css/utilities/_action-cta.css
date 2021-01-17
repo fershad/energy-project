@@ -1,0 +1,13 @@
+.action-cta {
+  padding: var(--size-300) var(--size-500);
+  margin: var(--size-500) 0 var(--size-700) 0;
+}
+
+.action-cta p:before {
+  content: "◾";
+  margin-right: 0.5ex;
+}
+
+.action-cta.card {
+  max-width: 75ch;
+}

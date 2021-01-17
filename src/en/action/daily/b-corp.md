@@ -11,8 +11,9 @@ thumbnail: {
     caption: "B Corporations are certified on social and environmental performance. Source <a href='https://bullhorncreative.com/'>Bullhorn Creative</a>"
 }
 actions:
-    - Find [B Corps in Taiwan](https://bcorporation.net/directory?search=&industry=&country=Taiwan&state=&city=) (or [globally](https://bcorporation.net/directory))
-    - Find [companies committed to net zero](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46) by 2030
+    - Find [B Corps in Taiwan](https://bcorporation.net/directory?search=&industry=&country=Taiwan&state=&city=) (or [globally](https://bcorporation.net/directory)) & support them.
+    - Find [companies committed to net zero](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46) by 2030.
+    - If you run a business then take the [B Impact Assessment](https://bimpactassessment.net/).
 contributors:
     - 
         - display: "Fershad"
@@ -24,11 +25,10 @@ How and where we spend our money is one of the biggest signals we, as consumers,
 
 One way to identify purpose-driven companies is by looking for [B Corp certification](https://bcorporation.net/). B Corporation (B Corp) certification is private certification that aimed at identifying profit-seeking companies that seek to maximise social & environmental performance. The program assesses a company’s overall impact across five dimensions of governance, workers, environment, community, and customers.
 
-Over 800 B Corps have committed to reducing their greenhouse gas emissions to [net zero by 2030](https://www.bcorpclimatecollective.org/net-zero-2030). Among that is 10 companies from Taiwan.
+Over 800 certified B corporations have committed to reducing their greenhouse gas emissions to [net zero by 2030](https://www.bcorpclimatecollective.org/net-zero-2030). 10 of those companies are here in Taiwan.
 
-Support purpose-driven companies, especially those who are committed to net zero emissions.
 
-<div class="take-action">
+<div class="action-cta card">
 <h2>
     What can you do?
 </h2>
