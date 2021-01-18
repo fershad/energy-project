@@ -138,6 +138,21 @@ export default [
         },
     },
     {
+        input: 'src/_bundle/share.js',
+        output: [
+            {
+                sourcemap: false,
+                format: 'es',
+                name: 'index',
+                file: `${output}/assets/share.bundle.js`,
+            },
+        ],
+        plugins,
+        watch: {
+            clearScreen: false,
+        },
+    },
+    {
         input: 'src/_bundle/css.js',
         output: [
             {

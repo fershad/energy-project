@@ -5,4 +5,8 @@ layout: base
 <main class="wrapper" data-wraps="content" id="main-content">
     {% include 'partials/action-image' %}
     {{ content | safe }}
+    <span data-share-btn></span>
 </main>
+
+<!-- Add share button -->
+<script src="/assets/share.bundle.js" type="module"></script>
