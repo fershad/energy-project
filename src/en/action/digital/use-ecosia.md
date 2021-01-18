@@ -29,7 +29,7 @@ The company generates revenue from serving generic ads (i.e. ads that are not in
 I've used Ecosia for a number of months now, and often the search results serve up the answers to my questions. Sometimes I do still find myself reaching for Google, but not after running a few searches through Ecosia first.
 
 
-<div class="action-cta card">
+<div class="action-cta card" data-padded>
 <h2>
     What can you do?
 </h2>

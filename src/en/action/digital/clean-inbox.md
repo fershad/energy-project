@@ -27,7 +27,7 @@ There are nearly 300 billion (yep, billion) emails sent out every day. Out of th
 
 While email might only form a small fraction of the internet's overall carbon footprint, it's a really easy place to start reducing your own personal carbon footprint (and restoring some sanity too, depending on how messy your inbox is!).
 
-<div class="action-cta card">
+<div class="action-cta card" data-padded>
 <h2>
     What can you do?
 </h2>

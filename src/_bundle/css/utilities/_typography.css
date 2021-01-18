@@ -223,4 +223,12 @@ h3 + .subheading {
   font-size: var(--size-400);
 }
 
+p[data-1rem] {
+  font-size: var(--size-400);
+}
+
+p[data-wide] {
+  max-width: 100%;
+}
+
 /* End Typography */
