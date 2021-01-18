@@ -28,11 +28,13 @@ One way to identify purpose-driven companies is by looking for [B Corp certifica
 Over 800 certified B corporations have committed to reducing their greenhouse gas emissions to [net zero by 2030](https://www.bcorpclimatecollective.org/net-zero-2030). 10 of those companies are here in Taiwan.
 
 
-<div class="action-cta card" data-padded>
-<h2>
-    What can you do?
-</h2>
+<div class="action-cta card" data-spaced>
+<div class="card--content">
+    <h2>
+        What can you do?
+    </h2>
 {% for action in actions %}
 {{ action }}
 {% endfor %}
+</div>
 </div>

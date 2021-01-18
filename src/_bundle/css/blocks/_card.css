@@ -1,11 +1,16 @@
 .card {
   width: 100%;
-  border: 2px solid var(--color-ocean-blue);
+  border: 2px solid var(--text-color);
   /* border-radius: 0 18px 18px 0; */
   position: relative;
   background: var(--background-color);
   /* transition: all 0.4s ease-in-out; */
   animation: card 0.4s forwards;
+}
+
+.card[data-wide] {
+  grid-column: -1/1;
+  width: 100%;
 }
 
 .card::after {
@@ -17,17 +22,14 @@
   left: 10px;
   /* border-radius: 0 18px 18px 0; */
   /*     background-color: var(--color-ocean-blue); */
-  background-image: radial-gradient(
-      var(--color-ocean-blue) 20%,
-      transparent 20%
-    ),
-    radial-gradient(var(--color-ocean-blue) 20%, transparent 20%);
+  background-image: radial-gradient(var(--text-color) 20%, transparent 20%),
+    radial-gradient(var(--text-color) 20%, transparent 20%);
   display: block;
   z-index: -1;
   background-position: 0 0, 3.5px 3.5px;
   background-size: 7px 7px;
   background-color: var(--background-color);
-  border: 2px solid var(--color-ocean-blue);
+  border: 2px solid var(--text-color);
   transition: all 0.4s ease-in-out;
   animation: card 0.4s forwards;
 }
@@ -78,8 +80,7 @@ a.card {
   text-decoration: none;
 }
 
-.card[data-padded] {
-  padding: var(--size-300) var(--size-500);
+.card[data-spaced] {
   margin: var(--size-500) 0 var(--size-700) 0;
 }
 

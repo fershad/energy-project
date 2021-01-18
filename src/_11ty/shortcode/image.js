@@ -2,7 +2,7 @@ const Image = require('@11ty/eleventy-img');
 
 const dev = process.env.NODE_ENV !== 'production';
 
-async function rasterImage(src, alt, widths, sizes) {
+async function rasterImage(src, alt, widths, sizes, loading = 'lazy') {
     const defaultWidths = [300, 600, 1200];
     let defaultFormats = ['jpeg'];
     let srcset;
@@ -28,7 +28,7 @@ async function rasterImage(src, alt, widths, sizes) {
         alt,
         sizes,
         //! Disable these if you want to lint responsive images during development.
-        loading: !dev ? 'lazy' : 'eager',
+        loading,
         decoding: 'async',
     };
 

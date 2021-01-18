@@ -13,15 +13,25 @@ hasSubscription: true
     <section data-overflow="allow" id="action">
         <h1>{{ pages.homepage.action.heading | defaultLocale: locale | capitalize }}</h1>
         <p>{{ pages.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
-        <div class="card" data-padded>
-            <h2>Stay updated</h2>
-            <p>I'll be periodically updating and adding actions. If you'd like to stay updated with changes then subscribe to email updates using the form below. I'll only send out one email per month, I promise.</p>
-            {% include "partials/subscription" %}
-        </div>
         <div class="action-grid auto-grid">
             {% for action in actions %}
+            {% if forloop.index0 < 3 %}
+                {% assign loading = 'eager' %}
+            {% else %}
+                {% assign loading = 'lazy' %}
+            {% endif %}
+
+            {% if forloop.index0 == 3 %}
+            <div class="card" data-wide>
+                <div class="card--content">
+                    <h2>Stay updated</h2>
+                    <p data-wide>I'll be periodically updating and adding actions. If you'd like to stay updated with changes then subscribe to email updates using the form below. I'll only send out one email per month, I promise.</p>
+                    {% include "partials/subscription" %}
+                </div>
+            </div>
+            {% endif %}
             <div class="card" {% if  action.data.hasMore %}data-more="true"{% endif %}>
-                {% image action.data.thumbnail.src,  action.data.thumbnail.alt, "321, 642, 269, 538, 252, 504, 524", "(min-width: 1280px) 321px, (min-width: 1040px) calc(23.64vw + 23px), (min-width: 580px) calc(2.27vw + 239px), calc(100vw - 36px)" %}
+                {% image action.data.thumbnail.src,  action.data.thumbnail.alt, "321, 642, 269, 538, 252, 504, 524", "(min-width: 1280px) 321px, (min-width: 1040px) calc(23.64vw + 23px), (min-width: 580px) calc(2.27vw + 239px), calc(100vw - 36px)", loading %}
                 <div class="card--content">
                     <p class="card--content--heading underlined" data-color="ocean-blue">
                         {{ action.data.title }}

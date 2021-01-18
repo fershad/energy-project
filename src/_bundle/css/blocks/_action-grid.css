@@ -1,7 +1,7 @@
 .action-grid {
   margin-bottom: var(--size-600);
   margin-top: var(--size-600);
-  --auto-grid-gap: var(--size-major);
+  --auto-grid-gap: var(--size-800);
   --auto-grid-cols: 1;
 }
 
