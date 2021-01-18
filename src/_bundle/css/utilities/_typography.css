@@ -223,7 +223,8 @@ h3 + .subheading {
   font-size: var(--size-400);
 }
 
-p[data-1rem] {
+p[data-1rem],
+span[data-1rem] {
   font-size: var(--size-400);
 }
 
