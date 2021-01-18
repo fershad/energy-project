@@ -7,6 +7,7 @@
         </div>
         {% unless hasSubscription %}    
         <div class="subscription">
+            <p class="h3" data-color="white" data-wide>{{ partial.footer.subscribe.heading | defaultLocale: locale }}</p>
             <p>{{ partial.footer.subscribe.intro | defaultLocale: locale }}</p>
             {% include "partials/subscription" %}
         </div>

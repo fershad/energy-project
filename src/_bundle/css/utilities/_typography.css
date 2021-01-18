@@ -179,7 +179,7 @@ strong,
 }
 
 [data-color="white"] {
-  color: #fff;
+  color: var(--color-campfire-smoke);
 }
 
 [data-color="peach"] {

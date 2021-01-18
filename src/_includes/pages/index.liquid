@@ -57,7 +57,7 @@ layout: base
         {% endif %}
 
         <h2>{{ pages.homepage.action.heading | defaultLocale: locale | capitalize }}</h2>
-        <p>{{ pages.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
+        {{ pages.homepage.action.paragraph | defaultLocale: locale | safe }}
         <div class="action-grid auto-grid">
             {% for action in homepageActions limit: 3 reversed %}
                 <div class="card" {% if  action.data.hasMore %}data-more="true"{% endif %}>

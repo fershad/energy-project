@@ -29,11 +29,11 @@ const data = {
         },
     },
     note: {
-        en: 'Why this energy mix? Read the FAQ.',
+        en: 'Why this energy mix? <a href="/en/faq">Read the FAQ.</a>',
     },
     historical: {
-        en: `See historical data.`,
-        zh: `看所有個月的數據.`,
+        en: `Historical data.`,
+        zh: `所有個月的數據.`,
     },
 };
 
@@ -43,8 +43,8 @@ const action = {
         zh: '減少你的碳足跡',
     },
     paragraph: {
-        en: `We can all do our part to reduce CO2 emissions through small changes in lifestyle and behaviour. More often than not these changes don't come at a large financial cost, and simply require a small change in mindset or habits. Here are just a few actions you can take to reduce your personal carbon footprint.`,
-        zh: '您可以在日常生活中採取的行動, 開始邁向低碳, 低污染的生活方式.',
+        en: `<p>We can all do our part to reduce CO2 emissions through small changes in lifestyle and behaviour. More often than not these changes don't come at a large financial cost, and simply require a small change in mindset or habits.</p> <p>Here are just a few actions you can take to reduce your personal carbon footprint.</p>`,
+        zh: '<p>您可以在日常生活中採取的行動, 開始邁向低碳, 低污染的生活方式.</p>',
     },
     cta: {
         en: 'See more actions',
@@ -58,8 +58,8 @@ const news = {
         zh: `新聞和文章`,
     },
     paragraph: {
-        en: `A collection of news, blog posts & articles in English/Chinese about the situation in Taiwan. Find more in the <a href="/en/news">news archive</a>.`,
-        zh: `有關台灣局勢的一些新聞，博客和文章 (中文 / 英文的). 看更多在 <a href="/zh/news">新聞檔案</a>.`,
+        en: `A collection of news articles & blog posts in English/Chinese about the situation in Taiwan. <br>Find more in the <a href="/en/news">news archive</a>.`,
+        zh: `有關台灣局勢的一些新聞文章和博客和 (中文 / 英文的). <br>看更多在 <a href="/zh/news">新聞檔案</a>.`,
     },
 };
 
