@@ -21,7 +21,7 @@
     }
 </style>
 
-<button class="link--button" data-spaced on:click={showChart}>{ text }</button>
-<div data-emissions-chart data-spaced class:hidden={!display}>
+<button class="link--button" on:click={showChart}>{ text }</button>
+<div data-emissions-chart class:hidden={!display}>
     <div id="emissionsChart" />
 </div>

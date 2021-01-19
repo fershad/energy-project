@@ -21,5 +21,5 @@
     }
 </style>
 
-<button class="link--button" data-spaced on:click={showChart}>{ text }</button>
-<div data-production-chart data-spaced class:hidden={!display} />
+<button class="link--button" on:click={showChart}>{ text }</button>
+<div data-production-chart class:hidden={!display} />
