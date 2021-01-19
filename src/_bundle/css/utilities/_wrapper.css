@@ -28,9 +28,13 @@
 
 .wrapper[data-wraps="content"] {
   --flow-space: var(--size-800);
-  padding: var(--size-700) 0;
+  padding: var(--size-700) var(--size-300);
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 72rem;
 
   @media (min-width: 62rem) {
-    padding: var(--size-900) 0;
+    padding: var(--size-900) var(--size-400);
   }
 }
