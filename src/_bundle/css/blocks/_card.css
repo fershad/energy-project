@@ -46,7 +46,7 @@
 }
 
 .card--content {
-  padding: var(--size-300) var(--size-400);
+  padding: var(--size-400) var(--size-600);
   display: flex;
   z-index: 0;
   position: relative;

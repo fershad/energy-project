@@ -5,13 +5,6 @@
                 {{ partial.footer.maintainer | defaultLocale: locale | safe }}
             </p>
         </div>
-        {% unless hasSubscription %}    
-        <div class="subscription">
-            <p class="h3" data-color="white" data-wide>{{ partial.footer.subscribe.heading | defaultLocale: locale }}</p>
-            <p>{{ partial.footer.subscribe.intro | defaultLocale: locale }}</p>
-            {% include "partials/subscription" %}
-        </div>
-        {% endunless %}
         <div class="nav__list">
             <ul class="nav__menu-list" role="navigation">
                 {% for item in nav %}
