@@ -22,17 +22,12 @@ Below are some of the books that have helped me understand the climate emergency
 I'd love to add to this list. So, if you have any book recommendations [send them through!](mailto:{{ site.contact.email }}) 
 
 <div class="action-grid auto-grid">
+{% for book in books %}
 <div class="card book">
-{% image './src/_includes/img/howbadarebananas.jpg', 'Book cover for How Bad Are Bananas', '150, 300, 600' %}
+{% image book.image, 'Book cover for {{ book.title }}', '150, 300, 600' %}
 <div class="card--content">
-<p>How Bad Are Bananas <br><strong>Mike Berners-Lee</strong></p>
+<p>{{ book.title }}<br><strong>{{ book.author }}</strong></p>
 </div>
 </div>
-<div class="card book">
-{% image './src/_includes/img/worldwidewaste.jpg', 'Book cover for World Wide Waste', '150, 300, 600' %}
-<div class="card--content">
-<p>World Wide Waste <br><strong>Gerry McGovern</strong></p>
-</div>
-</div>
-
+{% endfor %}
 </div>
