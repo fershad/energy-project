@@ -76,18 +76,18 @@ main:focus {
   background: rgba(var(--color-pale-peach), 0.99);
 }
 
-/* Scrollbar styles
+/*  Scrollbar styles */
 ::-webkit-scrollbar {
-  height: 0.8rem;
+  height: var(--size-300);
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color-charcoal);
-  border: 1px solid var(--color-charcoal);
+  background-color: var(--color-rich-black);
+  border: 1px solid var(--color-rich-black);
   border-radius: 0rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-pale-peach);
-  border-radius: 0rem;
-} */
+  background-color: var(--color-ocean-green);
+  border-radius: var(--size-300);
+}
