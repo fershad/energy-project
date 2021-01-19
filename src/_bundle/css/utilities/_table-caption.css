@@ -1,6 +1,6 @@
 table caption[data-align="left"] {
   text-align: left;
-  max-width: max-content;
+  max-width: calc(100vw - (var(--size-500) * 2));
   position: sticky;
   left: 0;
 }

@@ -35,11 +35,11 @@ const globalCarbon = {
     },
     table: {
         caption: {
-            en: 'Total CO2 emissions for Taiwan.',
+            en: 'Total CO<sup>2</sup> emissions for Taiwan.',
             zh: '',
         },
         note: {
-            en: `All values below are in <em>millions of tonnes</em> of CO2 (i.e. add '000,000 to the end).`,
+            en: `All values below are in <em>millions of tonnes</em> of CO<sup>2</sup> (i.e. add '000,000 to the end).`,
             zh: ``,
         },
     },

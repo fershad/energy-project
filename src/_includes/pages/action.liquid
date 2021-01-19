@@ -10,8 +10,8 @@ layout: base
     {% endif %}
 
     <section data-overflow="allow" id="action">
-        <h1>{{ pages.homepage.action.heading | defaultLocale: locale | capitalize }}</h1>
-        <p>{{ pages.homepage.action.paragraph | defaultLocale: locale | safe }}</p>
+        <h1>{{ pages.action.heading | defaultLocale: locale | capitalize }}</h1>
+        <p>{{ pages.action.paragraph | defaultLocale: locale | safe }}</p>
         <div class="action-grid auto-grid">
             {% for action in actions %}
             {% if forloop.index0 < 3 %}

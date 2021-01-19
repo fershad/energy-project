@@ -35,7 +35,7 @@ const questions = [
                 The Strategic Framework for Sustainable Energy Policy (2008) outlines a series of aspirational short-term objectives, including:
             </p>
             <ul>
-                <li>Reduce CO2 emissions to its 2008 level between 2016 ~ 2020, and further reduced to the 2000 level in 2025</li>
+                <li>Reduce CO<sup>2</sup> emissions to its 2008 level between 2016 ~ 2020, and further reduced to the 2000 level in 2025</li>
                 <li>Increase the share of low carbon energy in electricity generation systems from the current 40% to 55% by 2025 against a 2008 baseline</li>
                 <li>Renewable energy share in the electricity system 8% by 2025</li>
             </ul>            
@@ -63,7 +63,7 @@ const questions = [
             zh: ``,
         },
         answer: {
-            en: `<p>I am tracking the estimated carbon emissions of this website using the <a href="//websitecarbon.com" data-external>Website Carbon Calculator</a>. Each time a page is viewed the estimated carbon emissions are calculated and shown in the badge. I use this figure along with data from my website analytics (provided by <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>) to determine the overall CO2 emissions of the entire site.</p>`,
+            en: `<p>I am tracking the estimated carbon emissions of this website using the <a href="//websitecarbon.com" data-external>Website Carbon Calculator</a>. Each time a page is viewed the estimated carbon emissions are calculated and shown in the badge. I use this figure along with data from my website analytics (provided by <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>) to determine the overall CO<sup>2</sup> emissions of the entire site.</p>`,
             zh: ``,
         },
     },

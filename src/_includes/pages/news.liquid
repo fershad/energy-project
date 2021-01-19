@@ -3,8 +3,8 @@ layout: base
 ---
 <main class="wrapper flow" data-wraps="content" id="main-content">
     <section id="news">
-        <h1>{{ pages.homepage.news.heading | defaultLocale: locale | capitalize }}</h1>
-        <p>{{ pages.homepage.news.paragraph | defaultLocale: locale | safe }}</p>
+        <h1>{{ pages.news.heading | defaultLocale: locale | capitalize }}</h1>
+        <p>{{ pages.news.paragraph | defaultLocale: locale | safe }}</p>
 
         <div class="article--holder">
             {% for story in news %}

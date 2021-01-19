@@ -41,9 +41,32 @@ const support = {
     },
 };
 
+const subscribe = {
+    heading: {
+        en: 'Stay updated',
+        zh: '',
+    },
+    intro: {
+        en: `I'll be periodically updating and adding actions. If you'd like to stay updated with changes then subscribe to email updates using the form below. I'll only send out one email per month, I promise.`,
+        zh: '',
+    },
+    email: {
+        en: 'Enter your email',
+        zh: '加入你的電信',
+    },
+    button: {
+        en: 'Subscribe',
+        zh: '訂閱',
+    },
+    buttondown: {
+        en: `<a href="https://buttondown.email" target="_blank" rel="nofollow">Powered by Buttondown.</a> If you're having trouble subscribing email me directly at <a href="mailto:cleanenergyproject@fershad.com">cleanenergyproject@fershad.com</a>.`,
+        zh: `<a href="https://buttondown.email" target="_blank" rel="nofollow">由Buttondown強力驅動.</a> 如果不能訂閱，用<a href="mailto:cleanenergyproject@fershad.com">cleanenergyproject@fershad.com</a>發電信給我.`,
+    },
+};
+
 const emailMe = {
     en: 'Email me',
     zh: '聯絡我',
 };
 
-module.exports = { defaultLocale, baseUrl, name, description, ogImgAlt, contact, support, locales, emailMe };
+module.exports = { defaultLocale, baseUrl, name, description, ogImgAlt, contact, support, locales, emailMe, subscribe };
