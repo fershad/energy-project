@@ -45,6 +45,10 @@
   min-height: 15rem;
 }
 
+.card.book img {
+  object-fit: contain;
+}
+
 .card--content {
   padding: var(--size-400) var(--size-600);
   display: flex;
