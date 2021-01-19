@@ -1,5 +1,13 @@
 <script>
+    let display = false;
+    let text = 'Show graph'
     async function showChart() {
+        display = !display;
+        if (display) {
+            text = 'Hide graph'
+        } else {
+            text = 'Show graph'
+        }
         const { default: chart } = await import(
             "/assets/emissionsChart.bundle.js"
         );
@@ -7,8 +15,13 @@
     }
 </script>
 
-<button class="link--button" on:click={showChart}>Show graph</button>
-<!-- TODO: Hide this chart unless the user requests it. -->
-<div data-emissions-chart style="margin: 0 var(--size-500);">
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+
+<button class="link--button" data-spaced on:click={showChart}>{ text }</button>
+<div data-emissions-chart data-spaced class:hidden={!display}>
     <div id="emissionsChart" />
 </div>
