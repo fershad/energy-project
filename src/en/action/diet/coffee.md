@@ -1,6 +1,6 @@
 ---
 title: Change up your coffee
-subtag: If you add milk to your coffee, try switching it out for a non-dairy alternative.
+subtag: Adding dairy milk to your tea of coffee can triple the carbon footprint of each cup you drink.
 shortName: coffee
 hasMore: true
 thumbnail: { 
