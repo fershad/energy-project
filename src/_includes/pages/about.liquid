@@ -8,20 +8,25 @@ layout: base
         <p>{{ pages.about.intro | defaultLocale: locale | safe }}</p>
     </section>
 
-    <section id="aims">
+    <section id="aims" data-divider="regular">
         <h2>{{ pages.about.aims.heading | defaultLocale: locale }}</h2>
         <p>{{ pages.about.aims.paragraph | defaultLocale: locale | safe }}</p>
-        <p>{{ pages.about.aims.why | defaultLocale: locale | safe }}</p>
-        <h3>{{ pages.about.aims.roadmap.heading | defaultLocale: locale }}</h3>
-        <p>{{ pages.about.aims.roadmap.paragraph | defaultLocale: locale | safe }}</p>
+        <p>{{ pages.about.aims.learning | defaultLocale: locale | safe }}</p>
     </section>
 
-    <section id="who">
+    <section id="who" data-divider="regular">
         <h2>{{ pages.about.who.heading | defaultLocale: locale }}</h2>
         {{ pages.about.who.paragraph | defaultLocale: locale | safe }}
     </section>
 
-    <section id="contribute">
+    <section id="roadmap" data-divider="regular">
+        <h2>{{ pages.about.roadmap.heading | defaultLocale: locale }}</h2>
+        <p>
+            {{ pages.about.roadmap.paragraph | defaultLocale: locale | safe }}
+        </p>
+    </section>
+
+    <section id="contribute" data-divider="regular">
         <h2>{{ pages.about.contribute.heading | defaultLocale: locale }}</h2>
         <p>{{ pages.about.contribute.paragraph | defaultLocale: locale | safe }}</p>
         <ul>
@@ -29,17 +34,18 @@ layout: base
                 <li>{{ item[1] | defaultLocale: locale }}</li>
             {% endfor %}
         </ul>
-        <div class="cta-button-holder" data-align="left">
-            <a class="link--button" href="mailto:cleanenergyproject@fershad.com">{{ site.emailMe | defaultLocale: locale }}</a>
+        <div class="auto-grid cta-button-holder" data-align="left">
+            <a class="link--button" href="mailto:{{site.contact.email}}">{{ site.emailMe | defaultLocale: locale }}</a>
+            <a class="link--button" href="{{ site.contact.twitterURL }}">{% include "svg/twitter.svg" %}{{ pages.about.contribute.twitter | defaultLocale: locale }}</a>
         </div>
     </section>
 
-    <section id="contribute">
+    <section id="support"  data-divider="regular">
         <h2>{{ pages.about.support.heading | defaultLocale: locale }}</h2>
         <p>{{ pages.about.support.paragraph | defaultLocale: locale | safe }}</p>
         <ul>
             {% for item in pages.about.support.list %}
-                <li>{{ item[1] | defaultLocale: locale }}</li>
+                <li>{{ item | defaultLocale: locale }}</li>
             {% endfor %}
         </ul>
         <h3>{{ pages.about.support.ways.heading | defaultLocale: locale }}</h3>

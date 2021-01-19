@@ -87,7 +87,7 @@ layout: base
 
         <h2>{{ pages.news.heading | defaultLocale: locale | capitalize }}</h2>
         <p>{{ pages.news.paragraph | defaultLocale: locale | safe }}</p>
-        <p>{{ pages.news.extra | defaultLocale: locale | safe }}</p>
+        <p>{{ pages.homepage.news.extra | defaultLocale: locale | safe }}</p>
 
         <div class="article--holder">
             {% for story in localeNews limit: 5 %}

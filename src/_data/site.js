@@ -46,7 +46,7 @@ const subscribe = {
         en: 'Stay updated',
         zh: '',
     },
-    intro: {
+    paragraph: {
         en: `I'll be periodically updating and adding actions. If you'd like to stay updated with changes then subscribe to email updates using the form below. I'll only send out one email per month, I promise.`,
         zh: '',
     },
