@@ -13,8 +13,7 @@ layout: base
         <h2>{{ pages.data.moe.heading | defaultLocale: locale }}</h2>
         <p>{{ pages.data.moe.paragraph | defaultLocale: locale | safe }}<br/>
             {{ pages.data.moe.source | defaultLocale: locale | safe }}</p>
-            <!-- TODO: Hide this chart unless the user requests it. -->
-            <div data-production-button></div>
+            <div data-production-button data-spaced></div>
             <script src="/assets/showProduction.bundle.js" type="module"></script>
         <div class="table-wrapper">
             <table>
@@ -157,7 +156,7 @@ layout: base
         <h2>{{ pages.data.globalCarbon.heading | defaultLocale: locale }}</h2>
         <p>{{ pages.data.globalCarbon.paragraph | defaultLocale: locale | safe }}<br/>
             {{ pages.data.globalCarbon.source | defaultLocale: locale | safe }}</p>
-            <div data-emissions-button></div>
+            <div data-emissions-button data-spaced></div>
             <script src="/assets/showEmissions.bundle.js" type="module"></script>
         <div class="table-wrapper">
             <table>

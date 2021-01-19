@@ -80,10 +80,6 @@ a.card {
   text-decoration: none;
 }
 
-.card[data-spaced] {
-  margin: var(--size-500) 0 var(--size-700) 0;
-}
-
 .card--action {
   display: inline-block;
   margin-bottom: var(--size-300);
