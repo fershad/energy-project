@@ -8,9 +8,9 @@ layout: base
         <p>{{ pages.faq.intro.paragraph | defaultLocale: locale | safe }}</p>
     </section>
 
-    <section id="questions flow">
+    <section id="questions" class="flow">
             {% for question in pages.faq.questions %}
-                        <div>
+                        <div data-divider="regular">
                             <h2 class="question">{{ question.question | defaultLocale: locale | safe }}</h2>
                             <div class="answer">{{ question.answer | defaultLocale: locale | safe }}</div>
                         </div>

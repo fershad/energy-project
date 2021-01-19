@@ -6,11 +6,12 @@ section[data-color="ocean-green"] {
   background: var(--color-ocean-green);
 }
 
-section[data-divider="regular"] {
+[data-divider="regular"] {
   padding-bottom: 3rem;
+  position: relative;
 }
 
-section[data-divider="regular"]::after {
+[data-divider="regular"]::after {
   content: "";
   position: absolute;
   bottom: var(--size-300);
