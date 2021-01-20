@@ -3,8 +3,11 @@ const path = require('path');
 const fs = require('fs');
 const critical = require('critical');
 const cheerio = require('cheerio');
+const stringHash = require('string-hash');
 
 const dev = process.env.NODE_ENV !== 'production';
+
+const siteFolder = !dev ? '_site' : '_staging';
 
 /*
  * Extract critical CSS for desktop & mobile. Inline that in the head (blocks render)
@@ -35,9 +38,17 @@ const extractCritical = async (content, outputPath) => {
     return { html, uncritical };
 };
 
+const createFolder = async dir => {
+    try {
+        await fs.promises.mkdir(dir, { recursive: true });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 module.exports = async (content, outputPath) => {
     // const styles = fs.readFileSync(path.join(__dirname, `/../../_css_cache/main.css`));
-    const pattern = /<\s*section[^>]*>.*?<\s*\/\s*section>/gs;
+    // const pattern = /<\s*section[^>]*>.*?<\s*\/\s*section>/gs;
 
     if (outputPath.endsWith('.html')) {
         // Return HTML with critical CSS inlined
@@ -45,9 +56,10 @@ module.exports = async (content, outputPath) => {
         const { html, uncritical } = await extractCritical(content, outputPath);
 
         const $ = cheerio.load(html);
-        const body = $('body');
+        const head = $('head');
+        let result;
 
-        if (body.length > 0) {
+        if (!dev) {
             // for (let index = 0; index < sections.length; index++) {
             // const section = sections[index];
             const [{ css: output }] = await new PurgeCSS().purge({
@@ -55,12 +67,36 @@ module.exports = async (content, outputPath) => {
                 css: [{ raw: uncritical }],
                 safelist: ['no-js', 'webp', 'avif', 'link--button'],
             });
-            const result = output;
-            const inlineStyle = `<style type="text/css">${result}</style>`;
-
-            body.prepend(inlineStyle);
-            // }
+            result = output;
+        } else {
+            result = uncritical;
         }
+
+        // Create a unique filename for the uncritical CSS file
+        const hashedFilename = `${stringHash(result)}.css`;
+
+        // Create folder in assets for uncritical CSS to live
+        await createFolder(path.join(__dirname, `/../../../${siteFolder}/assets/css`));
+
+        // Write uncritical CSS to file
+        // Add it to HTML document
+        // Return HTML
+        await fs.writeFile(
+            path.join(__dirname, `/../../../${siteFolder}/assets/css/${hashedFilename}`),
+            result,
+            function(error, result) {
+                if (error) {
+                    console.log(error);
+                }
+            }
+        );
+
+        // const inlineStyle = `<style type="text/css">${result}</style>`;
+        const linkToFile = `<link href='/assets/css/${hashedFilename}' rel="stylesheet" media="nope!" onload="this.media='all'">
+    <noscript><link href='/assets/css/${hashedFilename}' rel='stylesheet'></noscript>`;
+
+        head.append(linkToFile);
+        // }
 
         return $.html();
     }

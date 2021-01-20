@@ -56,6 +56,7 @@
   "dependencies": {
     "@quasibit/eleventy-plugin-sitemap": "^2.0.3",
     "airtable": "^0.10.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "string-hash": "^1.1.3"
   }
 }
