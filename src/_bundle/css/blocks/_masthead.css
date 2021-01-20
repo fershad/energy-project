@@ -11,22 +11,22 @@
   overflow: hidden;
   background-size: cover !important;
   /* background-color: #000000; */
-  background-image: url("/img/tw-iss-min.jpg"), var(--base64);
+  background-image: url("/img/tw-iss-min.jpeg"), var(--base64);
   background-position: center -200px;
   background-repeat: no-repeat;
   background-color: #000;
 }
 
 .no-js .masthead {
-  background-image: url("/img/tw-iss-min.jpg"), var(--base64);
+  background-image: url("/img/tw-iss-min.jpeg"), var(--base64);
 }
 
 .webp .masthead {
-  background-image: url("/img/tw-iss.webp"), var(--base64);
+  background-image: url("/img/tw-iss-min.webp"), var(--base64);
 }
 
 .avif .masthead {
-  background-image: url("/img/tw-iss.avif"), var(--base64);
+  background-image: url("/img/tw-iss-min.avif"), var(--base64);
 }
 
 .masthead__headline {
