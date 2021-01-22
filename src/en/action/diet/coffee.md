@@ -2,7 +2,8 @@
 title: Change up your coffee
 subtag: Adding dairy milk to your tea of coffee can <stron><em>triple</em></strong> the carbon footprint of each cup you drink. So if you add milk to your brew, try switching to oat or soy based alternatives instead.
 shortName: coffee
-hasMore: true
+tags:
+    - homepage
 thumbnail: { 
     src: "./src/_includes/img/actions/coffee.jpg", 
     alt: "Person pouring oat milk into black coffee.",
