@@ -10,6 +10,10 @@ thumbnail: {
     alt: "Green fields with a wind turbine in the middle.",
     caption: 'Photo credit: Greenpeace Taiwan'
 }
+actions:
+    - Vote for representatives that have a serious climate policy.
+    - Start conversations with family, friends, colleagues, and even your employer.
+    - Sign online petitions, such as [this one from Greenpeace](https://cloud.greentw.greenpeace.org/petition-climate-greenhouse).
 contributors:
     - 
         - display: "Fershad"
@@ -17,7 +21,16 @@ contributors:
         - github: "fishintaiwan"
 ---
 
-<h1>
-    {{ title }}
-</h1>
-https://cloud.greentw.greenpeace.org/petition-climate-greenhouse
+# {{ title }}
+Government action is absolutely required if we are to reduce greenhouse gas emissions, and switch to a more sustainable energy generation mix. A failure (or even a delay) to adjust has the potential to hurt Taiwan environmentally, as well as economically
+
+Voting for representatives who take climate change seriously is one way to push for change. It shows legistators that climate is an important issue to their electorate (and it's the electorate that's responsible for keeping them in office). Foreigners in Taiwan can also help by joining online petitions that push for change, and by starting conversations with their Taiwanese friends & colleagues.
+
+<div class="action-cta card" data-padded>
+<h2>
+    What can you do?
+</h2>
+{% for action in actions %}
+{{ action }}
+{% endfor %}
+</div>
