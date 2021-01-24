@@ -23,6 +23,7 @@ import './css/blocks/_table.css';
 
 /* Critical for Action Index Page */
 import './css/blocks/_action-grid.css';
+import './css/utilities/_auto-grid.css';
 
 /* Critical for Action Page */
 import './css/blocks/_card.css';
