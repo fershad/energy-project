@@ -1,5 +1,6 @@
 const purgeStyles = require('./src/_11ty/transforms/purge-css')
 const htmlMin = require('./src/_11ty/transforms/html-min')
+const imgPlaceholder = require('./src/_11ty/transforms/img-placeholder')
 const {
   rasterImage,
   svgImage
@@ -99,8 +100,10 @@ module.exports = (eleventyConfig) => {
   //* Inline critical CSS & purge all unused CSS per page
   eleventyConfig.addTransform('purge-styles', purgeStyles);
 
-  //* Minify the HTML
-  eleventyConfig.addTransform("htmlmin", htmlMin);
+  if (!dev) {
+    //* Minify the HTML
+    eleventyConfig.addTransform("htmlmin", htmlMin);
+  }
 
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
