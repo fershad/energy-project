@@ -1,12 +1,12 @@
 ---
-title: Listen
-subtag: There are a multitude of podcasts online that you can listen to and learn more about various facets of the climate crisis, and ways you can act.
+title: 聽
+subtag: 您可以在線收聽許多播客，並詳細了解氣候危機的各個方面以及如何採取行動。
 shortName: podcasts
 hasMore: true
 thumbnail: { 
     src: "./src/_includes/img/actions/podcasts.jpg", 
-    alt: "Person standing while holding phone.",
-    caption: <span>Photo by <a href="https://unsplash.com/@melanie_sophie?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Melanie Pongratz</a> on <a href="https://unsplash.com/s/photos/listen-podcasts?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+    alt: "人站立時拿著電話。",
+    caption: <span>攝影者<a href="https://unsplash.com/@melanie_sophie?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Melanie Pongratz</a>在<a href="https://unsplash.com/s/photos/listen-podcasts?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 }
 contributors:
     - 
@@ -15,9 +15,9 @@ contributors:
         - github: "fishintaiwan"
 ---
 # {{ title }}
-Podcasts can be both entertaining and educational. They are a great way to expand your knowledge on the complex issue that is climate change. They allow you access to experts and industry leaders, plus they make it easy to remain up-to-date as policy, industry and science evolves.
+播客既可以娛樂又可以教育。 它們是擴展您對氣候變化這一複雜問題的認識的好方法。 它們使您可以與專家和行業領導者取得聯繫，此外，隨著政策，行業和科學的發展，它們也使您可以輕鬆保持最新狀態。
 
-Below are a few podcasts that have helped me better understand the problem of climate change, and what we might be able to do to fix it. I'd love to expand this list, so if you've got any recommendations then [send them through!](mailto:{{ site.contact.email }})
+以下是一些播客，它們幫助我更好地了解了氣候變化問題以及我們可能採取的措施。 我希望擴展此列表，因此，如果您有任何建議，請[通過發送！](mailto:{{ site.contact.email }})
 
 <div class="action-grid auto-grid">
 {% for pod in podcasts %}
