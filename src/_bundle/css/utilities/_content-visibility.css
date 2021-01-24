@@ -1,0 +1,3 @@
+section:not(#action) {
+  content-visibility: auto;
+}

@@ -73,6 +73,7 @@
   align-items: center;
   min-height: calc(100vh - 3.5rem);
   padding-top: 4rem;
+  content-visibility: auto;
 }
 
 .nav__button[aria-expanded="true"] + .nav__menu-list {

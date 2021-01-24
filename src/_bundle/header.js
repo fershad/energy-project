@@ -7,6 +7,7 @@ import './css/utilities/_typography.css';
 import './css/utilities/_skip-link.css';
 import './css/utilities/_wrapper.css';
 import './css/utilities/_links.css';
+import './css/utilities/_content-visibility.css';
 
 import './css/blocks/_header.css';
 import './css/blocks/_nav.css';
