@@ -31,7 +31,7 @@ layout: base
                     </p>
                     <p class="card--content--subtag">{{ action.data.subtag }}</p>
                     {% if action.data.hasMore %}
-                        <a href="{{ action.url }}" class="link--button card--action">Read more</a>
+                        <a href="{{ action.url }}" class="link--button card--action" title="Read more about {{ action.data.title }}">Read more</a>
                     {% endif %}
                 </div>
             </div>

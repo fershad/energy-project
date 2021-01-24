@@ -78,7 +78,7 @@ preloadImage: ['/img/tw-iss-min']
             {% endfor %}
         </div>
         <div class="cta-button-holder">
-            <a class="link--button" href="/{{ locale }}/actions">{{ pages.homepage.action.cta | defaultLocale: locale }}</a>
+            <a class="link--button" href="/{{ locale }}/actions" title="Read more about {{ action.data.title }}">{{ pages.homepage.action.cta | defaultLocale: locale }}</a>
         </div>
     </section>
 
