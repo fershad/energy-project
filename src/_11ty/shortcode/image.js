@@ -1,6 +1,6 @@
 const Image = require('@11ty/eleventy-img');
 
-const dev = process.env.NODE_ENV !== 'production';
+const dev = process.env.NODE_ENV !== 'production' || process.env.NODE_ENV !== 'staging';
 
 async function rasterImage(src, alt, widths, sizes, loading = 'lazy') {
     const defaultWidths = [300, 600, 1200];
