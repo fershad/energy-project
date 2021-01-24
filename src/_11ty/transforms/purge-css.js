@@ -9,35 +9,6 @@ const dev = process.env.NODE_ENV !== 'production';
 
 const siteFolder = !dev ? '_site' : '_staging';
 
-/*
- * Extract critical CSS for desktop & mobile. Inline that in the head (blocks render)
- * Take the remaining CSS for the page & run it through purgeCSS so that we only have used CSS remaining
- * With the remaining CSS & raw HTML
- *      - Search for <section>, <article>, <footer> tags
- *      - Run the tag content & unused CSS through purgeCSS
- *      - Return the block with HTML first
- *      - All remaining unused CSS is run one final time against the HTML & added to the end of the document.
- */
-// REGEX for HTML tag search: /<\s*div[^>]*>(.*?)<\s*/\s*div>/gis
-// Extract critical CSS for each page from main css file
-// Inline critical CSS
-// Return new HTML and unused CSS
-
-const extractCritical = async (content, outputPath) => {
-    const { html, uncritical } = await critical.generate({
-        inline: true,
-        base: path.dirname(outputPath),
-        html: content,
-        css: ['/.cache/main.css'],
-        minify: !dev,
-        height: 1080,
-        width: 1920,
-        rebase: ({ originalUrl }) => originalUrl,
-    });
-
-    return { html, uncritical };
-};
-
 const createFolder = async dir => {
     try {
         await fs.promises.mkdir(dir, { recursive: true });
@@ -47,30 +18,18 @@ const createFolder = async dir => {
 };
 
 module.exports = async (content, outputPath) => {
-    // const styles = fs.readFileSync(path.join(__dirname, `/../../_css_cache/main.css`));
-    // const pattern = /<\s*section[^>]*>.*?<\s*\/\s*section>/gs;
+    const styles = path.join(__dirname, `/../../../.cache/main.css`);
+    const pattern = /<\/head>/s;
 
     if (outputPath.endsWith('.html')) {
-        // Return HTML with critical CSS inlined
-        // Return uncritical CSS for further purge & file creation
-        const { html, uncritical } = await extractCritical(content, outputPath);
-
-        const $ = cheerio.load(html);
-        const head = $('head');
-        let result;
-
-        if (!dev) {
-            // for (let index = 0; index < sections.length; index++) {
-            // const section = sections[index];
-            const [{ css: output }] = await new PurgeCSS().purge({
-                content: [{ raw: $(body).html(), extension: 'html' }],
-                css: [{ raw: uncritical }],
-                safelist: ['no-js', 'webp', 'avif', 'link--button'],
-            });
-            result = output;
-        } else {
-            result = uncritical;
-        }
+        // for (let index = 0; index < sections.length; index++) {
+        // const section = sections[index];
+        const [{ css: output }] = await new PurgeCSS().purge({
+            content: [{ raw: content, extension: 'html' }],
+            css: [styles],
+            safelist: ['no-js', 'webp', 'avif', 'link--button'],
+        });
+        const result = output;
 
         // Create a unique filename for the uncritical CSS file
         const hashedFilename = `${stringHash(result)}.css`;
@@ -92,13 +51,9 @@ module.exports = async (content, outputPath) => {
         );
 
         // const inlineStyle = `<style type="text/css">${result}</style>`;
-        const linkToFile = `<link href='/assets/css/${hashedFilename}' rel="stylesheet" media="nope!" onload="this.media='all'">
+        const linkToFile = `<link href='/assets/css/${hashedFilename}' rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href='/assets/css/${hashedFilename}' rel='stylesheet'></noscript>`;
-
-        head.append(linkToFile);
-        // }
-
-        return $.html();
+        return content.replace(pattern, `${linkToFile}</head>`);
     }
     return content;
 };

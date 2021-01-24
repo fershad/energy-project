@@ -1,0 +1,217 @@
+footer *:focus {
+  outline-offset: 0.3rem;
+  outline-color: var(--color-campfire-smoke);
+}
+
+footer {
+  background-color: var(--color-charcoal);
+  color: var(--color-campfire-smoke);
+  min-height: 10vh;
+  bottom: 0;
+  line-height: 1.5;
+  padding: var(--size-500) 0;
+}
+
+footer .wrapper .carbon {
+  grid-row: 1;
+}
+
+footer .wrapper {
+  padding: 2rem var(--size-500);
+  display: grid;
+  gap: var(--size-500);
+}
+
+footer .wrapper .social {
+  text-align: center;
+}
+
+footer .social a:not(:first-of-type) {
+  margin-left: var(--size-600);
+}
+
+footer .social svg {
+  position: relative;
+  height: var(--size-600);
+  width: var(--size-600);
+  overflow: visible;
+  filter: drop-shadow(4px 4px 0 var(--color-ocean-green));
+  transition: filter 0.15s ease-in-out;
+}
+
+footer .social svg path {
+  fill: var(--color-campfire-smoke);
+}
+
+footer .social svg:hover {
+  filter: drop-shadow(0 0 0 var(--color-ocean-green));
+}
+
+.subscription {
+  position: relative;
+  z-index: 0;
+}
+
+.subscription label {
+  display: block;
+  font-size: var(--size-400);
+}
+
+.subscription--input {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--size-300);
+  align-items: baseline;
+}
+
+.subscription--input input[type="email"] {
+  flex: 1 0 auto;
+  max-width: 60ch;
+  width: 100%;
+  margin-bottom: var(--size-300);
+  -webkit-margin-end: var(--size-300);
+          margin-inline-end: var(--size-300);
+}
+
+.subscription--input button[type="submit"] {
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+
+footer .nav__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer .nav__list .nav__menu-list {
+  display: inline-flex;
+  flex-direction: row;
+  min-height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+footer .nav__link {
+  font-size: var(--size-500);
+  display: inline-block;
+  -webkit-margin-end: var(--size-400);
+          margin-inline-end: var(--size-400);
+}
+
+footer li.nav__link {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@media only screen and (min-width: 48em) {
+  footer .wrapper {
+    grid-template-areas:
+      ". . . maintain carbon . ."
+      ". . . subscription . . ."
+      ". . . nav social . .";
+  }
+
+  footer .wrapper .maintainer,
+  footer .wrapper .subscription,
+  footer .wrapper .nav__list {
+    grid-column: 4;
+  }
+
+  footer .wrapper .carbon,
+  footer .wrapper .social {
+    grid-column: 5;
+  }
+
+  footer .wrapper .maintainer,
+  footer .wrapper .carbon {
+    grid-row: 1;
+  }
+
+  footer .wrapper .subscription {
+    grid-row: 2;
+  }
+
+  footer .wrapper .nav__list,
+  footer .wrapper .social {
+    grid-row: 3;
+  }
+
+  footer .nav__list > *:first-of-type {
+    padding-left: 0;
+  }
+
+  footer .nav__list .nav__menu-list {
+    justify-content: flex-start;
+  }
+}
+
+.footer a:not(.icon-link),
+.footer a:not(.icon-link):visited {
+  box-shadow: 0 3px 0px 0px currentColor;
+}
+
+#wcb.carbonbadge {
+  font-size: 15px;
+  text-align: center;
+  color: var(--color-rich-black);
+  line-height: 1.15;
+}
+
+#wcb.carbonbadge sub {
+  vertical-align: middle;
+  position: relative;
+  top: 0.3em;
+  font-size: 0.7em;
+}
+
+#wcb #wcb_g,
+#wcb #wcb_a,
+#wcb #wcb_2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.15;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-decoration: none;
+  margin: 0.2em 0;
+}
+
+#wcb #wcb_g,
+#wcb #wcb_a {
+  padding: 0.3em 0.5em;
+  border: 0.13em solid var(--color-ocean-green);
+}
+
+#wcb #wcb_g {
+  border-radius: 0.3em 0 0 0.3em;
+  background: var(--color-campfire-smoke);
+  border-right: 0;
+  min-width: 8.2em;
+}
+
+#wcb #wcb_a {
+  border-radius: 0 0.3em 0.3em 0;
+  border-left: 0;
+  background: var(--color-ocean-blue);
+  color: var(--color-campfire-smoke);
+  font-weight: 700;
+  border-color: var(--color-ocean-blue);
+  box-shadow: none;
+  left: -0.43em;
+  position: relative;
+}
+
+.wcb-d #wcb_a {
+  color: var(--color-rich-black);
+  background: var(--color-ocean-green);
+  border-color: var(--color-ocean-green);
+  box-shadow: none;
+}
+
+.wcb-d #wcb_2 {
+  color: var(--color-campfire-smoke);
+}

@@ -178,4 +178,56 @@ export default [
             clearScreen: false,
         },
     },
+    {
+        input: 'src/_bundle/css/critical/generic.js',
+        output: [
+            {
+                file: '.cache/css/critical-generic.js',
+            },
+        ],
+        plugins: [
+            replace({
+                DEV_MODE: dev,
+            }),
+            /* Generates a cached file with all CSS,
+        /  which will be used later to purge & add only the CSS used
+        /  on each individual page. */
+            postcss({
+                extract: '.cache/css/critical-generic.css',
+                // inject: true,
+                // minimize: !dev,
+            }),
+            commonjs(),
+            dev && terser(),
+        ],
+        watch: {
+            clearScreen: false,
+        },
+    },
+    {
+        input: 'src/_bundle/footer.js',
+        output: [
+            {
+                file: '.cache/css/footer.js',
+            },
+        ],
+        plugins: [
+            replace({
+                DEV_MODE: dev,
+            }),
+            /* Generates a cached file with all CSS,
+        /  which will be used later to purge & add only the CSS used
+        /  on each individual page. */
+            postcss({
+                extract: 'public/assets/css/footer.css',
+                // inject: true,
+                minimize: !dev,
+            }),
+            commonjs(),
+            dev && terser(),
+        ],
+        watch: {
+            clearScreen: false,
+        },
+    },
 ];

@@ -1,4 +1,5 @@
 const purgeStyles = require('./src/_11ty/transforms/purge-css')
+const critical = require('./src/_11ty/transforms/critical')
 const htmlMin = require('./src/_11ty/transforms/html-min')
 const imgPlaceholder = require('./src/_11ty/transforms/img-placeholder')
 const {
@@ -97,6 +98,9 @@ module.exports = (eleventyConfig) => {
   });
 
   // ! Transforms
+  //* Inline critical CSS & purge all unused CSS per page
+  eleventyConfig.addTransform('critical', critical);
+
   //* Inline critical CSS & purge all unused CSS per page
   eleventyConfig.addTransform('purge-styles', purgeStyles);
 
