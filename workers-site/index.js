@@ -74,6 +74,13 @@ async function handleEvent(event) {
     // options.mapRequestToAsset = handlePrefix(/^\/docs/)
 
     try {
+        options.cacheControl = {
+            bypassCache: false,
+            browserTTL: 0,
+        };
+
+        const filesRegex = /(.*\.(jpeg|avif|webp|css|js))$/;
+
         if (DEBUG) {
             // customize caching
             options.cacheControl = {
@@ -91,6 +98,11 @@ async function handleEvent(event) {
             const header = event.request.headers.get('accept-language');
             const language = await getParsedAcceptLangs(header);
             options.mapRequestToAsset = handleLanguage(language);
+        }
+
+        if (url.pathname.match(filesRegex)) {
+            options.cacheControl.edgeTTL = 7 * 60 * 24 * 60; /* 7 days */
+            options.cacheControl.browserTTL = 7 * 60 * 24 * 60; /* 7 days */
         }
 
         return await getAssetFromKV(event, options);

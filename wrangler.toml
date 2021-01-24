@@ -6,7 +6,6 @@ workers_dev = true
 [site]
 bucket = "./_staging"
 entry-point = "workers-site"
-route = "staging.cleanenergyproject.tw/*"
 
 [env.production]
 bucket = "./_site"
