@@ -59,8 +59,8 @@ const subscribe = {
         zh: '訂閱',
     },
     buttondown: {
-        en: `<a href="https://buttondown.email" target="_blank" rel="nofollow">Powered by Buttondown.</a> If you're having trouble subscribing email me directly at <a href="mailto:cleanenergyproject@fershad.com">cleanenergyproject@fershad.com</a>.`,
-        zh: `<a href="https://buttondown.email" target="_blank" rel="nofollow">由Buttondown強力驅動.</a> 如果不能訂閱，用<a href="mailto:cleanenergyproject@fershad.com">cleanenergyproject@fershad.com</a>發電信給我.`,
+        en: `<a href="https://buttondown.email" target="_blank" rel="nofollow noopener">Powered by Buttondown.</a> If you're having trouble subscribing email me directly at <a href="mailto:cleanenergyproject@fershad.com">cleanenergyproject@fershad.com</a>.`,
+        zh: `<a href="https://buttondown.email" target="_blank" rel="nofollow noopener">由Buttondown強力驅動.</a> 如果不能訂閱，用<a href="mailto:cleanenergyproject@fershad.com">cleanenergyproject@fershad.com</a>發電信給我.`,
     },
 };
 
