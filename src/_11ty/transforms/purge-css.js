@@ -1,8 +1,6 @@
 const { PurgeCSS } = require('purgecss');
 const path = require('path');
 const fs = require('fs');
-const critical = require('critical');
-const cheerio = require('cheerio');
 const stringHash = require('string-hash');
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -27,7 +25,7 @@ module.exports = async (content, outputPath) => {
         const [{ css: output }] = await new PurgeCSS().purge({
             content: [{ raw: content, extension: 'html' }],
             css: [styles],
-            safelist: ['no-js', 'webp', 'avif', 'link--button'],
+            safelist: ['no-js', 'js', 'webp', 'avif', 'link--button'],
         });
         const result = output;
 

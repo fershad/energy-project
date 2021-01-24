@@ -1,23 +1,17 @@
-const critical = require('critical');
+const { PurgeCSS } = require('purgecss');
 const path = require('path');
 
 const dev = process.env.NODE_ENV !== 'production';
 
 module.exports = async (content, outputPath) => {
-    if (outputPath.endsWith('.html')) {
-        const { html } = await critical.generate({
-            inline: true,
-            base: path.dirname(outputPath),
-            html: content,
-            css: ['/.cache/css/critical-generic.css'],
-            minify: !dev,
-            height: 1080,
-            width: 1920,
-            rebase: ({ originalUrl }) => originalUrl,
-        });
+    const styles = path.join(__dirname, `/../../../.cache/css/header.css`);
+    const [{ css: output }] = await new PurgeCSS().purge({
+        content: [{ raw: content, extension: 'html' }],
+        css: [styles],
+        safelist: ['no-js', 'js', 'webp', 'avif', 'link--button'],
+    });
+    const result = `<style>${output}</style>`;
+    const pattern = /<\/title>/s;
 
-        return html;
-    }
-
-    return content;
+    return content.replace(pattern, `</title>${result}`);
 };

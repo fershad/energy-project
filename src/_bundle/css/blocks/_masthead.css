@@ -28,7 +28,7 @@
   background-image: url("/img/tw-iss-min.jpeg"), var(--base64);
 }
 
-.js .masthead {
+.js:not(.webp):not(.avif) .masthead {
   background-image: url("/img/tw-iss-min.jpeg"), var(--base64);
 }
 
