@@ -11,6 +11,9 @@ const readFile = promisify(require('fs').readFile);
 const writeFile = promisify(require('fs').writeFile);
 const exists = promisify(require('fs').exists);
 
+const dev = process.env.NODE_ENV !== 'production';
+const outputFolder = !dev ? './_site/' : './_staging/';
+
 const PIXEL_TARGET = 60;
 
 const ESCAPE_TABLE = {
@@ -71,7 +74,7 @@ function getBitmapDimensions_(imgWidth, imgHeight) {
 }
 
 module.exports = async function(src) {
-    const filename = `dist/${src}`;
+    const filename = `${outputFolder}/${src}`;
     const cachedName = `${filename}.blurred`;
     if (await exists(cachedName)) {
         return readFile(cachedName, {

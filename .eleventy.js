@@ -103,6 +103,9 @@ module.exports = (eleventyConfig) => {
 
   //* Inline critical CSS & purge all unused CSS per page
   eleventyConfig.addTransform('purge-styles', purgeStyles);
+  
+  //* Inline critical CSS & purge all unused CSS per page
+  eleventyConfig.addTransform('imgPlaceholder', imgPlaceholder);
 
   if (!dev) {
     //* Minify the HTML

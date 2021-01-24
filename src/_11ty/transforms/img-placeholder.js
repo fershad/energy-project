@@ -5,7 +5,7 @@ const path = require('path');
 const blurryPlaceholder = require('../../utils/blurry-placeholder');
 
 const dev = process.env.NODE_ENV !== 'production';
-const outputFolder = dev ? './_site/' : './_staging/';
+const outputFolder = !dev ? './_site/' : './_staging/';
 
 const processImage = async (img, outputPath) => {
     let src = img.getAttribute('src');
@@ -16,7 +16,7 @@ const processImage = async (img, outputPath) => {
     }
     let dimensions;
     try {
-        dimensions = await sizeOf(`dist/${src}`);
+        dimensions = await sizeOf(`${outputFolder}/${src}`);
     } catch (e) {
         console.warn(e.message, src);
         return;
@@ -50,21 +50,19 @@ const processImage = async (img, outputPath) => {
     }
 };
 
-const imgPlaceholder = async (rawContent, outputPath) => {
+module.exports = async (rawContent, outputPath) => {
     let content = rawContent;
-
     if (outputPath && outputPath.endsWith('.html')) {
         const dom = new JSDOM(content);
-        const images = [...dom.window.document.querySelectorAll('picture > img,img')];
+        const images = [...dom.window.document.querySelectorAll('img')];
 
         if (images.length > 0) {
-            console.log('Processing images');
             await Promise.all(images.map(i => processImage(i, outputPath)));
             content = dom.serialize();
         }
+
+        return content;
     }
 
     return content;
 };
-
-module.exports = { imgPlaceholder };
