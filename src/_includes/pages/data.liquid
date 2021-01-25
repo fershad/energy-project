@@ -127,6 +127,16 @@ layout: base
                         {% endfor %}
                     </tr>
                     <tr>
+                        <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.geo | defaultLocale: locale | capitalize }}</th>
+                        {% for data in energyData %}
+                            {% for years in data.years %}
+                                {% for year in years %}
+                                    <td>{{ year.fields.Geothermal | default: '-' }}</td>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
                         <th class="energy" data-direction="row" data-sticky scope="row">{{ energyTypes.biomass | defaultLocale: locale | capitalize }}</th>
                         {% for data in energyData %}
                             {% for years in data.years %}
