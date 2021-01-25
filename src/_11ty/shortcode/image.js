@@ -1,19 +1,14 @@
 const Image = require('@11ty/eleventy-img');
 
-let dev = true;
-
-if (process.env.NODE_ENV !== 'production' || process.env.NODE_ENV !== 'staging') {
-    dev = false;
-}
-
-console.log(dev);
+const dev = process.env.NODE_ENV !== 'production';
+const staging = process.env.NODE_ENV === 'staging';
 
 async function rasterImage(src, alt, widths, sizes, loading = 'lazy') {
     const defaultWidths = [300, 600, 1200];
     const defaultFormats = ['jpeg'];
     let srcset;
 
-    if (!dev) {
+    if (!dev || staging) {
         defaultFormats.push('webp', 'avif');
     }
 
