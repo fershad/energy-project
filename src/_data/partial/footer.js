@@ -2,9 +2,9 @@ const site = require('../site');
 
 const maintainer = {
     en: `The ${site.name.en} is maintained by <a href="//fershad.com" data-external>Fershad Irani</a>.<br> 
-    Community <a href="en/about#contribute">contributions</a> and <a href="en/about#support">support</a> are welcome.`,
+    Community <a href="/en/about#contribute">contributions</a> and <a href="/en/about#support">support</a> are welcome.`,
     zh: `${site.name.zh}由 <a href="//fershad.com" data-external>Fershad Irani</a> 維護. <br>
-    歡迎大家所有的<a href="zh/about#contribute">貢獻</a>和<a href="zh/about#support">支持</a>`,
+    歡迎大家所有的<a href="/zh/about#contribute">貢獻</a>和<a href="/zh/about#support">支持</a>`,
 };
 
 const source = {

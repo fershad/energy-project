@@ -33,22 +33,23 @@ const contact = {
 const support = {
     kofi: {
         url: 'https://ko-fi.com/cleanenergy_tw',
-        action: { en: 'Support on Ko-fi', zh: '' },
+        action: { en: 'Support on Ko-fi', zh: '用Ko-fi支持' },
     },
     patreon: {
         url: 'https://www.patreon.com/cleanenergy_tw',
-        action: { en: 'Support on Patreon', zh: '' },
+        action: { en: 'Support on Patreon', zh: '用Patreon支持' },
     },
 };
 
 const subscribe = {
     heading: {
         en: 'Stay updated',
-        zh: '',
+        zh: '保持最新',
     },
     paragraph: {
-        en: `I'll be periodically updating and adding actions. If you'd like to stay updated with changes then subscribe to email updates using the form below. I'll only send out one email per month, I promise.`,
-        zh: '',
+        en: `I'll be periodically updating data and content on this site. If you'd like to stay updated with changes then subscribe to email updates using the form below. I'll only send out one email per month, I promise.`,
+        zh:
+            '我將定期更新此站點上的數據和內容。 如果您想隨時了解更改，請使用以下表格訂閱電子郵件更新。 我保證，我每月只會發送一封電子郵件。',
     },
     email: {
         en: 'Enter your email',

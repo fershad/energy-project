@@ -30,6 +30,7 @@ const data = {
     },
     note: {
         en: 'Why this energy mix? <a href="/en/faq">Read the FAQ.</a>',
+        zh: '為什麼這些能源類型？<a href="/zh/faq">看FAQ.</a>',
     },
     historical: {
         en: `Historical data.`,
