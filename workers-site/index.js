@@ -79,7 +79,9 @@ async function handleEvent(event) {
             browserTTL: 0,
         };
 
-        const filesRegex = /(.*\.(jpeg|avif|webp|css|js))$/;
+        const imagesRegex = /(.*\.(jpeg|avif|webp|svg|jpg|png))$/;
+        const cssRegex = /(.*\.(css))$/;
+        const jsRegex = /(.*\.(js))$/;
 
         if (DEBUG) {
             // customize caching
@@ -100,9 +102,14 @@ async function handleEvent(event) {
             options.mapRequestToAsset = handleLanguage(language);
         }
 
-        if (url.pathname.match(filesRegex)) {
+        if (url.pathname.match(jsRegex)) {
             options.cacheControl.edgeTTL = 7 * 60 * 24 * 60; /* 7 days */
             options.cacheControl.browserTTL = 7 * 60 * 24 * 60; /* 7 days */
+        }
+
+        if (url.pathname.match(cssRegex) || url.pathname.match(imagesRegex)) {
+            options.cacheControl.edgeTTL = 29 * 60 * 24 * 60; /* 29 days */
+            options.cacheControl.browserTTL = 29 * 60 * 24 * 60; /* 29 days */
         }
 
         return await getAssetFromKV(event, options);
