@@ -8,39 +8,39 @@ const intro = {
 const moe = {
     heading: {
         en: 'Energy Production',
-        zh: '',
+        zh: '能源生產',
     },
     paragraph: {
         en: 'Energy production for various sources as a percentage of total energy generation.',
-        zh: '',
+        zh: '各種能源的生產量佔總發電量的百分比。',
     },
     source: {
         en: `Source: <a href="https://www.moeaboe.gov.tw/wesnq/Views/B01/wFrmB0102.aspx" data-external>Taiwan Ministry of Economic Affairs - Bureau of Energy</a>`,
-        zh: ``,
+        zh: `數據源：<a href="https://www.moeaboe.gov.tw/wesnq/Views/B01/wFrmB0102.aspx" data-external>台灣經濟部-能源局</a>`,
     },
 };
 
 const globalCarbon = {
     heading: {
         en: 'Total Emissions',
-        zh: '',
+        zh: '排放總量',
     },
     paragraph: {
         en: `Taiwan's yearly total carbon dioxide emissions (shown in million tonnes).`,
-        zh: '',
+        zh: '台灣每年的二氧化碳總排放量（以百萬噸為單位）。',
     },
     source: {
         en: `Source: <a href="https://www.globalcarbonproject.org/" data-external>Global Carbon Project</a> -  Friedlingstein et al. 2020`,
-        zh: ``,
+        zh: `數據源：<a href="https://www.globalcarbonproject.org/" data-external>Global Carbon Project</a> -  Friedlingstein et al. 2020`,
     },
     table: {
         caption: {
             en: 'Total CO<sup>2</sup> emissions for Taiwan.',
-            zh: '',
+            zh: '台灣二氧化碳排放總量',
         },
         note: {
             en: `All values below are in <em>millions of tonnes</em> of CO<sup>2</sup> (i.e. add '000,000 to the end).`,
-            zh: ``,
+            zh: `在下的數字都是<em>百萬噸</em>的二氧化碳。`,
         },
     },
 };
