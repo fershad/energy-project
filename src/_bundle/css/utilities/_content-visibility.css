@@ -1,3 +1,5 @@
-section {
+section,
+footer,
+nav .nav__menu-list {
   content-visibility: auto;
 }
