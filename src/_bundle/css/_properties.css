@@ -1,13 +1,3 @@
-html {
-  font-size: 66.25%;
-}
-
-@media (min-width: 36rem) {
-  html {
-    font-size: 100%;
-  }
-}
-
 :root {
   --base-size: 1rem;
 

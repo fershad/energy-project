@@ -65,6 +65,7 @@ addEventListener('fetch', event => {
 
 async function handleEvent(event) {
     const url = new URL(event.request.url);
+    const header = event.request.headers.get('accept-language');
     const options = {};
 
     /**
@@ -97,7 +98,6 @@ async function handleEvent(event) {
         // See if they have Chinese (zh) set at a higher priority than English then return the ZH site
         // Otherwise English is the default
         if (checkPath.length < 1) {
-            const header = event.request.headers.get('accept-language');
             const language = await getParsedAcceptLangs(header);
             options.mapRequestToAsset = handleLanguage(language);
         }
@@ -117,8 +117,17 @@ async function handleEvent(event) {
         // if an error is thrown try to serve the asset at 404.html
         if (!DEBUG) {
             try {
+                const checkPath = await checkURLPath(url);
+                let language;
+
+                if (checkPath.length < 1) {
+                    language = await getParsedAcceptLangs(header);
+                } else {
+                    language = checkPath;
+                }
+
                 const notFoundResponse = await getAssetFromKV(event, {
-                    mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
+                    mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/${language}/404.html`, req),
                 });
 
                 return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 });
