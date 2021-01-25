@@ -1,11 +1,11 @@
 .card {
   width: 100%;
   border: 2px solid var(--text-color);
-  /* border-radius: 0 18px 18px 0; */
+  border-radius: 20px 20px 0;
   position: relative;
   background: var(--background-color);
   /* transition: all 0.4s ease-in-out; */
-  animation: card 0.4s forwards;
+  /* animation: card 0.4s forwards; */
 }
 
 .card[data-wide] {
@@ -20,7 +20,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  /* border-radius: 0 18px 18px 0; */
+  border-radius: 20px 20px 0;
   /*     background-color: var(--color-ocean-blue); */
   background-image: radial-gradient(var(--text-color) 20%, transparent 20%),
     radial-gradient(var(--text-color) 20%, transparent 20%);
@@ -35,7 +35,8 @@
 }
 
 .card picture {
-  animation: card 0.4s forwards;
+  border-radius: 18px 18px 0;
+  /* animation: card 0.4s forwards; */
   overflow: hidden;
 }
 
