@@ -19,7 +19,7 @@ layout: base
             <table>
                 <thead>
                     <tr>
-                        <td rowspan="3"></td>
+                        <td rowspan="3" style="border-top: none;border-left: none;"></td>
                         {% for data in energyData %}
                             <th colspan="{{ data.years.size | times: 12 }}" class="decade" data-sticky data-direction="row">{{ data.decade }}'s</th>
                         {% endfor %}
