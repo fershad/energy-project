@@ -16,4 +16,5 @@ th.decade {
 
 th.energy {
   text-align: right;
+  min-width: 12ch;
 }
