@@ -1,5 +1,6 @@
-import { readable } from 'svelte/store'
+import { writable } from 'svelte/store';
+import { getLocale } from './helpers';
 
-export const site = readable({
-    url: 'https://green-energy-project.netlify.app'
-})
+const url = document.querySelector("link[rel='canonical']").href;
+
+export const locale = writable(getLocale(url));

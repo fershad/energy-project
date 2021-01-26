@@ -1,5 +1,6 @@
 <script>
   import ApexCharts from "apexcharts";
+  import { locale } from "../store";
 
   async function getJSON() {
     const response = await fetch("/api/emissions.json");
@@ -12,7 +13,7 @@
     var options = {
       series: [
         {
-          name: "Total Emissions (million of tonnes)",
+          name: $locale === 'zh' ? "排放總量 (百萬噸)" : "Total Emissions (million of tonnes)",
           data: data
         }
       ],
@@ -37,7 +38,7 @@
         size: 2
       },
       title: {
-        text: "Total CO2 Emissions",
+        text: $locale === 'zh' ? "二氧化碳總排放量" : `Total CO<sup>2</sup> Emissions`,
         align: "left"
       },
       grid: {
@@ -48,12 +49,12 @@
       },
       yaxis: {
         title: {
-          text: "CO2 (million of tonnes)"
+          text: $locale === 'zh' ? "二氧化碳  (百萬噸)" : `CO<sup>2</sup> (million of tonnes)`
         }
       },
       xaxis: {
         title: {
-          text: "Year"
+          text: $locale === 'zh' ? '年' : "Year"
         },
         tickAmount: 10,
         labels: {

@@ -1,5 +1,8 @@
 <script>
   import ApexCharts from "apexcharts";
+  import { locale } from "../store";
+
+  const url =  document.querySelector("link[rel='canonical']").href
 
   async function getJSON() {
     const response = await fetch("/api/production.json");
@@ -11,47 +14,47 @@
     var options = {
       series: [
         {
-          name: "Pumped hydro",
+          name: $locale === 'zh' ? "抽蓄水力" : "Pumped hydro",
           data: data.pumpedHydro
         },
         {
-          name: "Coal",
+          name: $locale === 'zh' ? "燃煤" : "Coal",
           data: data.coal
         },
         {
-          name: "Oil",
+          name: $locale === 'zh' ? "燃油" : "Oil",
           data: data.oil
         },
         {
-          name: "Gas",
+          name: $locale === 'zh' ? "燃氣" : "Gas",
           data: data.gas
         },
         {
-          name: "Solar",
+          name: $locale === 'zh' ? "太陽光電" : "Solar",
           data: data.solar
         },
         {
-          name: "Wind",
+          name: $locale === 'zh' ? "風力" : "Wind",
           data: data.wind
         },
         {
-          name: "Geothermal",
+          name: $locale === 'zh' ? "地熱" : "Geothermal",
           data: data.geo
         },
         {
-          name: "Hydroelectric",
+          name: $locale === 'zh' ? "慣常水力" : "Hydroelectric",
           data: data.hydro
         },
         {
-          name: "Nuclear",
+          name: $locale === 'zh' ? "核能" : "Nuclear",
           data: data.nuclear
         },
         {
-          name: "Biomass",
+          name: $locale === 'zh' ? "生質能" : "Biomass",
           data: data.biomass
         },
         {
-          name: "Waste",
+          name: $locale === 'zh' ? "廢棄物" : "Waste",
           data: data.waste
         }
       ],
@@ -75,6 +78,9 @@
         // stacked: true,
         zoom: {
           autoScaleYaxis: true
+        },
+        toolbar: {
+          show: false
         }
       },
       dataLabels: {
@@ -182,13 +188,13 @@
 
 <div id="chart">
   <div class="toolbar">
-    <button id="one_year"> Past 1 year </button>
+    <button id="one_year">{ $locale === 'zh' ? '過去一年' : 'Past 1 Year' }</button>
 
-    <button id="ten_years"> Past 10 Years </button>
+    <button id="ten_years">{ $locale === 'zh' ? '過去十年' : 'Past 10 Years' }</button>
 
-    <button class="active" id="twenty_years"> Past 20 Years </button>
+    <button class="active" id="twenty_years">{ $locale === 'zh' ? '過去二十年' : 'Past 20 Years' }</button>
 
-    <button id="all"> All </button>
+    <button id="all">{ $locale === 'zh' ? '全部' : 'All' }</button>
   </div>
   <div id="chart-timeline" />
 </div>

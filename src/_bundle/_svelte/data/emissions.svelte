@@ -1,17 +1,21 @@
 <script>
+    import { locale } from '../store'
+
     let display = false;
-    let text = 'Show graph'
+    let text = $locale === 'zh' ? '顯示圖表 ' : 'Show graph'
     async function showChart() {
         display = !display;
         if (display) {
-            text = 'Hide graph'
+            text = $locale === 'zh' ? '隱藏圖表 ' : 'Hide graph'
         } else {
-            text = 'Show graph'
+            text = $locale === 'zh' ? '顯示圖表 ' : 'Show graph'
         }
+    }
+
+    async function importChart() {
         const { default: chart } = await import(
-            "/assets/emissionsChart.bundle.js"
-        );
-        chart();
+                "/assets/emissionsChart.bundle.js"
+            );
     }
 </script>
 
@@ -21,7 +25,7 @@
     }
 </style>
 
-<button class="link--button" on:click={showChart}>{ text }</button>
+<button class="link--button" on:click={showChart} on:click|once={importChart}>{ text }</button>
 <div data-emissions-chart class:hidden={!display}>
     <div id="emissionsChart" />
 </div>
