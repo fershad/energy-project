@@ -25,6 +25,12 @@
     {% endfor %}
 {% endif %}
 
+{% if prefetch %}
+    {% for item in prefetch %}
+        <link rel="prefetch" href="{{ item.link }}">
+    {% endfor %}
+{% endif %}
+
 {% include 'partials/favicon' %}
 {% include 'partials/social-image' %}
 {% analytics %}
