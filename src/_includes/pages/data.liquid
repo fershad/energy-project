@@ -20,7 +20,7 @@ preload:
         <p>{{ pages.data.moe.paragraph | defaultLocale: locale | safe }}<br/>
             {{ pages.data.moe.source | defaultLocale: locale | safe }}</p>
             <div data-production-button class="flow" data-spaced></div>
-            <script src="/assets/showProduction.bundle.js" type="module"></script>
+            <script src="/assets/showProduction.bundle.js" async></script>
         <div class="table-wrapper">
             <table>
                 <thead>
@@ -173,7 +173,7 @@ preload:
         <p>{{ pages.data.globalCarbon.paragraph | defaultLocale: locale | safe }}<br/>
             {{ pages.data.globalCarbon.source | defaultLocale: locale | safe }}</p>
             <div data-emissions-button class="flow" data-spaced></div>
-            <script src="/assets/showEmissions.bundle.js" type="module"></script>
+            <script src="/assets/showEmissions.bundle.js" async></script>
         <div class="table-wrapper">
             <table>
                 <caption data-align="left">
