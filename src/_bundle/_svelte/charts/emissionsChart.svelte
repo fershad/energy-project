@@ -16,6 +16,7 @@
           data: data
         }
       ],
+      colors: ['#343837'],
       chart: {
         height: 350,
         type: "line",
@@ -41,8 +42,8 @@
       },
       grid: {
         row: {
-          colors: ["#1F3B4D", "transparent"], // takes an array which will be repeated on columns
-          opacity: 0.5
+          colors: ["#343837", "transparent"], // takes an array which will be repeated on columns
+          opacity: 0.4
         }
       },
       yaxis: {
