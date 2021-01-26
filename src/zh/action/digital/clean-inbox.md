@@ -27,13 +27,15 @@ contributors:
 
 儘管電子郵件可能只佔互聯網總體碳足蹟的一小部分，但它確實是開始減少自己的個人碳足蹟的真正容易的地方（並且還可以恢復一些理智，這取決於您的收件箱有多雜亂！）。
 
-<div class="action-cta card" data-padded>
+<div class="action-cta card" data-spaced>
+<div class="card--content">
 <h2>
     你能做什麼？
 </h2>
 {% for action in actions %}
 {{ action }}
 {% endfor %}
+</div>
 </div>
 
 ## Sources

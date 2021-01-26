@@ -26,11 +26,13 @@ Government action is absolutely required if we are to reduce greenhouse gas emis
 
 Voting for representatives who take climate change seriously is one way to push for change. It shows legistators that climate is an important issue to their electorate (and it's the electorate that's responsible for keeping them in office). Foreigners in Taiwan can also help by joining online petitions that push for change, and by starting conversations with their Taiwanese friends & colleagues.
 
-<div class="action-cta card" data-padded>
+<div class="action-cta card" data-spaced>
+<div class="card--content">
 <h2>
     What can you do?
 </h2>
 {% for action in actions %}
 {{ action }}
 {% endfor %}
+</div>
 </div>

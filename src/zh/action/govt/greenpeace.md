@@ -26,11 +26,13 @@ contributors:
 
 對認真對待氣候變化的代表進行投票是推動變革的一種方式。 它向立法者表明，氣候對他們的選民來說是一個重要的問題（這是由選民負責任的）。 台灣的外國人還可以通過加入在線申請來推動變革，並與他們的台灣朋友和同事進行對話，從而為他們提供幫助。
 
-<div class="action-cta card" data-padded>
+<div class="action-cta card" data-spaced>
+<div class="card--content">
 <h2>
     你能做什麼？
 </h2>
 {% for action in actions %}
 {{ action }}
 {% endfor %}
+</div>
 </div>

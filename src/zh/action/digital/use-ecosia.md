@@ -29,13 +29,15 @@ Google的平均搜尋量會產生約0.5克的二氧化碳 <sup>[1][1]</sup>. 您
 我已經使用Ecosia數月了，搜索結果經常可以回答我的問題。 有時候，我仍然可以接觸到Google，但在先通過Ecosia進行了幾次搜索之後，卻沒有找到。
 
 
-<div class="action-cta card" data-padded>
+<div class="action-cta card" data-spaced>
+<div class="card--content">
 <h2>
     你能做什麼？
 </h2>
 {% for action in actions %}
 {{ action }}
 {% endfor %}
+</div>
 </div>
 
 ## Sources
