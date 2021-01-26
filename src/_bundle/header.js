@@ -20,6 +20,7 @@ import './css/blocks/_masthead.css';
 import './css/utilities/_table-caption.css';
 import './css/utilities/_table-wrapper.css';
 import './css/utilities/_sticky-header.css';
+import './css/utilities/_hidden.css';
 import './css/blocks/_table.css';
 
 /* Critical for Action Index Page */

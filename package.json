@@ -51,7 +51,6 @@
     "rollup-plugin-svelte": "^6.1.1",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^5.1.3",
-    "svelte": "^3.31.0",
     "image-size": "^0.8.3",
     "jsdom": "^15.1.1",
     "datauri": "^3.0.0"
@@ -60,6 +59,7 @@
     "@quasibit/eleventy-plugin-sitemap": "^2.0.3",
     "airtable": "^0.10.1",
     "dotenv": "^8.2.0",
-    "string-hash": "^1.1.3"
+    "string-hash": "^1.1.3",
+    "svelte": "^3.31.0"
   }
 }

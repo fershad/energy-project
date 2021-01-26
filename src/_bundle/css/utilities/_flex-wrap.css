@@ -8,8 +8,13 @@
   display: flex;
   gap: var(--size-600);
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .flex-wrap[data-reverse] {
   flex-wrap: wrap-reverse;
+}
+
+.flex-wrap[data-spread] {
+  justify-content: space-between;
 }

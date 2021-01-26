@@ -8,7 +8,7 @@ module.exports = async (content, outputPath) => {
     const [{ css: output }] = await new PurgeCSS().purge({
         content: [{ raw: content, extension: 'html' }],
         css: [styles],
-        safelist: ['no-js', 'js', 'webp', 'avif', 'link--button'],
+        safelist: ['no-js', 'js', 'webp', 'avif', 'link--button', 'hidden'],
     });
     const result = `<style>${output}</style>`;
     const pattern = /<\/title>/s;

@@ -186,7 +186,7 @@
   buildChart();
 </script>
 
-<div id="chart">
+<div id="productionChart">
   <div class="toolbar">
     <button id="one_year">{ $locale === 'zh' ? '過去一年' : 'Past 1 Year' }</button>
 

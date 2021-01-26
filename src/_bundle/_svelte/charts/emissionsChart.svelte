@@ -9,6 +9,7 @@
     return data;
   }
 
+
   async function lineChart(data) {
     var options = {
       series: [
@@ -38,7 +39,7 @@
         size: 2
       },
       title: {
-        text: $locale === 'zh' ? "二氧化碳總排放量" : `Total CO<sup>2</sup> Emissions`,
+        text: $locale === 'zh' ? "二氧化碳總排放量" : `Total CO2 Emissions`,
         align: "left"
       },
       grid: {
@@ -49,7 +50,7 @@
       },
       yaxis: {
         title: {
-          text: $locale === 'zh' ? "二氧化碳  (百萬噸)" : `CO<sup>2</sup> (million of tonnes)`
+          text: $locale === 'zh' ? "二氧化碳  (百萬噸)" : `CO2 (million of tonnes)`
         }
       },
       xaxis: {
@@ -79,3 +80,5 @@
 
   buildChart();
 </script>
+
+<div id="emissionsChart" />
