@@ -13,4 +13,4 @@ const readmore = {
     zh: '了解更多關於',
 };
 
-module.exports = { heading, paragraph };
+module.exports = { heading, paragraph, readmore };
