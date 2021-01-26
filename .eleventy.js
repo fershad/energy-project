@@ -39,6 +39,13 @@ module.exports = (eleventyConfig) => {
   //* Add fathom analytics tracking script in build
   eleventyConfig.addShortcode("analytics", analytics)
 
+  //* Shortcode to put noindex metadata into staging site
+  eleventyConfig.addShortcode("noindex", () => { 
+    if (dev) {
+      return `<meta name="robots" content="noindex, nofollow, noarchive">`
+    }
+  })
+
   // ! Filters
   //*  Localisation filter - looks for current locale, defaults to EN
   eleventyConfig.addFilter('defaultLocale', localiser);
