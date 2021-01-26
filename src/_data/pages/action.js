@@ -8,4 +8,9 @@ const paragraph = {
     zh: '您可以在日常生活中採取的行動, 開始邁向低碳, 低污染的生活方式.',
 };
 
+const readmore = {
+    en: 'Read more about ',
+    zh: '了解更多關於',
+};
+
 module.exports = { heading, paragraph };
