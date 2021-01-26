@@ -1,0 +1,15 @@
+@media (max-width: 36rem) {
+  .flex-wrap {
+    justify-content: center;
+  }
+}
+
+.flex-wrap {
+  display: flex;
+  gap: var(--size-600);
+  flex-wrap: wrap;
+}
+
+.flex-wrap[data-reverse] {
+  flex-wrap: wrap-reverse;
+}

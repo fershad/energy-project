@@ -106,6 +106,16 @@ a.card .content [data-external]:hover {
   grid-template-rows: auto 1fr;
 }
 
+.card[data-type="small-image-only"] {
+  width: 200px;
+  height: 200px;
+}
+
+.card[data-type="small-image-only"] img {
+  min-height: auto;
+  max-height: 100%;
+}
+
 /* .card:hover::after,
 .card:focus::after,
 .card:focus-within::after {
