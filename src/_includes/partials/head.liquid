@@ -19,6 +19,12 @@
 <link rel="preconnect dns-prefetch" href="https://api.websitecarbon.com/">
 <link rel="preconnect dns-prefetch" href="https://heron.cleanenergyproject.tw/">
 
+{% if preload %}
+    {% for item in preload %}
+        <link rel="preload" href="{{ item.link }}" as="{{ item.type }}">
+    {% endfor %}
+{% endif %}
+
 {% include 'partials/favicon' %}
 {% include 'partials/social-image' %}
 {% analytics %}
