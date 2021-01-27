@@ -17,19 +17,37 @@
 }
 
 .webp .masthead {
-  background-image: url("/img/tw-iss-min.webp"), var(--base64);
+  background-image: url("/img/tw-iss-mob-min.webp"), var(--base64);
 }
 
 .avif .masthead {
-  background-image: url("/img/tw-iss-min.avif"), var(--base64);
+  background-image: url("/img/tw-iss-mob-min.avif"), var(--base64);
 }
 
 .no-js .masthead {
-  background-image: url("/img/tw-iss-min.jpeg"), var(--base64);
+  background-image: url("/img/tw-iss-mob-min.jpeg"), var(--base64);
 }
 
 .js:not(.webp):not(.avif) .masthead {
-  background-image: url("/img/tw-iss-min.jpeg"), var(--base64);
+  background-image: url("/img/tw-iss-mob-min.jpeg"), var(--base64);
+}
+
+@media (min-width: 37rem) {
+  .webp .masthead {
+    background-image: url("/img/tw-iss-min.webp"), var(--base64);
+  }
+
+  .avif .masthead {
+    background-image: url("/img/tw-iss-min.avif"), var(--base64);
+  }
+
+  .no-js .masthead {
+    background-image: url("/img/tw-iss-min.jpeg"), var(--base64);
+  }
+
+  .js:not(.webp):not(.avif) .masthead {
+    background-image: url("/img/tw-iss-min.jpeg"), var(--base64);
+  }
 }
 
 .masthead__headline {
