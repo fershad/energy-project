@@ -1,0 +1,11 @@
+.card-paragraph .card {
+  clear: both;
+  float: right;
+  margin: 0 var(--size-400) var(--size-500) var(--size-500);
+}
+
+@media (min-width: 62rem) {
+  .card-paragraph .card {
+    margin: 0 0 0 var(--size-500);
+  }
+}

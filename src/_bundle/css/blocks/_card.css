@@ -107,8 +107,15 @@ a.card .content [data-external]:hover {
 }
 
 .card[data-type="small-image-only"] {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 36rem) {
+  .card[data-type="small-image-only"] {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .card[data-type="small-image-only"] img {

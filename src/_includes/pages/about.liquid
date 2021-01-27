@@ -16,14 +16,12 @@ layout: base
 
     <section id="who" data-divider="regular">
         <h2>{{ pages.about.who.heading | defaultLocale: locale }}</h2>
-        <div class="flex-wrap" data-reverse>
-            <div>
+            <div class="card-paragraph">
+                <div class="card" data-type="small-image-only">
+                    {% image "./src/_includes/img/fershad.jpg", "", "200, 400" %}
+                </div>
                 {{ pages.about.who.paragraph | defaultLocale: locale | safe }}
             </div>
-            <div class="card" data-type="small-image-only">
-                {% image "./src/_includes/img/fershad.jpg", "", "200, 400" %}
-            </div>
-        </div>
     </section>
 
     <section id="roadmap" data-divider="regular">
@@ -41,7 +39,7 @@ layout: base
                 <li>{{ item[1] | defaultLocale: locale }}</li>
             {% endfor %}
         </ul>
-        <div class="flex-wrap cta-button-holder" data-align="left">
+        <div class="auto-grid cta-button-holder" data-align="left">
             <a class="link--button" href="mailto:{{site.contact.email}}">{{ site.emailMe | defaultLocale: locale }}</a>
             <a class="link--button" href="{{ site.contact.twitterURL }}">{% include "svg/twitter.svg" %}{{ pages.about.contribute.twitter | defaultLocale: locale }}</a>
         </div>

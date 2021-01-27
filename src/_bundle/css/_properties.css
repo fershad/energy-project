@@ -84,7 +84,7 @@ main:focus {
 
 ::-webkit-scrollbar-track {
   background-color: var(--color-rich-black);
-  border: 1px solid var(--color-rich-black);
+  border: 2px solid var(--color-rich-black);
   border-radius: 0rem;
 }
 

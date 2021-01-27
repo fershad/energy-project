@@ -1,6 +1,7 @@
 .cta-button-holder {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: var(--size-600) 0;
 }
