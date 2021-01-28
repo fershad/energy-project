@@ -1,5 +1,5 @@
 <nav aria-label="Primary navigation" class="header__nav">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">{{ site.skipToMain | defaultLocale: locale }}</a>
     <div class="header__logo">
         <a href="/{{locale}}/" aria-label="Link to Clean Energy Project Taiwan homepage">
             {% include "svg/logo-text.svg" %}

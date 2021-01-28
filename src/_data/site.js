@@ -70,4 +70,21 @@ const emailMe = {
     zh: '聯絡我',
 };
 
-module.exports = { defaultLocale, baseUrl, name, description, ogImgAlt, contact, support, locales, emailMe, subscribe };
+const skipToMain = {
+    en: 'Skip to main content',
+    zh: '跳到主要內容',
+};
+
+module.exports = {
+    defaultLocale,
+    baseUrl,
+    name,
+    description,
+    ogImgAlt,
+    contact,
+    support,
+    locales,
+    emailMe,
+    subscribe,
+    skipToMain,
+};
