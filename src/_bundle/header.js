@@ -30,3 +30,7 @@ import './css/utilities/_auto-grid.css';
 /* Critical for Action Page */
 import './css/blocks/_card.css';
 import './css/blocks/_lead-image.css';
+
+/* Critical for News Page */
+import './css/blocks/_article-holder.css';
+import './css/blocks/_article.css';
