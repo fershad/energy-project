@@ -41,12 +41,24 @@
 
         // Return the cached response
         console.log(r);
+        recordCarbon(wcU, r.c);
         return r;
       }
 
       // If no cached response, then fetch from API
       const nr = await newRequest();
+      recordCarbon(wcU, nr.c);
       return nr;
+    }
+  }
+
+  // This bit saves a record of the carbon measurement. Useful for tracking the total carbon footprint of the website.
+  async function recordCarbon(site, carbon) {
+    const url = `https://energy-project-carbon.fershad.workers.dev/?site=${site}&c=${carbon}`;
+
+    const resp = await fetch(url);
+    if (!resp.ok) {
+      console.log("Error saving carbon data", resp);
     }
   }
 
@@ -68,7 +80,8 @@
       id="wcb_a"
       target="_blank"
       rel="noopener"
-      href="https://websitecarbon.com">Website Carbon</a>
+      href="https://websitecarbon.com"
+    >Website Carbon</a>
   </div><span id="wcb_2">&nbsp;</span>
 {:then value}
   <!-- data was fulfilled -->
@@ -84,7 +97,8 @@
       id="wcb_a"
       target="_blank"
       rel="noopener"
-      href="https://websitecarbon.com">Website Carbon</a>
+      href="https://websitecarbon.com"
+    >Website Carbon</a>
   </div>
   {#if locale == 'zh'}
     <!-- content here -->
@@ -107,6 +121,7 @@
       id="wcb_a"
       target="_blank"
       rel="noopener"
-      href="https://websitecarbon.com">Website Carbon</a>
+      href="https://websitecarbon.com"
+    >Website Carbon</a>
   </div><span id="wcb_2">&nbsp;</span>
 {/await}
