@@ -12,7 +12,7 @@ thumbnail: {
 }
 actions:
     - 支持 [在台灣的B Corps](https://bcorporation.net/directory?search=&industry=&country=Taiwan&state=&city=) (或 [全球的](https://bcorporation.net/directory)).
-    - 找致力於到2030年實現淨零排放的[公司](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46) by 2030.
+    - 找致力於到2030年實現淨零排放的[公司](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46).
     - 如果你自己有公司[試填商業影響力評表](http://blab.tw/becomeabcorp).
 contributors:
     - 
