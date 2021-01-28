@@ -18,6 +18,12 @@ const moe = {
         en: `Source: <a href="https://www.moeaboe.gov.tw/wesnq/Views/B01/wFrmB0102.aspx" data-external>Taiwan Ministry of Economic Affairs - Bureau of Energy</a>`,
         zh: `數據源：<a href="https://www.moeaboe.gov.tw/wesnq/Views/B01/wFrmB0102.aspx" data-external>台灣經濟部-能源局</a>`,
     },
+    table: {
+        caption: {
+            en: 'Energy production (by type)',
+            zh: '能源的生產(按類型)',
+        },
+    },
 };
 
 const globalCarbon = {
