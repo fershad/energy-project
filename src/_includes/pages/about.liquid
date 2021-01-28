@@ -58,14 +58,14 @@ layout: base
         <div class="auto-grid">
             <div>
                 <h4>{{ pages.about.support.ways.once.heading | defaultLocale: locale }}</h4>
-                <p>Make a one-off contribution to help cover the expenses of this project.</p>
+                <p>{{ pages.about.support.ways.once.paragraph | defaultLocale: locale }}</p>
                 <div class="cta-button-holder" data-align="left">
                     <a href="{{ site.support.kofi.url }}" class="link--button">{% include "svg/kofi.svg" %}{{ site.support.kofi.action | defaultLocale: locale }}</a>
                 </div>
             </div>
             <div>
                 <h4>{{ pages.about.support.ways.monthly.heading | defaultLocale: locale }}</h4>
-                <p>Support work on this project with a small, monthly contribution.</p>
+                <p>{{ pages.about.support.ways.monthly.paragraph | defaultLocale: locale }}</p>
                 <div class="cta-button-holder" data-align="left">
                     <a href="{{ site.support.patreon.url }}" class="link--button">{% include "svg/patreon.svg" %}{{ site.support.patreon.action | defaultLocale: locale }}</a>
                 </div>

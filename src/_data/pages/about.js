@@ -115,9 +115,17 @@ const support = {
         },
         once: {
             heading: { en: `One-time contribution`, zh: '一次性捐款' },
+            paragraph: {
+                en: 'Make a one-off contribution to help cover the expenses of this project.',
+                zh: '一次性捐款，以幫助支付該項目的費用。',
+            },
         },
         monthly: {
             heading: { en: `Recurring monthly contribution`, zh: '每月性捐款' },
+            paragraph: {
+                en: 'Support work on this project with a small, monthly contribution.',
+                zh: '每月為該項目提供少量支持。',
+            },
         },
     },
 };

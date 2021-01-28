@@ -87,7 +87,7 @@
   <div id="wcb_p">
     {#if locale == 'zh'}
       <!-- content here -->
-      <span id="wcb_g">{value.c}克二氧化碳<sub>2</sub>/每次看</span>
+      <span id="wcb_g">{value.c}克二氧化碳/每次看</span>
     {:else}
       <!-- else content here -->
       <span id="wcb_g">{value.c}g of CO<sub>2</sub>/view</span>

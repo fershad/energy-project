@@ -13,4 +13,14 @@ const readmore = {
     zh: '了解更多關於',
 };
 
-module.exports = { heading, paragraph, readmore };
+const readMoreButton = {
+    en: 'Read more',
+    zh: '看更多',
+};
+
+const shareButton = {
+    en: 'Share this page',
+    zh: '分享此頁面',
+};
+
+module.exports = { heading, paragraph, readmore, readMoreButton, shareButton };

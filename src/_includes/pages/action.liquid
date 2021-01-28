@@ -31,7 +31,7 @@ layout: base
                     </p>
                     <p class="card--content--subtag">{{ action.data.subtag }}</p>
                     {% if action.data.hasMore %}
-                        <a href="{{ action.url }}" class="link--button card--action" title="{{ pages.action.readmore | defaultLocale: locale }}{{ action.data.title }}">Read more</a>
+                        <a href="{{ action.url }}" class="link--button card--action" title="{{ pages.action.readmore | defaultLocale: locale }}{{ action.data.title }}">{{ pages.homepage.action.cta | defaultLocale: locale }}</a>
                     {% endif %}
                 </div>
             </div>
