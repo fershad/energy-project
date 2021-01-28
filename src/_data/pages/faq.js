@@ -39,7 +39,7 @@ const questions = [
             </p>
             <a href="https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=O0020098" data-external>Greenhouse Gas Reduction and Management Act (2015)</a></blockquote>
             <p>
-                “可持續能源政策戰略框架”（2008年）概述了一系列雄心勃勃的短期目標，包括：
+                The Strategic Framework for Sustainable Energy Policy (2008) outlines a series of aspirational short-term objectives, including:
             </p>
             <ul>
                 <li>Reduce CO<sup>2</sup> emissions to its 2008 level between 2016 ~ 2020, and to the 2000 level in 2025</li>
