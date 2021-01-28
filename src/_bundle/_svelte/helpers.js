@@ -12,6 +12,6 @@ export const run = (element, fn) => {
 };
 
 export const getLocale = url => {
-    const splitUrl = url.split('/');
+    const splitUrl = decodeURIComponent(url.split('/'));
     return splitUrl[3];
 };
