@@ -84,7 +84,9 @@ preloadImage: ['/img/tw-iss-min']
 
 
     <section id="news">
-        {% assign localeNews = news | getLocalised: locale %}
+        {% assign sortedNews = news | sortByPublished %}
+        {% assign localeNews = sortedNews | getLocalised: locale %}
+
 
         <h2>{{ pages.news.heading | defaultLocale: locale | capitalize }}</h2>
         <p>{{ pages.news.paragraph | defaultLocale: locale | safe }}</p>

@@ -5,9 +5,9 @@ layout: base
     <section id="news">
         <h1>{{ pages.news.heading | defaultLocale: locale | capitalize }}</h1>
         <p>{{ pages.news.paragraph | defaultLocale: locale | safe }}</p>
-
+        {% assign sortedNews = news | sortByPublished %}
         <div class="article--holder">
-            {% for story in news %}
+            {% for story in sortedNews %}
                 <div class="article">
                     <small>{{story[1].publishedDate | date: "%B %e, %Y"}}
                         |

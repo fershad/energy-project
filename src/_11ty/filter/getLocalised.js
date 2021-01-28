@@ -1,14 +1,4 @@
 module.exports = (arr, locale) => {
-    const localised = {};
-
-    for (const key in arr) {
-        if (arr.hasOwnProperty(key)) {
-            const { language } = arr[key];
-            if (language === locale) {
-                localised[key] = arr[key];
-            }
-        }
-    }
-
+    const localised = arr.filter(article => article[1].language === locale);
     return localised;
 };

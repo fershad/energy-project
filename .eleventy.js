@@ -57,6 +57,18 @@ module.exports = (eleventyConfig) => {
   //* Filter to take yearly data & group by decades (used for MOE data)
   eleventyConfig.addFilter("yearlyData", yearlyData)
 
+  eleventyConfig.addFilter("sortByPublished", function(news) {
+    const arr = Object.entries(news);
+
+    arr.sort(function(a, b) {
+      aDate = new Date(a[1].publishedDate)
+      bDate = new Date(b[1].publishedDate)
+      return bDate - aDate;
+    });
+
+    return arr;
+  })
+
   // ! Collections
   //* Create action collections to be used on the homepage
   eleventyConfig.addCollection("homepageActionsEN", function (collectionApi) {
