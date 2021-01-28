@@ -8,6 +8,7 @@ const {
 } = require('./src/_11ty/shortcode/image')
 const analytics = require('./src/_11ty/shortcode/analytics')
 const localiser = require('./src/_11ty/filter/localiser')
+const getLocalised = require('./src/_11ty/filter/getLocalised')
 const yearlyData = require('./src/_11ty/filter/byDecades')
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
@@ -49,6 +50,9 @@ module.exports = (eleventyConfig) => {
   // ! Filters
   //*  Localisation filter - looks for current locale, defaults to EN
   eleventyConfig.addFilter('defaultLocale', localiser);
+
+  //* Localisation filter used to get the localised versions of news stories for the homepage 
+  eleventyConfig.addFilter('getLocalised', getLocalised);
 
   //* Filter to take yearly data & group by decades (used for MOE data)
   eleventyConfig.addFilter("yearlyData", yearlyData)
