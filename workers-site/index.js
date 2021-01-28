@@ -103,13 +103,13 @@ async function handleEvent(event) {
         }
 
         if (url.pathname.match(jsRegex)) {
-            options.cacheControl.edgeTTL = 7 * 60 * 24 * 60; /* 7 days */
-            options.cacheControl.browserTTL = 7 * 60 * 24 * 60; /* 7 days */
+            options.cacheControl.edgeTTL = 30 * 60 * 24 * 60; /* 30 days */
+            options.cacheControl.browserTTL = 30 * 60 * 24 * 60; /* 30 days */
         }
 
         if (url.pathname.match(cssRegex) || url.pathname.match(imagesRegex)) {
-            options.cacheControl.edgeTTL = 29 * 60 * 24 * 60; /* 29 days */
-            options.cacheControl.browserTTL = 29 * 60 * 24 * 60; /* 29 days */
+            options.cacheControl.edgeTTL = 365 * 60 * 24 * 60; /* 365 days */
+            options.cacheControl.browserTTL = 365 * 60 * 24 * 60; /* 365 days */
         }
 
         return await getAssetFromKV(event, options);
