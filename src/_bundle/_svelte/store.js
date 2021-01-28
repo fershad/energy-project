@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 import { getLocale } from './helpers';
 
-const url = document.querySelector("link[rel='canonical']").href;
+const url = encodeURIComponent(document.querySelector("link[rel='canonical']").href);
 
 // function showChart() {
 //     const { subscribe, set } = writable(false);
