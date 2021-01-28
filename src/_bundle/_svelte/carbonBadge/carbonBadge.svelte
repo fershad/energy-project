@@ -40,7 +40,6 @@
         }
 
         // Return the cached response
-        console.log(r);
         recordCarbon(wcU, r.c);
         return r;
       }
