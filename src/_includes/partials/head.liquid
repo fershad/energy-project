@@ -1,8 +1,6 @@
 {% if title %}
     {% capture pageTitle %}
-        {{ title }}
-        |
-        {{ site.name[locale] }}
+        {{ title }} | {{ site.name[locale] }}
     {% endcapture %}
 {% else %}
     {% assign pageTitle = site.name[locale] %}
