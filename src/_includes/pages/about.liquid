@@ -39,7 +39,7 @@ layout: base
                 <li>{{ item[1] | defaultLocale: locale }}</li>
             {% endfor %}
         </ul>
-        <div class="auto-grid cta-button-holder" data-align="left">
+        <div class="swiper--actions cta-button-holder" data-align="left">
             <a class="link--button" href="mailto:{{site.contact.email}}">{{ site.emailMe | defaultLocale: locale }}</a>
             <a class="link--button" href="{{ site.contact.twitterURL }}">{% include "svg/twitter.svg" %}{{ pages.about.contribute.twitter | defaultLocale: locale }}</a>
         </div>

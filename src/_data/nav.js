@@ -1,4 +1,10 @@
 module.exports = {
+    home: {
+        en: 'home',
+        zh: '主頁',
+        link: '/',
+        header: true,
+    },
     data: {
         en: 'data',
         zh: '數據',

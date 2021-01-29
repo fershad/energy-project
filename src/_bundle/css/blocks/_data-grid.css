@@ -11,7 +11,7 @@
   min-width: 100%;
   width: 100%;
   scroll-snap-align: start;
-  grid-template-rows: auto 1fr auto;
+  /* grid-template-rows: auto 1fr auto; */
 }
 
 .data-grid > .data-grid--intro {
@@ -47,7 +47,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .swiper--actions[data-direction="reverse"] {
