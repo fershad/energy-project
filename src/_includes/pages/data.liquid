@@ -14,7 +14,7 @@ layout: base
             <div class="flex-wrap" data-spread >
                 <p>{{ pages.data.moe.paragraph | defaultLocale: locale | safe }}<br/>
                     {{ pages.data.moe.source | defaultLocale: locale | safe }}</p>
-                    <div data-production-button></div>
+                    <div data-production-button data-spaced></div>
                 </div>
             <div data-production-chart></div>
             <script src="/assets/showProduction.bundle.js" type="module" async></script>
@@ -35,7 +35,7 @@ layout: base
                             {% for years in data.years %}
                                 {% for year in years %}
                                     {% if forloop.first %}
-                                        <th class="year" colspan="12" scope="col">{{ year.fields.Year | plus: 1911 }}</th>
+                                        <th class="year" colspan="12" scope="col" data-direction="row" data-sticky>{{ year.fields.Year | plus: 1911 }}</th>
                                     {% endif %}
                                 {% endfor %}
                             {% endfor %}
@@ -173,7 +173,7 @@ layout: base
         <div class="flex-wrap"  data-spread >
             <p>{{ pages.data.globalCarbon.paragraph | defaultLocale: locale | safe }}<br/>
                 {{ pages.data.globalCarbon.source | defaultLocale: locale | safe }}</p>
-                <div data-emissions-button></div>
+                <div data-emissions-button data-spaced></div>
             </div>
             <div data-emissions-chart></div>
             <script src="/assets/showEmissions.bundle.js" type="module" defer></script>

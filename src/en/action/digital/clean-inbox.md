@@ -10,7 +10,7 @@ thumbnail: {
 }
 actions:
     - Review the email newsletters you're subscribed to. If you don't read them, or they don't bring you much value then unsubscribe from them.
-    - Try out an app like Cleanfox([https://www.cleanfox.io/](https://www.cleanfox.io/)) which can help you with this, and give you an idea of the CO2 savings you're making.
+    - Try out an app like [Cleanfox](https://www.cleanfox.io/) which can help you with this, and give you an idea of the CO2 savings you're making.
 contributors:
     - 
         - display: "Fershad"
@@ -19,11 +19,11 @@ contributors:
 ---
 
 # {{ title }}
-There are nearly 300 billion (yep, billion) emails sent out every day. Out of that number, it's estimated that 55% of these are spam emails <sup>[1][1]</sup>. Most of the carbon emissions from email come from embodied emissions within the devices used to write and read them. The rest comes from the network and data centres involved in their transmission and storage. 
+There are nearly 300 billion (yep, billion) emails sent out every day. Out of that number, it's estimated that 55% of these are spam emails <sub>[1][1]</sub>. Most of the carbon emissions from email come from embodied emissions within the devices used to write and read them. The rest comes from the network and data centres involved in their transmission and storage. 
 
-- A spam email that's picked up by your provider's spam filter produces **0.03g of CO2** <sup>[2][2]</sup>
-- A short form email can generate up to **0.3g of CO2** <sup>[2][2]</sup>
-- Longer form emails, and emails with attachments/images can generate up to **0.5g of CO2** <sup>[3][3]</sup>
+- A spam email that's picked up by your provider's spam filter produces **0.03g of CO2** <sub>[2][2]</sub>
+- A short form email can generate up to **0.3g of CO2** <sub>[2][2]</sub>
+- Longer form emails, and emails with attachments/images can generate up to **0.5g of CO2** <sub>[3][3]</sub>
 
 While email might only form a small fraction of the internet's overall carbon footprint, it's a really easy place to start reducing your own personal carbon footprint (and restoring some sanity too, depending on how messy your inbox is!).
 
@@ -39,7 +39,7 @@ While email might only form a small fraction of the internet's overall carbon fo
 </div>
 
 ## Sources
-1. [https://www.statista.com/statistics/270899/global-e-mail-spam-rate/][1]
+1. [Global Email Spam Rate - Statista][1]
 2. [*How Bad Are Bananas* - Mike Berners-Lee][2]
 3. [https://carbonliteracy.com/the-carbon-cost-of-an-email/][3]
 

@@ -42,7 +42,7 @@ const questions = [
                 The Strategic Framework for Sustainable Energy Policy (2008) outlines a series of aspirational short-term objectives, including:
             </p>
             <ul>
-                <li>Reduce CO<sup>2</sup> emissions to its 2008 level between 2016 ~ 2020, and to the 2000 level in 2025</li>
+                <li>Reduce CO<sub>2</sub> emissions to its 2008 level between 2016 ~ 2020, and to the 2000 level in 2025</li>
                 <li>Increase the share of low carbon energy in electricity generation systems to 55% by 2025 (against a 2008 baseline)</li>
                 <li>Renewable energy share in the electricity system 8% by 2025</li>
             </ul>            
@@ -53,7 +53,7 @@ const questions = [
             <a href="https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=O0020098" data-external>溫室氣體減量及管理法 (2015)</a></blockquote>
             <p>『可持續能源政策戰略框架』(2008) 概述了一系列雄心勃勃的短期目標，包括：</p>
             <ul>
-                <li>在2016年至2020年之間將CO<sup>2</sup>排放量減少到2008年的水平，到2025年減少到2000年的水平</li>
+                <li>在2016年至2020年之間將CO<sub>2</sub>排放量減少到2008年的水平，到2025年減少到2000年的水平</li>
                 <li>到2025年將低碳能源在發電系統中的份額提高到55％(以2008年為基準)</li>
                 <li>到2025年可再生能源在電力系統中的份額為8％</li>
             </ul>
@@ -89,10 +89,10 @@ const questions = [
             estimated carbon emissions are calculated and shown in the badge. 
             I use this figure along with data from my website analytics 
             (provided by <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>) to determine the 
-            overall CO<sup>2</sup> emissions of the entire site.</p>
-            <p>I plan to eventually create a page to show the total CO<sup>2</sup> emissions of this site.`,
+            overall CO<sub>2</sub> emissions of the entire site.</p>
+            <p>I plan to eventually create a page to show the total CO<sub>2</sub> emissions of this site.`,
             zh: `<p>我正在使用<a href="//websitecarbon.com" data-external>Website Carbon Calculator</a>跟踪該網站的估計碳排放量。每次查看頁面時，都會計算估算的碳排放量，並將其顯示在徽標中。
-            我將其與我的網站分析(我使用 <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>)中的信息結合起來，以計算該網站的總體CO<sup>2</sup>排放量。`,
+            我將其與我的網站分析(我使用 <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>)中的信息結合起來，以計算該網站的總體CO<sub>2</sub>排放量。`,
         },
     },
     {

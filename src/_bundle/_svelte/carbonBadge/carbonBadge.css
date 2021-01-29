@@ -1,5 +1,5 @@
 #wcb.carbonbadge {
-  font-size: 15px;
+  font-size: var(--size-400);
   text-align: center;
   color: var(--color-rich-black);
   line-height: 1.15;
@@ -9,7 +9,7 @@
   vertical-align: middle;
   position: relative;
   top: 0.3em;
-  font-size: 0.7em;
+  font-size: var(--size-400);
 }
 
 #wcb #wcb_g,
@@ -19,9 +19,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1em;
+  /* font-size: 1rem; */
   line-height: 1.15;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
   text-decoration: none;
   margin: 0.2em 0;
 }

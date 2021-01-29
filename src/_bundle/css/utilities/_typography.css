@@ -160,6 +160,9 @@ h5,
 small,
 .small {
   font-size: var(--size-300);
+  @media (max-width: 36rem) {
+    font-size: var(--size-400);
+  }
 }
 
 b,
@@ -231,7 +234,7 @@ h3 + .subheading {
 
 p[data-1rem],
 span[data-1rem] {
-  font-size: var(--size-400);
+  font-size: 1rem;
 }
 
 p[data-wide] {

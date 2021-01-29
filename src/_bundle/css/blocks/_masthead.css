@@ -51,6 +51,11 @@
 }
 
 .masthead__headline {
+  @media (max-width: 36rem) {
+    font-size: var(--size-700);
+    bottom: var(--size-900);
+  }
+
   font-weight: 900;
   font-size: var(--size-600);
   padding: var(--size-300);

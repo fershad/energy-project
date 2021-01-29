@@ -9,9 +9,7 @@
             <source type="image/jpeg" srcset="/img/tw-iss-mob-min.jpeg" media="(max-width: 36rem)">
             <img src="/img/tw-iss-min.jpeg" alt="" loading="eager" decoding="sync">
         </picture>
-        <p class="masthead__headline">
             {{ mastheadHeadline | safe }}
-        </p>
         <small class="masthead__credit">{{ partial.masthead.credit | defaultLocale: locale | safe }}</small>
     </div>
 </div>

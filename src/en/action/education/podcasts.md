@@ -25,6 +25,7 @@ Below are a few podcasts that have helped me better understand the problem of cl
 {% image pod.image, 'Book cover for {{ pod.title }}', '150, 300, 600' %}
 <div class="card--content">
 <p>{{ pod.title }}<br><strong>{{ pod.author }}</strong></p>
+<a href="{{pod.website}}" data-external class="text-center">{{ pages.action.visitWebsite | defaultLocale: locale }}</a>
 </div>
 </div>
 {% endfor %}
