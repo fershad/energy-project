@@ -193,7 +193,7 @@ export default [
         /  which will be used later to purge & add only the CSS used
         /  on each individual page. */
             postcss({
-                extract: `${output}css/footer.css`,
+                extract: `${output}/css/footer.css`,
                 // inject: true,
                 minimize: !dev,
             }),
