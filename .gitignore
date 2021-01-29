@@ -5,6 +5,7 @@ node_modules
 yarn-error.log
 .env
 .cache
+lighthouse-parade-data
 
 # Local Netlify folder
 .netlify
