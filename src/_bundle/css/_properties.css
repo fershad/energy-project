@@ -89,6 +89,10 @@ main:focus {
 
 /*  Scrollbar styles */
 /* purgecss start ignore */
+html {
+  scrollbar-color: var(--color-ocean-green) var(--color-rich-black);
+}
+
 ::-webkit-scrollbar {
   height: var(--size-300);
 }
@@ -103,4 +107,5 @@ main:focus {
   background-color: var(--color-ocean-green);
   border-radius: var(--size-300);
 }
+
 /* purgecss end ignore */

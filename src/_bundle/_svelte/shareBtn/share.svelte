@@ -40,7 +40,7 @@
   id="shareBtn"
   on:click={share()}
 >
-  {#if locale == 'zh'}
+  {#if $locale == 'zh'}
     <!-- content here -->
     分享此頁面
   {:else}

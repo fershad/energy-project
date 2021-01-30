@@ -41,7 +41,7 @@ contributors:
 ## Sources
 1. [Global Email Spam Rate - Statista][1]
 2. [*How Bad Are Bananas* - Mike Berners-Lee][2]
-3. [https://carbonliteracy.com/the-carbon-cost-of-an-email/][3]
+3. [The Carbon Cost of Email][3]
 
 [1]:https://www.statista.com/statistics/270899/global-e-mail-spam-rate/
 [2]:https://www.howbadarebananas.com

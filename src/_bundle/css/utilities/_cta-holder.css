@@ -9,3 +9,7 @@
 .cta-button-holder[data-align="left"] {
   justify-content: flex-start;
 }
+
+.swiper--actions.cta-button-holder :not(:first-child) {
+  margin-inline-start: var(--size-500);
+}

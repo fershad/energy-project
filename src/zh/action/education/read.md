@@ -27,7 +27,7 @@ contributors:
 {% image book.image, 'Book cover for {{ book.title }}', '150, 300, 600' %}
 <div class="card--content">
 <p>{{ book.title }}<br><strong>{{ book.author }}</strong></p>
-<a href="{{book.website}}" data-external class="text-center">{{ pages.action.visitWebsite | defaultLocale: locale }}</a>
+<a href="{{book.website}}" data-external>{{ pages.action.visitWebsite | defaultLocale: locale }}</a>
 </div>
 </div>
 {% endfor %}

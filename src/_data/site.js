@@ -49,7 +49,7 @@ const subscribe = {
     paragraph: {
         en: `I'll be periodically updating data and content on this site. If you'd like to stay updated with changes then subscribe to email updates using the form below. I'll only send out one email per month, I promise.`,
         zh:
-            '我將定期更新此站點上的數據和內容。 如果您想隨時了解更改，請使用以下表格訂閱電子郵件更新。 我保證，我每月只會發送一封電子郵件。',
+            '我將定期更新此站點上的數據和內容。 如果您想隨時了解更改，請使用以下表格訂閱電子郵件更新。 我保證，我每月只會發送一封電子郵件 (英文)。',
     },
     email: {
         en: 'Enter your email',
