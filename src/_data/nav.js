@@ -30,7 +30,7 @@ module.exports = {
         header: true,
     },
     faq: {
-        en: 'FAQs',
+        en: 'FAQ',
         zh: '',
         link: '/faq',
         header: true,
