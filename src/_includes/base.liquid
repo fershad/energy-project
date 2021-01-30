@@ -11,6 +11,14 @@
         {% analytics %}
     </head>
     <body>
+        {% if locale === 'zh' %}
+            <style>
+                ::root {                    
+                    --heading-font-family: STHeiti,华文黑体,"Microsoft YaHei",微软雅黑,SimSun,宋体, serif;
+                    --base-font-family: STHeiti,华文黑体,"Microsoft YaHei",微软雅黑,SimSun,宋体, serif;
+                }
+            </style>
+        {% endif %}
         {% include "partials/header" %}
         {{ content | safe }}
         {% include "partials/footer" %}
