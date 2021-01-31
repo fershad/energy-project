@@ -4,10 +4,16 @@ account_id = "a35d1765ea70fc364f2336970c9059df"
 workers_dev = true
 
 [site]
-bucket = "./_staging"
 entry-point = "workers-site"
+bucket = "./_site"
+
+[env.staging]
+bucket = "./_staging"
+route = "staging.cleanenergyproject.tw/*"
 
 [env.production]
 bucket = "./_site"
+name = "tw-energy-production"
+vars = { ENVIRONMENT = "production" }
 zone_id = "d1f4126f8787ef179d51549face1f76e"
 route = "cleanenergyproject.tw/*"
