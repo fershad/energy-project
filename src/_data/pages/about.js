@@ -29,9 +29,9 @@ const aims = {
     },
     learning: {
         en: `Another aim of this project is to get people to start thinking about what they can do as individuals to live more sustainable, low-carbon lives.
-        Head over to the <a href="/en/action">actions</a> section of this website to find information, tips, and suggestions on ways to start.`,
+        Head over to the <a href="/en/actions">actions</a> section of this website to find information, tips, and suggestions on ways to start.`,
         zh: `該項目的另一個目的是使人們開始思考他們作為個人可以做些什麼以實現更可持續的低碳生活。
-        轉至本網站的<a href="/zh/action">操作</a>部分，以找到有關啟動方法的信息，技巧和建議。`,
+        轉至本網站的<a href="/zh/actions">操作</a>部分，以找到有關啟動方法的信息，技巧和建議。`,
     },
     why: {
         en: `Why clean energy? Where does the data come from? These questions and more are answered in the <a href="/en/faq">FAQ</a>.`,
