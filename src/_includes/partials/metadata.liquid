@@ -10,5 +10,20 @@
 <link rel="canonical" href="{{ site.baseUrl }}{{ page.url }}">
 
 <!-- Gives a reference to a location in your document that may be in another language -->
-<!-- TODO: Fix this!! -->
-<link rel="alternate" href="{{ site.baseUrl }}/zh{{ page.url }}" hreflang="zh-TW">
+
+{% for siteLocale in site.locales %}
+            {% assign currentLocale = siteLocale.code %}
+            {% assign translatedUrl = /{{ currentLocale }} %}
+
+            {% for item in collections.all %}
+                {% if item.data.translationKey == translationKey %}
+                    {% if currentLocale == item.data.locale %}
+                        {% assign translatedUrl = item.url %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            {% unless locale == currentLocale %}        
+                <link rel="alternate" href="{{ site.baseUrl}}{{ translatedUrl }}" hreflang="{{ currentLocale }}">
+            {% endunless %}
+{% endfor %}
