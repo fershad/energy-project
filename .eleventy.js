@@ -7,6 +7,7 @@ const {
   svgImage
 } = require('./src/_11ty/shortcode/image')
 const analytics = require('./src/_11ty/shortcode/analytics')
+const noindex = require('./src/_11ty/shortcode/noindex')
 const localiser = require('./src/_11ty/filter/localiser')
 const getLocalised = require('./src/_11ty/filter/getLocalised')
 const yearlyData = require('./src/_11ty/filter/byDecades')
@@ -41,11 +42,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("analytics", analytics)
 
   //* Shortcode to put noindex metadata into staging site
-  eleventyConfig.addShortcode("noindex", () => { 
-      if (dev) {
-        return `<meta name="robots" content="noindex, nofollow, noarchive">`
-      }
-    })
+  eleventyConfig.addShortcode("noindex", noindex)
 
   // ! Filters
   //*  Localisation filter - looks for current locale, defaults to EN
