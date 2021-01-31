@@ -19,11 +19,11 @@ contributors:
 ---
 
 # {{ title }}
-There are nearly 300 billion (yep, billion) emails sent out every day. Out of that number, it's estimated that 55% of these are spam emails <sub>[1][1]</sub>. Most of the carbon emissions from email come from embodied emissions within the devices used to write and read them. The rest comes from the network and data centres involved in their transmission and storage. 
+There are nearly 300 billion (yep, billion) emails sent out every day. Out of that number, it's estimated that 55% of these are spam emails <sub>[1][1]</sub>. Most of the carbon emissions from email come from embodied emissions within the devices used to write and read them. The rest comes from the network and data centresinvolved in their transmission and storage. 
 
-- A spam email that's picked up by your provider's spam filter produces **0.03g of CO2** <sub>[2][2]</sub>
-- A short form email can generate up to **0.3g of CO2** <sub>[2][2]</sub>
-- Longer form emails, and emails with attachments/images can generate up to **0.5g of CO2** <sub>[3][3]</sub>
+- A spam email that's picked up by your provider's spam filter produces <strong>0.03g of CO<sub>2</sub></strong> <sup>[2][2]</sup>
+- A short form email can generate up to <strong>0.3g of CO<sub>2</sub></strong> <sup>[2][2]</sup>
+- Longer form emails, and emails with attachments/images can generate up to <strong>0.5g of CO<sub>2</sub></strong> <sup>[3][3]</sup>
 
 While email might only form a small fraction of the internet's overall carbon footprint, it's a really easy place to start reducing your own personal carbon footprint (and restoring some sanity too, depending on how messy your inbox is!).
 
