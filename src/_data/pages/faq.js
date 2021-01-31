@@ -19,7 +19,7 @@ const questions = [
             zh: `那個能源能量源是『清潔的』？`,
         },
         answer: {
-            en: `<p>For this project I have considered wind, solar, hydro, nuclear, and geothermal as clean energy sources.
+            en: `<p>For this project, I have considered wind, solar, hydro, nuclear, and geothermal as clean energy sources.
             These sources don’t produce air pollutants or greenhouse gases as part of the energy generation process.</p>
             <p>Taiwan also generates a marginal amount of electricity from burning biomass and waste, which are considered renewable energy sources.
             However, I currently don't have enough knowledge around how Taiwan handles either of these to feel comfortable that they are non-polluting.</p>`,

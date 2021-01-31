@@ -12,7 +12,7 @@ thumbnail: {
 }
 actions:
     - Find [B Corps in Taiwan](https://bcorporation.net/directory?search=&industry=&country=Taiwan&state=&city=) (or [globally](https://bcorporation.net/directory)) & support them.
-    - Find [companies committed to net zero](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46) by 2030.
+    - Find [companies committed to net-zero](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46) by 2030.
     - If you run a business then take the [B Impact Assessment](https://bimpactassessment.net/).
 contributors:
     - 
@@ -21,11 +21,11 @@ contributors:
         - github: "fishintaiwan"
 ---
 # {{ title }}
-How and where we spend our money is one of the biggest signals we, as consumers, can send to businesses. As more companies commit to sustainability and net zero emissions, supporting them with your dollars can send a message to other organisations that these factors matter.
+How and where we spend our money is one of the biggest signals we, as consumers, can send to businesses. As more companies commit to sustainability and net-zero emissions, supporting them with your dollars can send a message to other organisations that these factors matter.
 
-One way to identify purpose-driven companies is by looking for [B Corp certification](https://bcorporation.net/). B Corporation (B Corp) certification is private certification that aimed at identifying profit-seeking companies that seek to maximise social & environmental performance. The program assesses a company’s overall impact across five dimensions of governance, workers, environment, community, and customers.
+One way to identify purpose-driven companies is by looking for [B Corp certification](https://bcorporation.net/). B Corporation (B Corp) certification is a private certification that is aimed at identifying profit-seeking companies that encorporate maximising social & environmental performance into their overall mission. The program assesses a company’s overall impact across five dimensions of governance, workers, environment, community, and customers.
 
-Over 800 certified B corporations have committed to reducing their greenhouse gas emissions to [net zero by 2030](https://www.bcorpclimatecollective.org/net-zero-2030). 10 of those companies are here in Taiwan.
+Over 800 certified B Corporations have committed to reducing their greenhouse gas emissions to [net-zero by 2030](https://www.bcorpclimatecollective.org/net-zero-2030). 10 of those companies are here in Taiwan.
 
 
 <div class="action-cta card" data-spaced>

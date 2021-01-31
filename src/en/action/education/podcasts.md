@@ -1,6 +1,6 @@
 ---
 title: Listen
-subtag: There are a multitude of podcasts online that you can listen to and learn more about various facets of the climate crisis, and ways you can act.
+subtag: There is a multitude of podcasts online that you can listen to and learn more about various facets of the climate crisis, and ways you can act.
 shortName: podcasts
 hasMore: true
 thumbnail: { 
@@ -15,9 +15,9 @@ contributors:
         - github: "fishintaiwan"
 ---
 # {{ title }}
-Podcasts can be both entertaining and educational. They are a great way to expand your knowledge on the complex issue that is climate change. They allow you access to experts and industry leaders, plus they make it easy to remain up-to-date as policy, industry and science evolves.
+Podcasts can be both entertaining and educational. They are a great way to expand your knowledge on the complex issue that is climate change. They allow you access to experts and industry leaders, plus they make it easy to remain up-to-date as policy, industry and science evolve.
 
-Below are a few podcasts that have helped me better understand the problem of climate change, and what we might be able to do to fix it. I'd love to expand this list, so if you've got any recommendations then [send them through!](mailto:{{ site.contact.email }})
+Below are a few podcasts that have helped me better understand the problem of climate change, and what we might be able to do to fix it. I'd love to expand this list, so if you've got any recommendations, then [send them through!](mailto:{{ site.contact.email }})
 
 <div class="action-grid auto-grid">
 {% for pod in podcasts %}
