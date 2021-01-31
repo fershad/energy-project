@@ -1,6 +1,6 @@
 const intro = {
     paragraph: {
-        en: `Data for this project is sourced from publicly available datasets. Below is historical data that can give you a further insight into Taiwan's energy production mix, and carbon emissions.`,
+        en: `Data for this project is sourced from publicly available datasets. Below is historical data that can give you further insight into Taiwan's energy production mix, and carbon emissions.`,
         zh: '該項目的數據來自公開可用數據集.',
     },
 };

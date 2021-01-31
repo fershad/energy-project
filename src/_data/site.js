@@ -47,7 +47,7 @@ const subscribe = {
         zh: '保持最新',
     },
     paragraph: {
-        en: `I'll be periodically updating data and content on this site. If you'd like to stay updated with changes then subscribe to email updates using the form below. I'll only send out one email per month, I promise.`,
+        en: `I'll be periodically updating data and content on this site. If you'd like to stay updated with changes then subscribe for monthly email updates using the form below.`,
         zh:
             '我將定期更新此站點上的數據和內容。 如果您想隨時了解更改，請使用以下表格訂閱電子郵件更新。 我保證，我每月只會發送一封電子郵件 (英文)。',
     },
@@ -60,7 +60,7 @@ const subscribe = {
         zh: '訂閱',
     },
     buttondown: {
-        en: `<a href="https://buttondown.email" target="_blank" rel="nofollow noopener">Powered by Buttondown.</a> If you're having trouble subscribing <a href="mailto:cleanenergyproject@fershad.com">email me directly</a>.`,
+        en: `Powered by <a href="https://buttondown.email" target="_blank" rel="nofollow noopener">Buttondown.</a> If you're having trouble subscribing <a href="mailto:cleanenergyproject@fershad.com">email me directly</a>.`,
         zh: `<a href="https://buttondown.email" target="_blank" rel="nofollow noopener">由Buttondown強力驅動.</a> 如果不能訂閱，<a href="mailto:cleanenergyproject@fershad.com">發電信給我</a>.`,
     },
 };

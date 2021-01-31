@@ -20,13 +20,13 @@ contributors:
         - github: "fishintaiwan"
 ---
 # {{ title }}
-The average Google search generates about 0.5g of CO<sub>2</sub> <sup>[1][1]</sup>. Your search habits will likely make up a very tiny fraction of your overall carbon footprint. Google, to it's credit, is striving to using only carbon-free energy sources at all data centres and facilities by 2030. 
+The average Google search generates about 0.5g of CO<sub>2</sub> <sup>[1][1]</sup>. Your search habits will likely make up a very tiny fraction of your overall carbon footprint. Google, to its credit, is striving to use only carbon-free energy sources at all data centres and facilities by 2030. 
 
 But what if I told you there's a way your searches can plant trees, and protect your digital privacy too. Ecosia is a German-based search engine that uses profits it generates to plant trees around the world in places that need them the most. 
 
 The company generates revenue from serving generic ads (i.e. ads that are not influenced by your search or browsing history, unlike Google ads). It takes roughly 45 searches to plant one tree. 
 
-I've used Ecosia for a number of months now, and often the search results serve up the answers to my questions. Sometimes I do still find myself reaching for Google, but not after running a few searches through Ecosia first.
+I've used Ecosia for a while now, and often the search results serve up the answers to my questions. Sometimes I do still find myself reaching for Google, but not after running a few searches through Ecosia first.
 
 
 <div class="action-cta card" data-spaced>

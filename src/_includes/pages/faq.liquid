@@ -10,7 +10,7 @@ layout: base
 
     <section id="questions" class="flow">
             {% for question in pages.faq.questions %}
-                        <div data-divider="regular">
+                        <div data-divider="regular" id="{{ question.id }}">
                             <h2 class="question">{{ question.question | defaultLocale: locale | safe }}</h2>
                             <div class="answer">{{ question.answer | defaultLocale: locale | safe }}</div>
                         </div>

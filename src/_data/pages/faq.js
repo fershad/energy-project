@@ -26,6 +26,7 @@ const questions = [
             zh: `<p>對於這個項目，我已經將風能，太陽能，水力發電，核能和地熱能視為清潔能源。 在能源生產過程中，這些能源不會產生空氣污染物或溫室氣體。</p>
             <p>台灣還通過燃燒被視為可再生能源的生物質和廢物產生少量電力。 但是，我目前對台灣如何處理這兩種方法中的任何一個還不了解，因此對它們無污染感到滿意。</p>`,
         },
+        id: 'clean-sources',
     },
     {
         question: {
@@ -59,6 +60,7 @@ const questions = [
             </ul>
             <p><a href="https://www.climate-laws.org/geographies/taiwan" data-external>Grantham Research Institute on Climate Change and the Environment</a> 詳細介紹了台灣現有的所有氣候變化法律和政策。`,
         },
+        id: 'target',
     },
     {
         question: {
@@ -77,6 +79,7 @@ const questions = [
                 <li><a href="https://www.globalcarbonproject.org/" data-external>Global Carbon Project</a></li>
             </ul>`,
         },
+        id: 'data-source',
     },
     {
         question: {
@@ -94,8 +97,10 @@ const questions = [
             zh: `<p>我正在使用<a href="//websitecarbon.com" data-external>Website Carbon Calculator</a>跟踪該網站的估計碳排放量。每次查看頁面時，都會計算估算的碳排放量，並將其顯示在徽標中。
             我將其與我的網站分析(我使用 <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>)中的信息結合起來，以計算該網站的總體CO<sub>2</sub>排放量。`,
         },
+        id: 'carbon-badge',
     },
     {
+        id: 'contribute',
         question: {
             en: `Can I contribute?`,
             zh: `我可不可以支持？`,

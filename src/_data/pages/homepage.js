@@ -1,8 +1,8 @@
 const site = require('../site');
 
 const intro = {
-    en: `${site.description.en} Data for this project is sourced from <a href="/en/about#data">publicly available datasets</a>.`,
-    zh: `${site.description.zh} 該項目的數據來自<a href="/zh/about#data">公開可用數據集</a>`,
+    en: `${site.description.en} Data for this project is sourced from <a href="/en/faq#data-source">publicly available datasets</a>.`,
+    zh: `${site.description.zh} 該項目的數據來自<a href="/zh/faq#data-source">公開可用數據集</a>`,
 };
 
 const data = {
