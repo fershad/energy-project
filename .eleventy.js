@@ -136,7 +136,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
-      hostname: "https://example.com",
+      hostname: "https://cleanenergyproject.tw",
     },
   });
 
