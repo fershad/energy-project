@@ -87,7 +87,7 @@
   <div id="wcb_p">
     {#if locale == 'zh'}
       <!-- content here -->
-      <span id="wcb_g">{value.c}克二氧化碳/每次看</span>
+      <span id="wcb_g">{value.c}克二氧化碳/瀏覽</span>
     {:else}
       <!-- else content here -->
       <span id="wcb_g">{value.c}g of CO<sub>2</sub>/view</span>
@@ -101,7 +101,7 @@
   </div>
   {#if locale == 'zh'}
     <!-- content here -->
-    <span id="wcb_2">清潔比 {value.p}% 的頁面經過測試</span>
+    <span id="wcb_2">比 {value.p}% 已檢測的網頁乾淨</span>
   {:else}
     <!-- else content here -->
     <span id="wcb_2">Cleaner than {value.p}% of pages tested</span>

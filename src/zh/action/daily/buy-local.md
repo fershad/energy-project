@@ -1,6 +1,6 @@
 ---
-title: 選購當地特產
-subtag: 進口的水果和蔬菜的碳足跡至少可以是當地種植農產品的兩倍。 進口的冷凍農產品的<strong>碳足跡大約增加了9倍</strong>。
+title: 選購在地時令食品
+subtag: 進口的水果和蔬菜至少是當地種植的農產品的2倍碳排放。 進口的冷凍農產品碳足跡更是增加了9倍之多。
 shortName: farmers-market
 thumbnail: { 
     src: "./src/_includes/img/actions/market.jpg", 

@@ -1,4 +1,4 @@
-<div aria-label="Oblique night image of Taiwan taken from the International Space Station." class="masthead" role="img">
+<div aria-label="{{ partial.masthead.arialabel | defaultLocale: locale | safe }}" class="masthead" role="img">
     <div class="wrapper">
         <picture style="display: none;">
             <source type="image/avif" srcset="/img/tw-iss-min.avif" media="(min-width: 37rem)">

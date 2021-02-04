@@ -17,7 +17,7 @@
     if (display) {
       text = $locale === "zh" ? "隱藏圖表 " : "Hide graph";
     } else {
-      text = $locale === "zh" ? "顯示圖表 " : "Show graph";
+      text = $locale === "zh" ? "展開圖表 " : "Show graph";
     }
     toggleClass();
   }

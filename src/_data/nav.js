@@ -31,7 +31,7 @@ module.exports = {
     },
     faq: {
         en: 'FAQ',
-        zh: '',
+        zh: '常見問答',
         link: '/faq',
         header: true,
     },

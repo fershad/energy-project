@@ -1,6 +1,6 @@
 ---
-title: 使用共用交通工具
-subtag: 台灣主要城市的共享交通選擇越來越多。 大多數都是電動的，是方便，乾淨的出行方式。
+title: 使用公享交通工具
+subtag: 在台灣較大型的城市, 共享的交通選擇越來越多。 大多數都是電動的，是方便也乾淨的移動方式。
 shortName: shared transport
 thumbnail: { 
     src: "./src/_includes/img/actions/shared-scooter.jpg", 
