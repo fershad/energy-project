@@ -3,12 +3,12 @@ const { contact } = require('../site');
 const intro = {
     heading: {
         en: 'FAQ',
-        zh: '',
+        zh: '如果對本網站的資料或內容有疑問，請先看看這一頁。若還有任何問題，也歡迎 e-mail 與我聯繫。',
     },
     paragraph: {
         en: `If you've got any questions about the data or content of this website then have a look for the answer here. 
         If you can't find what you're looking for then <a href="mailto:${contact.email}">drop me an email</a> and I'll see if I can help.`,
-        zh: `你對此這網站的資料或內容有疑問的話，在這網頁看一看。如果找不到答案，<a href="mailto:${contact.email}">發電信給我</a>。`,
+        zh: `如果對本網站的資料或內容有疑問，請先看看這一頁。若還有任何問題，也歡迎 <a href="mailto:${contact.email}">e-mail</a> 與我聯繫。`,
     },
 };
 
@@ -16,22 +16,22 @@ const questions = [
     {
         question: {
             en: `What energy sources considered 'clean'?`,
-            zh: `那個能源能量源是『清潔的』？`,
+            zh: `哪些算是『潔淨的』能源？`,
         },
         answer: {
             en: `<p>For this project, I have considered wind, solar, hydro, nuclear, and geothermal as clean energy sources.
             These sources don’t produce air pollutants or greenhouse gases as part of the energy generation process.</p>
             <p>Taiwan also generates a marginal amount of electricity from burning biomass and waste, which are considered renewable energy sources.
             However, I currently don't have enough knowledge around how Taiwan handles either of these to feel comfortable that they are non-polluting.</p>`,
-            zh: `<p>對於這個項目，我已經將風能，太陽能，水力發電，核能和地熱能視為清潔能源。 在能源生產過程中，這些能源不會產生空氣污染物或溫室氣體。</p>
-            <p>台灣還通過燃燒被視為可再生能源的生物質和廢物產生少量電力。 但是，我目前對台灣如何處理這兩種方法中的任何一個還不了解，因此對它們無污染感到滿意。</p>`,
+            zh: `<p>太陽能、風力、水力發電、核能和地熱能，是這個計畫中所稱的「潔淨能源」。 這些能源在生產過程中不會造成空氣污染物或排放溫室氣體。</p>
+            <p>台灣同時也透過燃燒廢棄物及生物質製造少量的可再生能源。 但由於我對目前台灣如何處理這兩種製電過程的衍生物還不很了解，因此無法確定這兩種發電方式是否乾淨。</p>`,
         },
         id: 'clean-sources',
     },
     {
         question: {
             en: `What are Taiwan's current emissions targets?`,
-            zh: `台灣目前的排放目標是什麼？`,
+            zh: `台灣目前的溫室氣體排放量目標為何？`,
         },
         answer: {
             en: `<p>The Greenhouse Gas Reduction and Management Act (2015) details Taiwan's national emissions target:</p>
@@ -48,24 +48,25 @@ const questions = [
                 <li>Renewable energy share in the electricity system 8% by 2025</li>
             </ul>            
             <p>The <a href="https://www.climate-laws.org/geographies/taiwan" data-external>Grantham Research Institute on Climate Change and the Environment</a> has a breakdown of all Taiwan's existing climate change laws and policies.`,
-            zh: `<p>『溫室氣體減量及管理法』(2015) 詳細介紹了台灣全國家的排放目標：</p>
-            <blockquote><p>國家溫室氣體長期減量目標為中華民國一百三十九年溫室氣體排放量降為
-            中華民國九十四年溫室氣體排放量百分之五十以下。</p>
+            zh: `<p>『溫室氣體減量及管理法』(2015) 明定了台灣國家溫室氣體排放目標：
+            </p>
+            <blockquote><p>國家溫室氣體長期減量目標為139年（西元2050年）溫室氣體排放量應降為94年（西元2005年）溫室氣體排放量50%以下。
+            </p>
             <a href="https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=O0020098" data-external>溫室氣體減量及管理法 (2015)</a></blockquote>
-            <p>『可持續能源政策戰略框架』(2008) 概述了一系列雄心勃勃的短期目標，包括：</p>
+            <p>『永續能源政策綱領』(2008) 概述了一系列雄心勃勃的短期目標，包括：</p>
             <ul>
-                <li>在2016年至2020年之間將CO<sub>2</sub>排放量減少到2008年的水平，到2025年減少到2000年的水平</li>
-                <li>到2025年將低碳能源在發電系統中的份額提高到55％(以2008年為基準)</li>
-                <li>到2025年可再生能源在電力系統中的份額為8％</li>
+                <li>2016至2020年間，將二氧化碳排放量減少到2008年的水平，到2025年減少到2000年的水平</li>
+                <li>到2025年，將低碳能源在整體能源生產佔比提高至55％(以2008年為基準)</li>
+                <li>到2025年，可再生能源為整體能源生產佔比之8％</li>
             </ul>
-            <p><a href="https://www.climate-laws.org/geographies/taiwan" data-external>Grantham Research Institute on Climate Change and the Environment</a> 詳細介紹了台灣現有的所有氣候變化法律和政策。`,
+            <p>倫敦政經學院<a href="https://www.climate-laws.org/geographies/taiwan" data-external>格蘭瑟姆氣候變遷與環境研究所</a> (Grantham Research Institute on Climate Change and the Environment) 詳細列出了台灣現有的所有氣候變遷法規及政策。`,
         },
         id: 'target',
     },
     {
         question: {
             en: `Where does the data come from?`,
-            zh: `數據來自哪裡？`,
+            zh: `數據來源`,
         },
         answer: {
             en: `<p>Data for this project is sourced from publicly available datasets.</p>
@@ -73,9 +74,9 @@ const questions = [
                 <li><a href="https://www.moeaboe.gov.tw/wesnq/Views/B01/wFrmB0102.aspx" data-external>Taiwan Ministry of Economic Affairs - Bureau of Energy</a></li>
                 <li><a href="https://www.globalcarbonproject.org/" data-external>Global Carbon Project</a></li>
             </ul>`,
-            zh: `<p>該項目的數據來自公開可用數據集.</p>
+            zh: `<p>此計畫的數據皆來自於開源數據集.</p>
             <ul>
-                <li><a href="https://www.moeaboe.gov.tw/wesnq/Views/B01/wFrmB0102.aspx" data-external>台灣經濟部-能源局</a></li>
+                <li><a href="https://www.moeaboe.gov.tw/wesnq/Views/B01/wFrmB0102.aspx" data-external> 台灣經濟部-能源局</a></li>
                 <li><a href="https://www.globalcarbonproject.org/" data-external>Global Carbon Project</a></li>
             </ul>`,
         },
@@ -84,7 +85,7 @@ const questions = [
     {
         question: {
             en: `What's with the "Website Carbon" badge at the bottom of the page?`,
-            zh: `沒網頁下面的『Website Carbon』的貼有什麼意思？`,
+            zh: `每網頁頁尾的 "Website Carbon" 標籤是什麼意思？`,
         },
         answer: {
             en: `<p>I am tracking the estimated carbon emissions of this website using the 
@@ -94,8 +95,8 @@ const questions = [
             (provided by <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>) to determine the 
             overall CO<sub>2</sub> emissions of the entire site.</p>
             <p>I plan to eventually create a page to show the total CO<sub>2</sub> emissions of this site.`,
-            zh: `<p>我正在使用<a href="//websitecarbon.com" data-external>Website Carbon Calculator</a>跟踪該網站的估計碳排放量。每次查看頁面時，都會計算估算的碳排放量，並將其顯示在徽標中。
-            我將其與我的網站分析(我使用 <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>)中的信息結合起來，以計算該網站的總體CO<sub>2</sub>排放量。`,
+            zh: `<p>此網站使用 <a href="//websitecarbon.com" data-external>Website Carbon Calculator</a>"Website Carbon Calculator"</a> 來追蹤並估算碳排放量。每次造訪一個頁面時，載入該頁面的碳排放量估值即會顯示在頁尾的標籤中。 這個網站的總碳排量則是綜合這些數值和網站分析數據 (我使用 <a href="https://usefathom.com/ref/CEHKLY" data-external>Fathom Analytics</a>) 來計算。
+            我計畫未來將新增一頁來呈現此網站整體的碳排放量。`,
         },
         id: 'carbon-badge',
     },
@@ -103,7 +104,7 @@ const questions = [
         id: 'contribute',
         question: {
             en: `Can I contribute?`,
-            zh: `我可不可以支持？`,
+            zh: `我能如何支持此計畫？`,
         },
         answer: {
             en: `<p>Community contributions to this project are very much welcome. 
@@ -121,9 +122,9 @@ const questions = [
                     <a href="https://www.patreon.com/cleanenergy_tw" data-external>Patreon</a> (monthly contribution)
                 </li>
                 </ul>`,
-            zh: `<p>歡迎大家所有的貢獻。您可以<a href="mailto:${contact.email}">通過電信</a>發送您可能有的建議，貢獻或反饋。</p>
+            zh: `<p>非常歡迎各種形式的支持。您可以透過 <a href="mailto:${contact.email}">email</a> 給我您的任何指教、建議、資訊和反饋。</p>
             <p>
-            如果您想提供財政支持，無論多麼小，我將不勝感激！ 這將幫助我承擔使該項目保持在線狀態的一些費用。 您可以在以下方面為我提供支持：
+            如果您想提供財務支援，無論多麼小，我將不勝感激！ 這將能幫助我支付維持此計畫網站的某部分支出。 您可以透過以下方式支持這項計畫：
             </p>
             <ul>
                 
@@ -131,7 +132,7 @@ const questions = [
                     <a href="https://ko-fi.com/cleanenergy_tw" data-external>Ko-fi</a> (一次性捐款)
                 </li>
                 <li>
-                    <a href="https://www.patreon.com/cleanenergy_tw" data-external>Patreon</a> (每月性捐款)
+                    <a href="https://www.patreon.com/cleanenergy_tw" data-external>Patreon</a> (每月定期捐款)
                 </li>
                 </ul>`,
         },
