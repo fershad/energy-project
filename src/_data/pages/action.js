@@ -26,7 +26,7 @@ const shareButton = {
 
 const visitWebsite = {
     en: 'Visit website',
-    zh: '看網站',
+    zh: '去看網站',
 };
 
 module.exports = { heading, paragraph, readmore, readMoreButton, shareButton, visitWebsite };

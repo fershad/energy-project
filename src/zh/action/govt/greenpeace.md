@@ -1,19 +1,19 @@
 ---
 title: 行動大廳
-subtag: 地方和國家級別的遊說政府應採取針對氣候的政策。
+subtag: 影響地方及中央政府制定專注於氣候變遷的政策。
 shortName: Lobby for action
 hasMore: true
 tags:
     - homepage
 thumbnail: { 
     src: "./src/_includes/img/actions/greenpeace.png", 
-    alt: "與一颱風輪機的綠色領域在中間。",
-    caption: '圖片來源：綠色和平台灣'
+    alt: "翠綠的農地中矗立著一座風力發電風車",
+    caption: '圖片來源：綠色和平 | 臺灣'
 }
 actions:
-    - 為具有認真的氣候政策的代表投票。
-    - 開始與家人，朋友，同事，甚至您的雇主進行對話。
-    - 簽署在線請願書，例如[綠色和平組織的這一請願書](https://cloud.greentw.greenpeace.org/petition-climate-greenhouse).
+    - 投票給有具體氣候變遷因應政策的候選人。
+    - 開始與家人，朋友，同事，甚至您的雇主進行討論。
+    - 簽署線上請願書，例如[綠色和平組織的這份請願書](https://cloud.greentw.greenpeace.org/petition-climate-greenhouse)。
 contributors:
     - 
         - display: "Fershad"
@@ -22,14 +22,14 @@ contributors:
 ---
 
 # {{ title }}
-如果我們要減少溫室氣體排放並轉向更具可持續性的能源生產組合，則絕對需要政府採取行動。 未能（甚至延遲）調整可能會損害台灣的環境和經濟利益
+希望減少溫室氣體排放量並提高永續能源的生產比例，絕對需要政府採取行動。 若未能 (即時) 做出改變，台灣將可能面臨環境和經濟上的潛在威脅。
 
-對認真對待氣候變化的代表進行投票是推動變革的一種方式。 它向立法者表明，氣候對他們的選民來說是一個重要的問題（這是由選民負責任的）。 台灣的外國人還可以通過加入在線申請來推動變革，並與他們的台灣朋友和同事進行對話，從而為他們提供幫助。
+投票給重視環境保育議題的候選人亦是一種方式，在向政府及立法機關傳達氣候是選民重視的議題 (選擇哪些人該為我們重視的議題服務是選民的責任)。 在台灣的外國人透過參加線上請願和與他們的台灣友人或同事交談，也能提供些幫助。
 
 <div class="action-cta card" data-spaced>
 <div class="card--content">
 <h2>
-    你能做什麼？
+    您能嘗試？
 </h2>
 {% for action in actions %}
 {{ action }}

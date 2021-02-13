@@ -1,19 +1,19 @@
 ---
-title: 支持商業發揮對社會及環境的正面影響力
-subtag: 在社會及環境正面影響力的商業用你的錢買產品或服務。
+title: 支持目的及使命導向的企業
+subtag: 做個有意識的消費者，購買承諾對社會及環境負責的公司產品或服務。
 shortName: b-corp
 hasMore: true
 tags:
     - homepage
 thumbnail: { 
     src: "./src/_includes/img/actions/b-corp.png", 
-    alt: "B Corporation 認證書商標.",
-    caption: "B Corporations 獲得了社會和環境績效認證. 資源 <a href='https://bullhorncreative.com/'>Bullhorn Creative</a>"
+    alt: "B 型企業認證標章.",
+    caption: "B 型企業為獲得社會和環境效益認證的公司行號. 圖片來源: Bullhorn Creative"
 }
 actions:
-    - 支持 [在台灣的B Corps](https://bcorporation.net/directory?search=&industry=&country=Taiwan&state=&city=) (或 [全球的](https://bcorporation.net/directory)).
-    - 找致力於到2030年實現淨零排放的[公司](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46).
-    - 如果你自己有公司[試填商業影響力評表](http://blab.tw/becomeabcorp).
+    - 支持[台灣 (或全球) 的 B 型企業](https://bcorporation.net/directory?search=&industry=&country=Taiwan&state=&city=)。
+    - 支持那些承諾並致力實現 [2030 年零淨排放的公司](https://airtable.com/shry2MiYSWGcDmMHn/tblRkevbm6ahEasKd/viw0nV0UB9pPQzE46)。
+    - 如果您為企業主，不妨申請 [B 型企業評估](http://blab.tw/becomeabcorp)。
 contributors:
     - 
         - display: "Fershad"
@@ -21,17 +21,17 @@ contributors:
         - github: "fishintaiwan"
 ---
 # {{ title }}
-我們如何以及在何處花錢，這是我們作為消費者可以發送給企業的最大信號之一。隨著越來越多的公司致力於實現淨零排放，以您的錢來支持它們 可以向其他組織傳達這些因素很重要的信息。
+我們如何以及在何處花錢，是我們作為消費者可以最直接傳遞給企業的訊息之一。有越來越多公司承諾發展永續的經營方式和實現零淨碳排量，您將能透過消費選擇來支持這些企業，同時向市場中的其他公司傳達這項重要訊息。
 
-認證識別驅動型公司的一種方法正在尋找[B Corp認證](https://bcorporation.net/)。B Corporation（B Corp）認證是一項私人認證，可以最大程度地提高社會和環境績效 計劃評估公司在治理，員工，環境，社區和客戶五個方面的整體影響。
+辨識目的導向公司的一種方法是搜尋 B Corp 認證。[B 型企業（B Corp）](https://bcorporation.net/)認證是一項私人認證，協助企業檢視策略與資源，以最大化社會及環境的正向影響力。 提供企業在公司治理、員工照顧、環境友善、社區照顧和客戶影響力等五個面向的商業影響力評估。
 
-超過800家獲得B認證的公司已承諾將其溫室氣體排放量減少[到2030年達到淨零排放](https://www.bcorpclimatecollective.org/net-zero-2030)。 這些公司中有10家在台灣。
+目前已有超過800家獲得B型企業認證的公司承諾將溫室氣體排放量逐年減少，[以在2030年達到零淨排放](https://www.bcorpclimatecollective.org/net-zero-2030)。 台灣有 10 家 B 型企業。
 
 
 <div class="action-cta card" data-spaced>
 <div class="card--content">
     <h2>
-        你能做什麼？
+        您能嘗試？
     </h2>
 {% for action in actions %}
 {{ action }}
