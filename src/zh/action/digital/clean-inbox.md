@@ -5,8 +5,8 @@ shortName: clean inbox
 hasMore: true
 thumbnail: { 
     src: "./src/_includes/img/actions/gmail.jpg", 
-    alt: "Gmail收件信箱，有Google的Gmail標誌。",
-    caption: <span>照片來源: <a href="https://unsplash.com/@hostreviews?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Stephen Phillips - Hostreviews.co.uk</a>在<a href="https://unsplash.com/s/photos/email?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+    alt: "Gmail收件信箱，有Google的Gmail標誌。", 
+    caption: '<span>照片來源: <a href="https://unsplash.com/@hostreviews?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Stephen Phillips - Hostreviews.co.uk</a>在<a href="https://unsplash.com/s/photos/email?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 }
 actions:
     - 時常檢視自己訂閱的電子報。 如果不會再閱讀，或者它們沒有帶給您多大價值，就取消訂閱吧。

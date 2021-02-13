@@ -5,8 +5,8 @@ shortName: read
 hasMore: true
 thumbnail: { 
     src: "./src/_includes/img/actions/book.jpg", 
-    alt: "放下眼鏡和咖啡，打開書本。",
-    caption: <span>照片來源: <a href="https://unsplash.com/@sincerelymedia?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sincerely Media</a>在<a href="https://unsplash.com/s/photos/read?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+    alt: "放下眼鏡和咖啡，打開書本。", 
+    caption: '<span>照片來源: <a href="https://unsplash.com/@sincerelymedia?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sincerely Media</a>在<a href="https://unsplash.com/s/photos/read?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 }
 contributors:
     - 

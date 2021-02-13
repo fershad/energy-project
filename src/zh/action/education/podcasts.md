@@ -5,8 +5,8 @@ shortName: podcasts
 hasMore: true
 thumbnail: { 
     src: "./src/_includes/img/actions/podcasts.jpg", 
-    alt: "一個人站著並拿著手機。",
-    caption: <span>照片來源: <a href="https://unsplash.com/@melanie_sophie?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Melanie Pongratz</a>在<a href="https://unsplash.com/s/photos/listen-podcasts?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+    alt: "一個人站著並拿著手機。", 
+    caption: '<span>照片來源: <a href="https://unsplash.com/@melanie_sophie?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Melanie Pongratz</a>在<a href="https://unsplash.com/s/photos/listen-podcasts?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 }
 contributors:
     - 
