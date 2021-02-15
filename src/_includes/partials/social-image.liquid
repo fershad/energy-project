@@ -4,11 +4,15 @@
 <meta property="og:title" content="{{ pageTitle }}">
 <meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:site_name" content="{{ site.name[locale] }}">
-<meta property="og:locale" content="en_GB">
-{% if ogLarge %}
-    <meta property="og:image" content="{{ site.baseUrl }}/LargeOG.jpg">
+{% if locale === 'zh' %}
+<meta property="og:locale" content="zh_TW">
 {% else %}
-    <meta property="og:image" content="{{ site.baseUrl }}/SmallOG.jpg">
+<meta property="og:locale" content="en_GB">
+{% endif %}
+{% if ogLarge %}
+    <meta property="og:image" content="{{ site.baseUrl }}/en/LargeOG.jpg">
+{% else %}
+    <meta property="og:image" content="{{ site.baseUrl }}/en/SmallOG.jpg">
 {% endif %}
 <meta property="og:image:alt" content="{{ site.ogImgAlt[locale] }}">
 
