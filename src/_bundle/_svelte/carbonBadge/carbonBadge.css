@@ -37,6 +37,8 @@
   background: var(--color-campfire-smoke);
   border-right: 0;
   min-width: 8.2em;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
 }
 
 #wcb #wcb_a {
