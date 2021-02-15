@@ -49,13 +49,14 @@ a:not([class]):focus {
   position: relative;
   background: var(--background-color);
   /* transition: all 0.4s ease-in-out; */
-  animation: card 0.4s forwards;
   padding: var(--size-300) var(--size-500);
   color: var(--color-ocean-blue);
   text-decoration: none;
   font-weight: 900;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  border-radius: 18px 18px 0;
+  /* animation: card 0.4s forwards; */
 }
 
 .link--button::after {
@@ -78,8 +79,9 @@ a:not([class]):focus {
   background-position: 0 0, 3.5px 3.5px;
   background-size: 7px 7px;
   background-color: var(--background-color);
-  /* transition: all 0.4s ease-in-out; */
-  animation: card 0.4s forwards;
+  transition: all 0.4s ease-in-out;
+  border-radius: 18px 18px 0;
+  /* animation: card 0.4s forwards; */
 }
 
 .link--button:hover,
@@ -87,14 +89,16 @@ a:not([class]):focus {
   color: var(--color-ocean-green);
   border: 2px solid var(--color-ocean-green);
   /* border-radius: 0 18px 18px; */
-  animation: cardHover 0.4s forwards;
+  /* animation: cardHover 0.4s forwards; */
+  border-radius: 0 18px 18px;
 }
 
 .link--button:hover::after,
 .link--button:focus::after {
   /* border-radius: 0 18px 18px; */
+  border-radius: 0 18px 18px;
   border: 2px solid var(--color-ocean-green);
-  animation: cardHover 0.4s forwards;
+  /* animation: cardHover 0.4s forwards; */
   background-color: var(--color-ocean-green);
   background-image: radial-gradient(
       var(--color-ocean-green) 20%,

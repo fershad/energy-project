@@ -231,6 +231,7 @@ li.nav__link {
     font-size: var(--size-500);
     display: inline-block;
     margin-inline-end: var(--size-400);
+    animation: none;
   }
 
   li.nav__link {
