@@ -8,17 +8,17 @@
   target="popupwindow"
   onsubmit="window.open('https://buttondown.email/cleanenergyprojecttw', 'popupwindow')"
   class="embeddable-buttondown-form"
-  style="width: 100%;"
+  style="width: 100%; margin-bottom: var(--size-400);"
 >
   <label for="bd-email">{{ site.subscribe.email | defaultLocale: locale }}</label>
   <div class="subscription--input z-reset">
       <input type="email" name="email" id="bd-email" placeholder="you@email.com" />
       <input type="hidden" value="1" name="embed" />
       <button class="link--button" type="submit">{{ site.subscribe.button | defaultLocale: locale }}</button>
-  </div>
-</form>
-<p data-wide>
-  {{ site.subscribe.buttondown | defaultLocale: locale | safe }}
-</p>
+    </div>
+  </form>
+  <p data-wide>
+    {{ site.subscribe.buttondown | defaultLocale: locale | safe }}
+  </p>
 </div>
 </div>

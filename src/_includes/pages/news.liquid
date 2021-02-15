@@ -8,15 +8,17 @@ layout: base
         {% assign sortedNews = news | sortByPublished %}
         <div class="article--holder">
             {% for story in sortedNews %}
-                <div class="article">
-                    <small>{{story[1].publishedDate | date: "%B %e, %Y"}}
-                        |
-                        {{ story[1].platform }}</small>
-                    <a href="{{ story[1].link }}" data-external class="article--title">{{ story[1].title }}</a>
-                    <p class="article--author" data-color="ocean-green">{{ story[1].author }}</p>
-                </div>
+            {% if story[1].publishedDate %}    
+            <div class="article">
+                <small>{{story[1].publishedDate | date: "%B %e, %Y"}}
+                    |
+                    {{ story[1].platform }}</small>
+                <a href="{{ story[1].link }}" data-external class="article--title">{{ story[1].title }}</a>
+                <p class="article--author" data-color="ocean-green">{{ story[1].author }}</p>
+            </div>
+            {% endif %}
             {% endfor %}
         </div>
-
     </section>
+    {% include "partials/subscription" %}
 </main>

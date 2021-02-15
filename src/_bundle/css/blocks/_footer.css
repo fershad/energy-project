@@ -95,8 +95,8 @@ footer .nav__list .nav__menu-list {
 footer .nav__link {
   font-size: var(--size-500);
   display: inline-block;
-  margin-inline-end: var(--size-400);
   margin-bottom: var(--size-400);
+  margin-inline-end: var(--size-400);
 }
 
 footer li.nav__link {

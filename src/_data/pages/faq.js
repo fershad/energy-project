@@ -3,7 +3,7 @@ const { contact } = require('../site');
 const intro = {
     heading: {
         en: 'FAQ',
-        zh: '如果對本網站的資料或內容有疑問，請先看看這一頁。若還有任何問題，也歡迎 e-mail 與我聯繫。',
+        zh: '常見問答',
     },
     paragraph: {
         en: `If you've got any questions about the data or content of this website then have a look for the answer here. 
