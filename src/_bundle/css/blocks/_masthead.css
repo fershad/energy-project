@@ -69,6 +69,7 @@
   position: absolute;
   border: solid 2px var(--color-pale-peach);
   box-shadow: 5px 5px 0 var(--color-pale-peach);
+  margin-left: max(var(--size-300));
 }
 
 .masthead__credit {
