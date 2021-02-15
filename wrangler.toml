@@ -8,8 +8,9 @@ entry-point = "workers-site"
 bucket = "./_site"
 
 [env.staging]
-bucket = "./_staging"
 route = "staging.cleanenergyproject.tw/*"
+vars = { ENVIRONMENT = "staging" }
+zone_id = "d1f4126f8787ef179d51549face1f76e"
 
 [env.production]
 bucket = "./_site"
