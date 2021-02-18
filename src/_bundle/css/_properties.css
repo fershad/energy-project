@@ -88,7 +88,7 @@ main:focus {
 }
 
 /*  Scrollbar styles */
-/* purgecss start ignore */
+/*! purgecss start ignore */
 html {
   scrollbar-color: var(--color-ocean-green) var(--color-rich-black);
 }
@@ -108,4 +108,4 @@ html {
   border-radius: var(--size-300);
 }
 
-/* purgecss end ignore */
+/*! purgecss end ignore */
