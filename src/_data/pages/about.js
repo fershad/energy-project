@@ -43,10 +43,10 @@ const aims = {
 const who = {
     heading: { en: 'Who am I?', zh: '我是誰？' },
     paragraph: {
-        en: `<p>I'm <a href='//fershad.com/about' data-external>Fershad Irani</a>, an Aussie who's been living in Taiwan for over ${yearsInTW} years.</p>
+        en: `<p>I'm <a onclick="window.fathom.trackGoal('ISZFFSKH', 0);" href='//fershad.com/about' data-external>Fershad Irani</a>, an Aussie who's been living in Taiwan for over ${yearsInTW} years.</p>
         <p>I work as a web performance consultant, meaning that I help companies build faster, smoother, better performing web experiences. This work also allows me to make websites more environmentally friendly - because the better 
         optimised a website, the less energy that's required to serve it for each user.</p>`,
-        zh: `<p>我是<a href='//fershad.com/about' data-external>尹沛學</a>。我是澳洲人，住在台灣已經${yearsInTW}年多。<p>
+        zh: `<p>我是<a onclick="window.fathom.trackGoal('ISZFFSKH', 0);"  href='//fershad.com/about' data-external>尹沛學</a>。我是澳洲人，住在台灣已經${yearsInTW}年多。<p>
         <p>我是一個網站效能顧問，我幫助企業網站提高運作效率以優化使用者體驗。 這項工作也使我能讓網站更加環保，因為網站的效能越好，每次造訪所需的能源就越少。</p>`,
     },
 };
@@ -54,9 +54,9 @@ const who = {
 const roadmap = {
     heading: { en: 'Roadmap & costs', zh: '計劃和費用' },
     paragraph: {
-        en: `You can find a roadmap of planned website features and content additions in <a href="https://www.notion.so/fershad/Clean-Energy-Project-a7d20c325f364304a42d1e0b69497aa0" data-external>this Notion document</a>.
+        en: `You can find a roadmap of planned website features and content additions in <a onclick="window.fathom.trackGoal('DWDDFN49', 0);" href="https://www.notion.so/fershad/Clean-Energy-Project-a7d20c325f364304a42d1e0b69497aa0" data-external>this Notion document</a>.
          Within the same document, you'll also find a breakdown of any costs incurred while running this project.`,
-        zh: `您可以在<a href="https://www.notion.so/fershad/Clean-Energy-Project-a7d20c325f364304a42d1e0b69497aa0" data-external>這個Notion頁面</a>中看到計劃的網站功能和未來將添加的內容。在這份文件中，您也能看到此項計畫產生的所有費用明細。`,
+        zh: `您可以在<a onclick="window.fathom.trackGoal('DWDDFN49', 0);" href="https://www.notion.so/fershad/Clean-Energy-Project-a7d20c325f364304a42d1e0b69497aa0" data-external>這個Notion頁面</a>中看到計劃的網站功能和未來將添加的內容。在這份文件中，您也能看到此項計畫產生的所有費用明細。`,
     },
 };
 

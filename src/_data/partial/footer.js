@@ -1,9 +1,9 @@
 const site = require('../site');
 
 const maintainer = {
-    en: `<p>The ${site.name.en} is maintained by <a href="//fershad.com" data-external>Fershad Irani</a>.</p>
+    en: `<p>The ${site.name.en} is maintained by <a onclick="window.fathom.trackGoal('PVDZAPBS', 0);" href="//fershad.com" data-external>Fershad Irani</a>.</p>
     <p>Community <a href="/en/about#contribute">contributions</a> and <a href="/en/about#support">support</a> are welcome.</p>`,
-    zh: `<p>${site.name.zh}由 <a href="//fershad.com" data-external>Fershad Irani</a> 發起. </p>
+    zh: `<p>${site.name.zh}由 <a onclick="window.fathom.trackGoal('PVDZAPBS', 0);"  href="//fershad.com" data-external>Fershad Irani</a> 發起. </p>
     <p>歡迎任何形式的<a href="/zh/about#contribute">貢獻</a>和<a href="/zh/about#support">支持</a></p>`,
 };
 
