@@ -11,4 +11,10 @@ module.exports = [
         image: './src/_includes/img/worldwidewaste.jpg',
         website: 'https://gerrymcgovern.com/books/world-wide-waste',
     },
+    {
+        title: 'Sustainable Web Design',
+        author: 'Tom Greenwood',
+        image: './src/_includes/img/sustainablewebdesign.png',
+        website: 'https://abookapart.com/products/sustainable-web-design',
+    },
 ];
