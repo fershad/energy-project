@@ -19,7 +19,13 @@ async function handleRequest(request) {
     // See if they have Chinese (zh) set at a higher priority than English then return the ZH site
     // Otherwise English is the default
     if (checkPath.length < 1) {
-        const language = await getParsedAcceptLangs(header)
+        let language
+        try {
+            language = await getParsedAcceptLangs(header)
+        } catch {
+            language = 'en'
+        }
+
         const redirectURL = handleLanguage(url, language)
         const response = await fetch(redirectURL, init)
         const results = await gatherResponse(response)
@@ -83,7 +89,6 @@ const checkURLPath = url => {
 }
 
 addEventListener('fetch', async event => {
-    console.log(event)
     const imagesRegex = /(.*\.(jpeg|avif|webp|svg|jpg|png))$/
     const cssRegex = /(.*\.(css))$/
     const jsRegex = /(.*\.(js))$/
